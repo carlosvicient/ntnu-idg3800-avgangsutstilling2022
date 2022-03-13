@@ -4,6 +4,8 @@
 
 Cite: https://www.sanity.io/blog/how-to-structure-your-code-repository-in-a-sanity-io-project
 
+**_Services has not been added yet_**
+
 ```
 project-folder/
 ├── studio/
