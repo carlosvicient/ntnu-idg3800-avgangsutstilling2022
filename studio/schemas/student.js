@@ -59,72 +59,14 @@ export default {
       ],
     },
     {
-      type: 'object',
       name: 'social',
       title: 'Social media links',
-      fields: [
-        {
-          title: 'Instagram',
-          name: 'instagram',
-          type: 'url',
-          validation: (Rule) =>
-            Rule.uri({
-              scheme: ['http', 'https', 'mailto', 'tel'],
-            }),
-        },
-        {
-          title: 'LinkedIn',
-          name: 'linkedin',
-          type: 'url',
-          validation: (Rule) =>
-            Rule.uri({
-              scheme: ['http', 'https', 'mailto', 'tel'],
-            }),
-        },
-        {
-          title: 'Behance',
-          name: 'behance',
-          type: 'url',
-          validation: (Rule) =>
-            Rule.uri({
-              scheme: ['http', 'https', 'mailto', 'tel'],
-            }),
-        },
-        {
-          title: 'Portfolio',
-          name: 'portfolio',
-          type: 'url',
-          validation: (Rule) =>
-            Rule.uri({
-              scheme: ['http', 'https', 'mailto', 'tel'],
-            }),
-        },
-      ],
+      type: 'platform',
     },
     {
-      title: 'Projects',
-      name: 'project',
-      type: 'object',
-      fields: [
-        {
-          title: 'First',
-          name: 'first',
-          type: 'reference',
-          to: { type: 'project' },
-        },
-        {
-          title: 'Second',
-          name: 'second',
-          type: 'reference',
-          to: { type: 'project' },
-        },
-        {
-          title: 'Third',
-          name: 'third',
-          type: 'reference',
-          to: { type: 'project' },
-        },
-      ],
+      name: 'showcase',
+      title: 'Showcase',
+      type: 'portfolio',
     },
   ],
 };
