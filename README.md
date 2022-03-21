@@ -1,5 +1,19 @@
 # ntnu-idg3800-avgangsutstilling2022
 
+## How to run
+
+### Studio
+
+- cd studio folder
+- npm i
+- sanity start
+
+### frontend
+
+- cd frontend Folder
+- npm i
+- npm start
+
 ## Folder structure
 
 Cite: https://www.sanity.io/blog/how-to-structure-your-code-repository-in-a-sanity-io-project
