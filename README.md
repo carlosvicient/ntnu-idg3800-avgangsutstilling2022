@@ -4,6 +4,12 @@
 
 ### Studio
 
+- Send mail to Cornelius on teams to get access to sanity.
+
+- npm install -g @sanity/cli
+- sanity login
+- choose github w/e
+
 - cd studio folder
 - npm i
 - sanity start
@@ -13,6 +19,10 @@
 - cd frontend Folder
 - npm i
 - npm start
+
+### information
+
+The studio is deployed so only use gatsby `http://localhost:8000/___graphql` to query the sanity database
 
 ## Folder structure
 
