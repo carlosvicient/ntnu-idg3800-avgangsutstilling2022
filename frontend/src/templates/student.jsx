@@ -1,5 +1,7 @@
 import React from 'react';
 import {graphql} from 'gatsby'
+import SanityImage from "gatsby-plugin-sanity-image"
+
 function Student({ data }) {
     const student = data.sanityStudent;
     console.log(student);
@@ -8,7 +10,7 @@ function Student({ data }) {
         <section>
             <h1>{student.name} {student.surname}</h1>
             <p>{student.studyprogramme.title}</p>
-            <img src={student.image._rawAsset} alt={student.name} />
+            <SanityImage asset={student.image._rawAsset} alt="Image of the student" />
             <p>{student.bio[0].children[0].text}</p>
 
             {student.social.behance ? <a href={student.social.behance} target='_blank' rel="noreferrer">Behance</a> : null}
@@ -94,7 +96,8 @@ query MyQuery($slug: [String] = "") {
             title
             }
         }
+      }
     }
-}
+  }
 `
 export default Student;

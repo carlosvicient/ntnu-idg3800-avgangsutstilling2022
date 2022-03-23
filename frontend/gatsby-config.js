@@ -25,6 +25,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-sanity-image",
+      options: {
+        // Sanity project info (required)
+        projectId: "y2aw28t3",
+        dataset: "production",
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,

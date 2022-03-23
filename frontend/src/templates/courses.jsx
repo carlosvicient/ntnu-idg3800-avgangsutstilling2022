@@ -1,18 +1,18 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import SanityImage from "gatsby-plugin-sanity-image"
 
 export default function Courses({data}) {
     const students = data.allSanityStudent.edges;
     const title = data.allSanityStudent.edges[0].node.studyprogramme.title;
-    console.log(students);
     return (
         <main>
             <h1>Studenter - {title}</h1>
             <p>Paragraf av tekst</p>
             {students.map(({node}) => (
-                <Link to={`${node.slug.current}`} key={node.slug.current}>
+                <Link to={`${node.slug.current}`} key={node.id}>
                     <div>
-                        {/*  <img src={node.image._rawAsset._ref} alt={node.name} /> */}
+                        <SanityImage asset={node.image._rawAsset} alt=""/>
                         <p>{node.name} {node.surname}</p>
                     </div>
                 </Link>
@@ -35,8 +35,8 @@ export const query = graphql`
                     studyprogramme {
                         title
                     }
-                    slug {
-                        current
+                    slug{
+                      current
                     }
                 }
             }
