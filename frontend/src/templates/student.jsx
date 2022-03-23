@@ -6,6 +6,7 @@ import SocialLinks from "../components/SocialLinks"
 import ProjectList from "../components/ProjectList"
 import StudentList from "../components/StudentList"
 import BioCard from "../components/BioCard"
+import Footer from "../components/Footer"
 
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
@@ -23,36 +24,39 @@ function Student({ data }) {
   console.log(studentList)
 
   return (
-    <section>
-      {/* Tilbake til course-page */}
-      <Link to={`/${student.studyprogramme.slug.current}`}>
-        &#8592; Tilbake
-      </Link>
+    <>
+      <section>
+        {/* Tilbake til course-page */}
+        <Link to={`/${student.studyprogramme.slug.current}`}>
+          &#8592; Tilbake
+        </Link>
 
-      {/* Overskrift og studieretning */}
-      <h1>
-        {student.name} {student.firstlettersurname}
-      </h1>
-      <p>{student.studyprogramme.title}</p>
+        {/* Overskrift og studieretning */}
+        <h1>
+          {student.name} {student.firstlettersurname}
+        </h1>
+        <p>{student.studyprogramme.title}</p>
 
-      {/* Profilbilde og bio */}
-      <BioCard student={student} />
+        {/* Profilbilde og bio */}
+        <BioCard student={student} />
 
-      {/* Sosiale medier linker */}
-      <SocialLinks links={student.social} />
+        {/* Sosiale medier linker */}
+        <SocialLinks links={student.social} />
 
-      {/* Prosjekter */}
-      <ProjectList showcase={student.showcase} />
+        {/* Prosjekter */}
+        <ProjectList showcase={student.showcase} />
 
-      {/* Liste over de andre studentene innen studieretningen */}
-      {studentList.length === 0 ? null : (
-        <StudentList
-          students={studentList}
-          studyprogramme={student.studyprogramme.name}
-          withSorting={false}
-        />
-      )}
-    </section>
+        {/* Liste over de andre studentene innen studieretningen */}
+        {studentList.length === 0 ? null : (
+          <StudentList
+            students={studentList}
+            studyprogramme={student.studyprogramme.name}
+            withSorting={false}
+          />
+        )}
+      </section>
+      <Footer />
+    </>
   )
 }
 

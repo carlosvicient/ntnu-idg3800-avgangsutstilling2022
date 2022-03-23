@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 
 // Components
 import StudentList from "../components/StudentList"
+import Footer from "../components/Footer"
 
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
@@ -15,17 +16,20 @@ export default function Courses({ data }) {
       .children[0].text
 
   return (
-    <main>
-      {/* Tilbake til forsiden */}
-      <Link to="/">&#8592; Tilbake</Link>
+    <>
+      <main>
+        {/* Tilbake til forsiden */}
+        <Link to="/">&#8592; Tilbake</Link>
 
-      {/* Overskrift og description */}
-      <h1>{name}</h1>
-      <p>{description}</p>
+        {/* Overskrift og description */}
+        <h1>{name}</h1>
+        <p>{description}</p>
 
-      {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
-      <StudentList students={students} withSorting={true} />
-    </main>
+        {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
+        <StudentList students={students} withSorting={true} />
+      </main>
+      <Footer />
+    </>
   )
 }
 
