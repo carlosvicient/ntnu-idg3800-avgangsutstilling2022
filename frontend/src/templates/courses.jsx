@@ -7,11 +7,18 @@ import SanityImage from "gatsby-plugin-sanity-image";
 export default function Courses({data}) {
     const students = data.allSanityStudent.edges;
     const title = data.allSanityStudent.edges[0].node.studyprogramme.title;
+    const description = data.allSanityStudent.edges[0].node.studyprogramme.description[0].children[0].text;
+
     return (
         <main>
+            {/* Tilbake til forsiden */}
             <Link to='/' >&#8592; Tilbake</Link>
+
+            {/* Overskrift og description */}
             <h1>Studenter - {title}</h1>
-            <p>Paragraf av tekst</p>
+            <p>{description}</p>
+
+            {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
             {students.map(({node}) => (
                 <Link to={`${node.slug.current}`} key={node.id}>
                     <div>
@@ -37,6 +44,11 @@ export const query = graphql`
                     }
                     studyprogramme {
                         title
+                        description {
+                            children {
+                                text
+                            }
+                        }
                     }
                     slug{
                         current
