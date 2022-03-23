@@ -5,7 +5,6 @@ import SanityImage from "gatsby-plugin-sanity-image"
 export default function Courses({data}) {
     const students = data.allSanityStudent.edges;
     const title = data.allSanityStudent.edges[0].node.studyprogramme.title;
-    console.log(title);
     return (
         <main>
             <h1>Studenter - {title}</h1>
