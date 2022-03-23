@@ -44,7 +44,7 @@ exports.createPages = async function ({ actions, graphql }) {
     actions.createPage({
       path: `${studyprogramme}/${slug}`,
       component: require.resolve("./src/templates/student.jsx"),
-      context: { slug },
+      context: { slug, studyprogramme },
     })
   })
 }
