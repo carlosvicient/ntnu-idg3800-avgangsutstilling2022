@@ -10,9 +10,8 @@ export default function Courses({data}) {
             <h1>Studenter - {title}</h1>
             <p>Paragraf av tekst</p>
             {students.map(({node}) => (
-                <Link to={`${node.id}`} key={node.id}>
+                <Link to={`${node.slug.current}`} key={node.id}>
                     <div>
-                        {/*  <img src={node.image._rawAsset._ref} alt={node.name} /> */}
                         <p>{node.name} {node.surname}</p>
                     </div>
                 </Link>
@@ -34,6 +33,9 @@ export const query = graphql`
                     }
                     studyprogramme {
                         title
+                    }
+                    slug{
+                      current
                     }
                 }
             }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {graphql} from 'graphql'
+import {graphql} from 'gatsby'
 function Student({ data }) {
     console.log(data);
 
@@ -11,81 +11,81 @@ function Student({ data }) {
 }
 
 export const query = graphql`
-query MyQuery($studId: [String] = "") {
-    sanityStudent(_id: {in: $studId}) {
-        name
-        surname
-        studyprogramme {
-            title
+  query MyQuery($slug: [String] = "") {
+    sanityStudent(slug: { current: { in: $slug } }) {
+      name
+      surname
+      studyprogramme {
+        title
+      }
+      bio {
+        children {
+          text
         }
-        bio {
-            children {
-            text
-            }
-        }
-        image {
+      }
+      image {
+        _rawAsset
+      }
+      social {
+        behance
+        instagram
+        linkedin
+        portfolio
+      }
+      showcase {
+        firstproject {
+          description {
+            _key
+            _type
+            style
+            list
+            _rawChildren
+          }
+          mainImage {
+            _key
+            _type
             _rawAsset
+            _rawHotspot
+            _rawCrop
+          }
+          title
         }
-        social {
-            behance
-            instagram
-            linkedin
-            portfolio
+        secondproject {
+          description {
+            _key
+            _type
+            style
+            list
+            _rawChildren
+          }
+          mainImage {
+            _key
+            _type
+            _rawAsset
+            _rawHotspot
+            _rawCrop
+          }
+          title
         }
-        showcase {
-            firstproject {
-                description {
-                _key
-                _type
-                style
-                list
-                _rawChildren
-                }
-                mainImage {
-                    _key
-                    _type
-                    _rawAsset
-                    _rawHotspot
-                    _rawCrop
-                }
-                title
-            }
-            secondproject {
-                description {
-                    _key
-                    _type
-                    style
-                    list
-                    _rawChildren
-                }
-                mainImage {
-                    _key
-                    _type
-                    _rawAsset
-                    _rawHotspot
-                    _rawCrop
-                }
-            title
-            }
-            thirdproject {
-                description {
-                    _key
-                    _type
-                    style
-                    list
-                    _rawChildren
-                }
-                mainImage {
-                    _key
-                    _type
-                    _rawAsset
-                    _rawHotspot
-                    _rawCrop
-                }
-            title
-            }
+        thirdproject {
+          description {
+            _key
+            _type
+            style
+            list
+            _rawChildren
+          }
+          mainImage {
+            _key
+            _type
+            _rawAsset
+            _rawHotspot
+            _rawCrop
+          }
+          title
         }
+      }
     }
-}
+  }
 `
 export default Student;
