@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import SanityImage from "gatsby-plugin-sanity-image"
-import StudentCard from "../components/StudentCard"
+
+// Components
+import StudentList from "../components/StudentList"
 
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
@@ -24,9 +25,7 @@ export default function Courses({ data }) {
 
       {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
       <h2>Studenter</h2>
-      {students.map(({ node }) => (
-        <StudentCard node={node} />
-      ))}
+      <StudentList students={students} />
     </main>
   )
 }
