@@ -15,7 +15,6 @@
     "gatsby-source-filesystem": "^4.9.0",
     "gatsby-source-sanity": "^7.3.2",
     "gatsby-transformer-sharp": "^4.9.0",
-    "path": "^0.12.7",
     "prop-types": "^15.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

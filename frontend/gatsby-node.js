@@ -1,33 +1,50 @@
-const path = require('path');
-
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
-  const coursesTemplate = path.resolve('src/templates/student.jsx');
-
-  return graphql(`
-  {
-    allSanityStudyprogramme {
-      edges {
-        node {
-          code
+exports.createPages = async function ({ actions, graphql }) {
+  const {
+    data: { allSanityStudyprogramme, allSanityStudent },
+  } = await graphql(`
+    {
+      allSanityStudyprogramme {
+        edges {
+          node {
+            slug {
+              current
+            }
+          }
+        }
+      }
+      allSanityStudent {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
+            studyprogramme {
+              slug {
+                current
+              }
+            }
+          }
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      throw result.errors;
-    };
+  `)
+  allSanityStudyprogramme.edges.forEach(edge => {
+    const slug = edge.node.slug.current
+    actions.createPage({
+      path: slug,
+      component: require.resolve("./src/templates/courses.jsx"),
+      context: { slug },
+    })
+  })
 
-    console.log(result);
-
-    result.data.allSanityStudyprogramme.edges.forEach(edge => {
-      createPage({
-        path: `${edge.node.code}`,
-        component: coursesTemplate,
-        context: {
-          studyProgramme: edge.node.code
-        },
-      })
+  allSanityStudent.edges.forEach(edge => {
+    const slug = edge.node.slug.current
+    const studyprogramme = edge.node.studyprogramme.slug.current
+    actions.createPage({
+      path: `${studyprogramme}/${slug}`,
+      component: require.resolve("./src/templates/student.jsx"),
+      context: { slug },
     })
   })
 }
