@@ -11,8 +11,8 @@ function Student({ data }) {
 }
 
 export const query = graphql`
-query MyQuery($studId: [String] = "") {
-    sanityStudent(_id: {in: $studId}) {
+query MyQuery($slug: [String] = "") {
+    sanityStudent(slug: {current: {in: $slug}}) {
         name
         surname
         studyprogramme {

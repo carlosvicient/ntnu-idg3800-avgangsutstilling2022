@@ -4,13 +4,13 @@ import { graphql, Link } from "gatsby";
 export default function Courses({data}) {
     const students = data.allSanityStudent.edges;
     const title = data.allSanityStudent.edges[0].node.studyprogramme.title;
-    console.log(title);
+    console.log(students);
     return (
         <main>
             <h1>Studenter - {title}</h1>
             <p>Paragraf av tekst</p>
             {students.map(({node}) => (
-                <Link to={`${node.id}`} key={node.id}>
+                <Link to={`${node.slug.current}`} key={node.slug.current}>
                     <div>
                         {/*  <img src={node.image._rawAsset._ref} alt={node.name} /> */}
                         <p>{node.name} {node.surname}</p>
@@ -34,6 +34,9 @@ export const query = graphql`
                     }
                     studyprogramme {
                         title
+                    }
+                    slug {
+                        current
                     }
                 }
             }
