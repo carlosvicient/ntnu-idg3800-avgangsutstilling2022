@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import SanityImage from "gatsby-plugin-sanity-image"
 
 export default function Courses({data}) {
     const students = data.allSanityStudent.edges;
@@ -12,6 +13,7 @@ export default function Courses({data}) {
             {students.map(({node}) => (
                 <Link to={`${node.slug.current}`} key={node.id}>
                     <div>
+                        <SanityImage asset={node.image._rawAsset} alt=""/>
                         <p>{node.name} {node.surname}</p>
                     </div>
                 </Link>
