@@ -34,8 +34,9 @@ export default {
       name: 'description',
       title: 'Description',
       type: 'blockContent',
+      validation: (Rule) =>
+        Rule.max(100).warning('Can only be 100 characters long'),
       options: {
-        maxLength: 100,
         required: true,
       },
     },

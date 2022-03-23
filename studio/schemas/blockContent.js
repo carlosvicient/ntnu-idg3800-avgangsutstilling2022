@@ -16,6 +16,8 @@ export default {
     {
       title: 'Block',
       type: 'block',
+      validation: (Rule) =>
+        Rule.max(100).warning('Can only be 100 characters long'),
       // Styles let you set what your user can mark up blocks with. These
       // correspond with HTML tags, but you can set any title or value
       // you want and decide how you want to deal with it where you want to
@@ -62,4 +64,6 @@ export default {
       options: { hotspot: true },
     },
   ],
+  validation: (Rule) =>
+    Rule.max(100).warning('Can only be 100 characters long'),
 };

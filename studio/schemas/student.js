@@ -25,8 +25,9 @@ export default {
       name: 'firstlettersurname',
       title: 'First Letter Surname',
       type: 'string',
+      validation: (Rule) =>
+        Rule.max(1).warning('Can only be one character long'),
       options: {
-        maxLength: 1,
         required: true,
       },
     },
@@ -75,16 +76,21 @@ export default {
         {
           title: 'Block',
           type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
+          styles: [
+            {
+              title: 'Normal',
+              value: 'normal',
+            },
+          ],
           lists: [],
           options: {
-            maxLength: 100,
             required: true,
           },
         },
       ],
+      validation: (Rule) =>
+        Rule.max(100).warning('Can only be 100 characters long'),
       options: {
-        maxLength: 100,
         required: true,
       },
       description: 'Short 100 characters',
