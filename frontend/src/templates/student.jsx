@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import SanityImage from "gatsby-plugin-sanity-image"
 
 // Components
 import SocialLinks from "../components/SocialLinks"
 import ProjectList from "../components/ProjectList"
 import StudentList from "../components/StudentList"
+import BioCard from "../components/BioCard"
 
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
@@ -36,12 +36,7 @@ function Student({ data }) {
       <p>{student.studyprogramme.title}</p>
 
       {/* Profilbilde og bio */}
-
-      <SanityImage
-        asset={student.image._rawAsset}
-        alt={`Portrett av ${student.name}`}
-      />
-      <p>{student.bio[0].children[0].text}</p>
+      <BioCard student={student} />
 
       {/* Sosiale medier linker */}
       <SocialLinks links={student.social} />
