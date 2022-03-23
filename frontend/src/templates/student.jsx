@@ -1,13 +1,15 @@
 import React from 'react';
 import {graphql} from 'gatsby'
+import SanityImage from "gatsby-plugin-sanity-image"
 function Student({ data }) {
     console.log(data);
-
+    const student = data.sanityStudent
     return (
-        <section>
-            <h1>StudentPage</h1>
-        </section>
-    );
+      <section>
+        <h1>StudentPage</h1>
+        <SanityImage asset={student.image._rawAsset} alt="Image of the student" />
+      </section>
+    )
 }
 
 export const query = graphql`
