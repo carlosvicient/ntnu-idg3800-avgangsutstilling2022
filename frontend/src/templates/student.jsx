@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {graphql} from 'graphql'
 function Student({ data }) {
     console.log(data);
 
@@ -11,7 +11,7 @@ function Student({ data }) {
 }
 
 export const query = graphql`
-    {
+query ($slug: [String] = "") {
         allSanityStudent(filter: {slug: {current: {in: $slug}}}) {
             edges {
             node {
@@ -23,5 +23,4 @@ export const query = graphql`
         }
     }
 `
-
 export default Student;
