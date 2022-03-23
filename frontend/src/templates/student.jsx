@@ -27,7 +27,7 @@ function Student({ data }) {
       <p>{student.studyprogramme.title}</p>
 
       {/* Profilbilde og bio */}
-      <SanityImage asset={student.image._rawAsset} alt="Image of the student" />
+      <SanityImage asset={student.image._rawAsset} alt={`Portrett av ${student.name}`} />
       <p>{student.bio[0].children[0].text}</p>
 
       {/* Sosiale medier linker */}
