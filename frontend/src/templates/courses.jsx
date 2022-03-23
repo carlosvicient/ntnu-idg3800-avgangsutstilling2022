@@ -16,7 +16,7 @@ export default function Courses({data}) {
                 <Link to={`${node.slug.current}`} key={node.id}>
                     <div>
                         <SanityImage asset={node.image._rawAsset} alt=""/>
-                        <p>{node.name} {node.surname}</p>
+                        <p>{node.name} {node.firstlettersurname}</p>
                     </div>
                 </Link>
             ))}
@@ -31,7 +31,7 @@ export const query = graphql`
                 node {
                     id
                     name
-                    surname
+                    firstlettersurname
                     image {
                         _rawAsset
                     }

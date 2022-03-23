@@ -20,7 +20,7 @@ function Student({ data }) {
   return (
     <section>
       <Link to={`/${student.studyprogramme.slug.current}`} >&#8592; Tilbake</Link>
-      <h1>{student.name} {student.surname}</h1>
+      <h1>{student.name} {student.firstlettersurname}</h1>
       <p>{student.studyprogramme.title}</p>
       <SanityImage asset={student.image._rawAsset} alt="Image of the student" />
       <p>{student.bio[0].children[0].text}</p>
@@ -46,7 +46,7 @@ function Student({ data }) {
             <Link to={`${node.slug.current}`} key={node.id}>
               <div>
                 <SanityImage asset={node.image._rawAsset} alt="" />
-                <p>{node.name} {node.surname}</p>
+                <p>{node.name} {node.firstlettersurname}</p>
               </div>
             </Link>
           ))}
@@ -60,7 +60,7 @@ export const query = graphql`
 query MyQuery($slug: [String] = "", $studyprogramme: [String] = "") {
   sanityStudent(slug: {current: {in: $slug}}) {
     name
-    surname
+    firstlettersurname
     studyprogramme {
       title
       slug {
