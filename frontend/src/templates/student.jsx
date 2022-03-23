@@ -1,11 +1,20 @@
 import React from 'react';
 import {graphql} from 'gatsby'
 function Student({ data }) {
-    console.log(data);
+    const student = data.sanityStudent;
+    console.log(student);
 
     return (
         <section>
-            <h1>StudentPage</h1>
+            <h1>{student.name} {student.surname}</h1>
+            <p>{student.studyprogramme.title}</p>
+            <img src={student.image._rawAsset} alt={student.name} />
+            <p>{student.bio[0].children[0].text}</p>
+
+            {student.social.behance ? <a href={student.social.behance} target='_blank' rel="noreferrer">Behance</a> : null}
+            {student.social.instagram ? <a href={student.social.instagram} target='_blank' rel="noreferrer">Instagram</a> : null}
+            {student.social.linkedin ? <a href={student.social.linkedin} target='_blank' rel="noreferrer">LinkedIn</a> : null}
+            {student.social.portfolio ? <a href={student.social.portfolio} target='_blank' rel="noreferrer">Portfolio</a> : null}
         </section>
     );
 }
