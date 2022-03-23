@@ -125,7 +125,7 @@ query MyQuery($slug: [String] = "", $studyprogramme: [String] = "") {
       node {
         id
         name
-        surname
+        firstlettersurname
         image {
           _rawAsset
         }
