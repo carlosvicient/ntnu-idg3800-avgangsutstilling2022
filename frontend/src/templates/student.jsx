@@ -1,5 +1,5 @@
 import React from 'react';
-import {graphql} from 'graphql'
+import {graphql} from 'gatsby'
 function Student({ data }) {
     console.log(data);
 
