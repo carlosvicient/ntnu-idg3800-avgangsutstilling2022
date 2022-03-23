@@ -24,7 +24,6 @@ export default function Courses({ data }) {
       <p>{description}</p>
 
       {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
-      <h2>Studenter</h2>
       <StudentList students={students} />
     </main>
   )
