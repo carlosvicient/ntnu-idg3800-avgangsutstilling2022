@@ -19,17 +19,24 @@ function Student({ data }) {
 
   return (
     <section>
+      {/* Tilbake til course-page */}
       <Link to={`/${student.studyprogramme.slug.current}`} >&#8592; Tilbake</Link>
+
+      {/* Overskrift og studieretning */}
       <h1>{student.name} {student.firstlettersurname}</h1>
       <p>{student.studyprogramme.title}</p>
+
+      {/* Profilbilde og bio */}
       <SanityImage asset={student.image._rawAsset} alt="Image of the student" />
       <p>{student.bio[0].children[0].text}</p>
 
+      {/* Sosiale medier linker */}
       {student.social.behance ? <a href={student.social.behance} target='_blank' rel="noreferrer">Behance</a> : null}
       {student.social.instagram ? <a href={student.social.instagram} target='_blank' rel="noreferrer">Instagram</a> : null}
       {student.social.linkedin ? <a href={student.social.linkedin} target='_blank' rel="noreferrer">LinkedIn</a> : null}
       {student.social.portfolio ? <a href={student.social.portfolio} target='_blank' rel="noreferrer">Portfolio</a> : null}
 
+      {/* Prosjekter */}
       <SanityImage asset={student.showcase.firstproject.mainImage._rawAsset} alt={student.showcase.firstproject.title} />
       <p>{student.showcase.firstproject.description[0].children[0].text}</p>
 
@@ -39,6 +46,7 @@ function Student({ data }) {
       {/* <SanityImage asset={student.showcase.thirdproject.mainImage._rawAsset} alt={student.showcase.firstproject.title} /> Disse er null atm */}
       {/* <p>{student.showcase.thirdproject.description[0].children[0].text}</p>                                              Disse er null atm */}
 
+      {/* Liste over de andre studentene innen studieretningen */}
       {studentList.length === 0 ? null :
         <>
           <h2>Studenter - {student.studyprogramme.title}</h2>
