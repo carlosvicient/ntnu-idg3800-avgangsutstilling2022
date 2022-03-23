@@ -1,3 +1,4 @@
+import { isUniqueAcrossAllDocuments } from '../lib/isUniqueAcrossAllDocuments';
 export default {
   name: 'student',
   title: 'Student',
@@ -28,6 +29,7 @@ export default {
             ? `${doc.name}-${doc.surname}`
             : `${doc.name}-${doc.middle}-${doc.surname}`,
         maxLength: 96,
+        isUnique: isUniqueAcrossAllDocuments,
       },
     },
     {
