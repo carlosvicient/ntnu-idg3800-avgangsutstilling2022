@@ -1,5 +1,5 @@
 import React from 'react';
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 import SanityImage from "gatsby-plugin-sanity-image"
 
 function Student({ data }) {
@@ -17,6 +17,15 @@ function Student({ data }) {
             {student.social.instagram ? <a href={student.social.instagram} target='_blank' rel="noreferrer">Instagram</a> : null}
             {student.social.linkedin ? <a href={student.social.linkedin} target='_blank' rel="noreferrer">LinkedIn</a> : null}
             {student.social.portfolio ? <a href={student.social.portfolio} target='_blank' rel="noreferrer">Portfolio</a> : null}
+
+            <SanityImage asset={student.showcase.firstproject.mainImage._rawAsset} alt={student.showcase.firstproject.title} />
+            <p>{student.showcase.firstproject.description[0].children[0].text}</p>
+
+            {/* <SanityImage asset={student.showcase.secondproject.mainImage._rawAsset} alt={student.showcase.firstproject.title} /> Disse er null atm */}
+            {/* <p>{student.showcase.secondproject.description[0].children[0].text}</p>                                              Disse er null atm */}
+
+            {/* <SanityImage asset={student.showcase.thirdproject.mainImage._rawAsset} alt={student.showcase.firstproject.title} /> Disse er null atm */}
+            {/* <p>{student.showcase.thirdproject.description[0].children[0].text}</p>                                              Disse er null atm */}
         </section>
     );
 }
@@ -27,77 +36,58 @@ query MyQuery($slug: [String] = "") {
         name
         surname
         studyprogramme {
-            title
+          title
         }
         bio {
-            children {
+          children {
             text
-            }
+          }
         }
         image {
-            _rawAsset
+          _rawAsset
         }
         social {
-            behance
-            instagram
-            linkedin
-            portfolio
+          behance
+          instagram
+          linkedin
+          portfolio
         }
         showcase {
-            firstproject {
-                description {
-                _key
-                _type
-                style
-                list
-                _rawChildren
-                }
-                mainImage {
-                    _key
-                    _type
-                    _rawAsset
-                    _rawHotspot
-                    _rawCrop
-                }
-                title
+          firstproject {
+            description {
+              children {
+                text
+              }
             }
-            secondproject {
-                description {
-                    _key
-                    _type
-                    style
-                    list
-                    _rawChildren
-                }
-                mainImage {
-                    _key
-                    _type
-                    _rawAsset
-                    _rawHotspot
-                    _rawCrop
-                }
             title
+            mainImage {
+              _rawAsset
             }
-            thirdproject {
-                description {
-                    _key
-                    _type
-                    style
-                    list
-                    _rawChildren
-                }
-                mainImage {
-                    _key
-                    _type
-                    _rawAsset
-                    _rawHotspot
-                    _rawCrop
-                }
+          }
+          secondproject {
+            description {
+              children {
+                text
+              }
+            }
+            mainImage {
+              _rawAsset
+            }
             title
+          }
+          thirdproject {
+            description {
+              children {
+                text
+              }
             }
+            mainImage {
+              _rawAsset
+            }
+            title
+          }
         }
       }
-    }
   }
 `
 export default Student;

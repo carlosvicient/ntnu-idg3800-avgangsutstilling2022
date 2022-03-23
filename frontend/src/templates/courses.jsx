@@ -36,7 +36,7 @@ export const query = graphql`
                         title
                     }
                     slug{
-                      current
+                        current
                     }
                 }
             }
