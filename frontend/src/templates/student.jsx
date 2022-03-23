@@ -37,7 +37,7 @@ function Student({ data }) {
       {student.social.portfolio ? <a href={student.social.portfolio} target='_blank' rel="noreferrer">Portfolio</a> : null}
 
       {/* Prosjekter */}
-      <SanityImage asset={student.showcase.firstproject.mainImage._rawAsset} alt={student.showcase.firstproject.title} />
+      <SanityImage asset={student.showcase.firstproject.mainImage._rawAsset} width={300} alt={student.showcase.firstproject.title} />
       <p>{student.showcase.firstproject.description[0].children[0].text}</p>
 
       {/* <SanityImage asset={student.showcase.secondproject.mainImage._rawAsset} alt={student.showcase.firstproject.title} /> Disse er null atm */}
@@ -49,12 +49,12 @@ function Student({ data }) {
       {/* Liste over de andre studentene innen studieretningen */}
       {studentList.length === 0 ? null :
         <>
-          <h2>Studenter - {student.studyprogramme.title}</h2>
+          <h2>Studenter - {student.studyprogramme.name}</h2>
           {studentList.map(({ node }) => (
             <Link to={`${node.slug.current}`} key={node.id}>
               <div>
                 <SanityImage asset={node.image._rawAsset} alt="" />
-                <p>{node.name} {node.firstlettersurname}</p>
+                <p>{node.name} {node.firstlettersurname}.</p>
               </div>
             </Link>
           ))}
@@ -65,84 +65,87 @@ function Student({ data }) {
 }
 
 export const query = graphql`
-query MyQuery($slug: [String] = "", $studyprogramme: [String] = "") {
-  sanityStudent(slug: {current: {in: $slug}}) {
-    name
-    firstlettersurname
-    studyprogramme {
-      title
-      slug {
-        current
-      }
-    }
-    bio {
-      children {
-        text
-      }
-    }
-    image {
-      _rawAsset
-    }
-    social {
-      behance
-      instagram
-      linkedin
-      portfolio
-    }
-    slug {
-      current
-    }
-    showcase {
-      firstproject {
-        description {
-          children {
-            text
-          }
-        }
-        title
-        mainImage {
-          _rawAsset
-        }
-      }
-      secondproject {
-        description {
-          children {
-            text
-          }
-        }
-        mainImage {
-          _rawAsset
-        }
-        title
-      }
-      thirdproject {
-        description {
-          children {
-            text
-          }
-        }
-        mainImage {
-          _rawAsset
-        }
-        title
-      }
-    }
-  }
-  allSanityStudent(filter: {studyprogramme: {slug: {current: {in: $studyprogramme}}}}) {
-    edges {
-      node {
-        id
+  query MyQuery($slug: [String] = "", $studyprogramme: [String] = "") {
+    sanityStudent(slug: { current: { in: $slug } }) {
+      name
+      firstlettersurname
+      studyprogramme {
         name
-        firstlettersurname
-        image {
-          _rawAsset
-        }
+        title
         slug {
           current
         }
       }
+      bio {
+        children {
+          text
+        }
+      }
+      image {
+        _rawAsset
+      }
+      social {
+        behance
+        instagram
+        linkedin
+        portfolio
+      }
+      slug {
+        current
+      }
+      showcase {
+        firstproject {
+          description {
+            children {
+              text
+            }
+          }
+          title
+          mainImage {
+            _rawAsset
+          }
+        }
+        secondproject {
+          description {
+            children {
+              text
+            }
+          }
+          mainImage {
+            _rawAsset
+          }
+          title
+        }
+        thirdproject {
+          description {
+            children {
+              text
+            }
+          }
+          mainImage {
+            _rawAsset
+          }
+          title
+        }
+      }
+    }
+    allSanityStudent(
+      filter: { studyprogramme: { slug: { current: { in: $studyprogramme } } } }
+    ) {
+      edges {
+        node {
+          id
+          name
+          firstlettersurname
+          image {
+            _rawAsset
+          }
+          slug {
+            current
+          }
+        }
+      }
     }
   }
-}
 `
 export default Student;

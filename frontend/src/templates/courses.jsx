@@ -6,29 +6,33 @@ import SanityImage from "gatsby-plugin-sanity-image";
 
 export default function Courses({data}) {
     const students = data.allSanityStudent.edges;
-    const title = data.allSanityStudent.edges[0].node.studyprogramme.title;
+    const name = data.allSanityStudent.edges[0].node.studyprogramme.name;
+    console.log(data)
     const description = data.allSanityStudent.edges[0].node.studyprogramme.description[0].children[0].text;
 
     return (
-        <main>
-            {/* Tilbake til forsiden */}
-            <Link to='/' >&#8592; Tilbake</Link>
+      <main>
+        {/* Tilbake til forsiden */}
+        <Link to="/">&#8592; Tilbake</Link>
 
-            {/* Overskrift og description */}
-            <h1>Studenter - {title}</h1>
-            <p>{description}</p>
+        {/* Overskrift og description */}
+        <h1>{name}</h1>
+        <p>{description}</p>
 
-            {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
-            {students.map(({node}) => (
-                <Link to={`${node.slug.current}`} key={node.id}>
-                    <div>
-                        <SanityImage asset={node.image._rawAsset} alt=""/>
-                        <p>{node.name} {node.firstlettersurname}</p>
-                    </div>
-                </Link>
-            ))}
-        </main>
-    );
+        {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
+        <h2>Studenter</h2>
+        {students.map(({ node }) => (
+          <Link to={`${node.slug.current}`} key={node.id}>
+            <div>
+              <SanityImage asset={node.image._rawAsset} width={300} alt="" />
+              <p>
+                {node.name} {node.firstlettersurname}.
+              </p>
+            </div>
+          </Link>
+        ))}
+      </main>
+    )
 }
 
 export const query = graphql`
@@ -44,6 +48,7 @@ export const query = graphql`
                     }
                     studyprogramme {
                         title
+                        name
                         description {
                             children {
                                 text
