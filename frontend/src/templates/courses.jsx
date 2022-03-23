@@ -1,9 +1,10 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 // Components
 import StudentList from "../components/StudentList"
 import Footer from "../components/Footer"
+import BackLink from "../components/BackLink"
 
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
@@ -19,7 +20,7 @@ export default function Courses({ data }) {
     <>
       <main>
         {/* Tilbake til forsiden */}
-        <Link to="/">&#8592; Tilbake</Link>
+        <BackLink to="/" />
 
         {/* Overskrift og description */}
         <h1>{name}</h1>
