@@ -4,6 +4,7 @@ import SanityImage from "gatsby-plugin-sanity-image"
 
 // Components
 import SocialLinks from "../components/SocialLinks"
+import ProjectList from "../components/ProjectList"
 
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
@@ -34,6 +35,7 @@ function Student({ data }) {
       <p>{student.studyprogramme.title}</p>
 
       {/* Profilbilde og bio */}
+
       <SanityImage
         asset={student.image._rawAsset}
         alt={`Portrett av ${student.name}`}
@@ -44,18 +46,7 @@ function Student({ data }) {
       <SocialLinks links={student.social} />
 
       {/* Prosjekter */}
-      <SanityImage
-        asset={student.showcase.firstproject.mainImage._rawAsset}
-        width={300}
-        alt={student.showcase.firstproject.title}
-      />
-      <p>{student.showcase.firstproject.description[0].children[0].text}</p>
-
-      {/* <SanityImage asset={student.showcase.secondproject.mainImage._rawAsset} alt={student.showcase.firstproject.title} /> Disse er null atm */}
-      {/* <p>{student.showcase.secondproject.description[0].children[0].text}</p>                                              Disse er null atm */}
-
-      {/* <SanityImage asset={student.showcase.thirdproject.mainImage._rawAsset} alt={student.showcase.firstproject.title} /> Disse er null atm */}
-      {/* <p>{student.showcase.thirdproject.description[0].children[0].text}</p>                                              Disse er null atm */}
+      <ProjectList showcase={student.showcase} />
 
       {/* Liste over de andre studentene innen studieretningen */}
       {studentList.length === 0 ? null : (
