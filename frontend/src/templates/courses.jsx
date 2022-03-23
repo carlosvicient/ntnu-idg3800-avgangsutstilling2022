@@ -22,8 +22,8 @@ export default function Courses(props) {
 }
 
 export const query = graphql`
-    {
-        allSanityStudent(filter: {studyprogramme: {slug: {current: {in: "bwu"}}}}) {
+    query ($slug: [String] = "") {
+        allSanityStudent(filter: {studyprogramme: {slug: {current: {in: $slug}}}}) {
             edges {
                 node {
                     id
@@ -33,7 +33,10 @@ export const query = graphql`
                         _rawAsset
                     }
                     slug {
-                    current
+                        current
+                    }
+                    studyprogramme {
+                        title
                     }
                 }
             }
