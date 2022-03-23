@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
         <div key={programme.node.code}>
           <h2>{programme.node.name}</h2>
           <p>{programme.node.description[0].children[0].text}</p>
-          <Link to={`/${programme.node.code}`}>Til utstilling</Link>
+          <Link to={`${programme.node.slug.current}`}>Til utstilling</Link>
         </div>
       ))}
     </>
@@ -32,6 +32,9 @@ export const query = graphql`
             children {
               text
             }
+          }
+          slug {
+            current
           }
         }
       }
