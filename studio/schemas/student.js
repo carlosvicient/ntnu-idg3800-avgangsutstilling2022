@@ -13,6 +13,7 @@ export default {
       name: 'middle',
       title: 'Middle Name',
       type: 'string',
+      description: 'If student has a middle name add it (optional field)',
     },
     {
       name: 'surname',
@@ -31,6 +32,16 @@ export default {
         maxLength: 96,
         isUnique: isUniqueAcrossAllDocuments,
       },
+      description:
+        'The slug are uniqe and created by using, name-middlename-surname or name-surname',
+    },
+    {
+      name: 'displayName',
+      title: 'Display Name',
+      type: 'string',
+      hidden: true,
+      getFirstLetterSurname: (doc) => `${doc.surname[0]}`,
+      description: 'displayName for the student',
     },
     {
       name: 'studyprogramme',
@@ -38,6 +49,7 @@ export default {
       type: 'reference',
       weak: true,
       to: { type: 'studyprogramme' },
+      description: 'Choose the study program that the student is enrolled in',
     },
     {
       name: 'image',
@@ -46,6 +58,7 @@ export default {
       options: {
         hotspot: true,
       },
+      description: 'Image of the student',
     },
     {
       name: 'bio',
@@ -57,13 +70,21 @@ export default {
           type: 'block',
           styles: [{ title: 'Normal', value: 'normal' }],
           lists: [],
+          options: {
+            maxLength: 100,
+          },
         },
       ],
+      options: {
+        maxLength: 100,
+      },
+      description: 'Short 100 characters',
     },
     {
       name: 'social',
       title: 'Social media links',
       type: 'platform',
+      description: 'Paste the whole link for the social platform',
     },
     {
       name: 'showcase',

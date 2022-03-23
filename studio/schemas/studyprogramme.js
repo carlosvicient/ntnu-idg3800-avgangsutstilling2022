@@ -14,6 +14,15 @@ export default {
       type: 'string',
     },
     {
+      title: 'Instagram',
+      name: 'instagram',
+      type: 'url',
+      validation: (Rule) =>
+        Rule.uri({
+          scheme: ['http', 'https', 'mailto', 'tel'],
+        }),
+    },
+    {
       name: 'title',
       title: 'Title',
       type: 'string',
