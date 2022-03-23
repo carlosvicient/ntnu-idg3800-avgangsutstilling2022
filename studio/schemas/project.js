@@ -7,6 +7,9 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
+      options: {
+        required: true,
+      },
     },
     {
       name: 'slug',
@@ -15,6 +18,7 @@ export default {
       options: {
         source: (doc) => `${doc.title}`,
         maxLength: 96,
+        required: true,
       },
     },
     {
@@ -23,12 +27,17 @@ export default {
       type: 'image',
       options: {
         hotspot: true,
+        required: true,
       },
     },
     {
       name: 'description',
       title: 'Description',
       type: 'blockContent',
+      options: {
+        maxLength: 100,
+        required: true,
+      },
     },
   ],
 

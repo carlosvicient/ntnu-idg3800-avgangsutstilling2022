@@ -8,17 +8,27 @@ export default {
       name: 'name',
       title: 'Name',
       type: 'string',
+      options: {
+        required: true,
+      },
     },
     {
       name: 'middle',
       title: 'Middle Name',
       type: 'string',
       description: 'If student has a middle name add it (optional field)',
+      options: {
+        required: true,
+      },
     },
     {
-      name: 'surname',
-      title: 'Surname',
+      name: 'firstlettersurname',
+      title: 'First Letter Surname',
       type: 'string',
+      options: {
+        maxLength: 1,
+        required: true,
+      },
     },
     {
       name: 'slug',
@@ -27,21 +37,14 @@ export default {
       options: {
         source: (doc) =>
           !doc.middle
-            ? `${doc.name}-${doc.surname}`
-            : `${doc.name}-${doc.middle}-${doc.surname}`,
+            ? `${doc.name}-${doc.firstlettersurname}`
+            : `${doc.name}-${doc.middle}-${doc.firstlettersurname}`,
         maxLength: 96,
         isUnique: isUniqueAcrossAllDocuments,
+        required: true,
       },
       description:
         'The slug are uniqe and created by using, name-middlename-surname or name-surname',
-    },
-    {
-      name: 'displayName',
-      title: 'Display Name',
-      type: 'string',
-      hidden: true,
-      getFirstLetterSurname: (doc) => `${doc.surname[0]}`,
-      description: 'displayName for the student',
     },
     {
       name: 'studyprogramme',
@@ -50,6 +53,9 @@ export default {
       weak: true,
       to: { type: 'studyprogramme' },
       description: 'Choose the study program that the student is enrolled in',
+      options: {
+        required: true,
+      },
     },
     {
       name: 'image',
@@ -57,6 +63,7 @@ export default {
       type: 'image',
       options: {
         hotspot: true,
+        required: true,
       },
       description: 'Image of the student',
     },
@@ -72,11 +79,13 @@ export default {
           lists: [],
           options: {
             maxLength: 100,
+            required: true,
           },
         },
       ],
       options: {
         maxLength: 100,
+        required: true,
       },
       description: 'Short 100 characters',
     },
