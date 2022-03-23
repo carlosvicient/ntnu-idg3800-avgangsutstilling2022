@@ -7,11 +7,17 @@ export default {
       name: 'name',
       title: 'Name',
       type: 'string',
+      options: {
+        required: true,
+      },
     },
     {
       name: 'code',
       code: 'Code',
       type: 'string',
+      options: {
+        required: true,
+      },
     },
     {
       title: 'Instagram',
@@ -21,11 +27,17 @@ export default {
         Rule.uri({
           scheme: ['http', 'https', 'mailto', 'tel'],
         }),
+      options: {
+        required: true,
+      },
     },
     {
       name: 'title',
       title: 'Title',
       type: 'string',
+      options: {
+        required: true,
+      },
     },
     {
       name: 'slug',
@@ -34,6 +46,7 @@ export default {
       options: {
         source: 'code',
         maxLength: 96,
+        required: true,
       },
     },
     {
@@ -48,6 +61,9 @@ export default {
           lists: [],
         },
       ],
+      options: {
+        required: true,
+      },
     },
   ],
   preview: {
