@@ -5,6 +5,7 @@ import SanityImage from "gatsby-plugin-sanity-image"
 // Components
 import SocialLinks from "../components/SocialLinks"
 import ProjectList from "../components/ProjectList"
+import StudentList from "../components/StudentList"
 
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
@@ -50,19 +51,11 @@ function Student({ data }) {
 
       {/* Liste over de andre studentene innen studieretningen */}
       {studentList.length === 0 ? null : (
-        <>
-          <h2>Studenter - {student.studyprogramme.name}</h2>
-          {studentList.map(({ node }) => (
-            <Link to={`${node.slug.current}`} key={node.id}>
-              <div>
-                <SanityImage asset={node.image._rawAsset} alt="" />
-                <p>
-                  {node.name} {node.firstlettersurname}.
-                </p>
-              </div>
-            </Link>
-          ))}
-        </>
+        <StudentList
+          students={studentList}
+          studyprogramme={student.studyprogramme.name}
+          withSorting={false}
+        />
       )}
     </section>
   )

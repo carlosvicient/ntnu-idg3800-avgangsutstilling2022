@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import StudentCard from "./StudentCard"
 
 // List of students
-const StudentList = ({ students }) => {
+const StudentList = ({ students, withSorting, studyprogramme }) => {
   const [sorting, setSorting] = useState(true)
 
   const sortDesc = (x, y) => {
@@ -28,10 +28,12 @@ const StudentList = ({ students }) => {
 
   return (
     <div>
-      <h2>Studenter</h2>
-      <button aria-label="sorter" onClick={() => handleClick()}>
-        {sorting ? "a - z" : "z - a"}
-      </button>
+      <h2>Studenter {studyprogramme && `- ${studyprogramme}`}</h2>
+      {withSorting && (
+        <button aria-label="sorter" onClick={() => handleClick()}>
+          {sorting ? "a - z" : "z - a"}
+        </button>
+      )}
       {students.map(({ node }) => (
         <StudentCard key={node.id} node={node} />
       ))}

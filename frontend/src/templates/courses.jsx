@@ -24,7 +24,7 @@ export default function Courses({ data }) {
       <p>{description}</p>
 
       {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
-      <StudentList students={students} />
+      <StudentList students={students} withSorting={true} />
     </main>
   )
 }
