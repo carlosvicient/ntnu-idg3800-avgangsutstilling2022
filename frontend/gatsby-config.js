@@ -1,3 +1,5 @@
+const { maxHeaderSize } = require("http");
+
 module.exports = {
   siteMetadata: {
     title: `Avgangsutstilling`,
@@ -30,6 +32,11 @@ module.exports = {
         // Sanity project info (required)
         projectId: "y2aw28t3",
         dataset: "production",
+        defaultImageConfig : {
+          quality: 75,
+          fit: 'max',
+          auto: 'format'
+        }
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
