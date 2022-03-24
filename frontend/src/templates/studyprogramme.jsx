@@ -6,8 +6,6 @@ import StudentList from "../components/StudentList";
 import BackLink from "../components/BackLink";
 import Layout from "../components/Layout";
 
-// Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
-
 export default function Studyprogramme({ data }) {
   const students = data.allSanityStudent.edges
   const name = data.allSanityStudent.edges[0].node.studyprogramme.name;

@@ -1,29 +1,30 @@
-import React, { useEffect, useState } from "react"
-// import * as React from "react"
-import StudentCard from "./StudentCard"
+import React, { useEffect, useState } from "react";
+
+// Components
+import StudentCard from "./StudentCard";
 
 // List of students
 const StudentList = ({ students, withSorting, studyprogramme }) => {
-  const [sorting, setSorting] = useState(true)
+  const [sorting, setSorting] = useState(true);
 
   const sortDesc = (x, y) => {
-    if (x.node.name < y.node.name) return -1
-    return 0
+    if (x.node.name < y.node.name) return -1;
+    return 0;
   }
 
   const sortAsc = (x, y) => {
-    if (x.node.name > y.node.name) return -1
-    return 0
+    if (x.node.name > y.node.name) return -1;
+    return 0;
   }
 
   useEffect(() => {
-    students.sort(sortAsc)
-  }, [students])
+    students.sort(sortAsc);
+  }, [students]);
 
   const handleClick = () => {
-    setSorting(!sorting)
-    if (sorting) students.sort(sortAsc)
-    if (!sorting) students.sort(sortDesc)
+    setSorting(!sorting);
+    if (sorting) students.sort(sortAsc);
+    if (!sorting) students.sort(sortDesc);
   }
 
   return (
@@ -41,4 +42,4 @@ const StudentList = ({ students, withSorting, studyprogramme }) => {
   )
 }
 
-export default StudentList
+export default StudentList;

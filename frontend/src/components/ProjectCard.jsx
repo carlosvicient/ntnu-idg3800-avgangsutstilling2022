@@ -1,5 +1,7 @@
-import React from "react"
-import SanityImage from "gatsby-plugin-sanity-image"
+import React from "react";
+
+// Components
+import SanityImage from "gatsby-plugin-sanity-image";
 
 const ProjectCard = ({ project }) => {
   const { title, description, mainImage } = project
@@ -11,4 +13,4 @@ const ProjectCard = ({ project }) => {
   )
 }
 
-export default ProjectCard
+export default ProjectCard;

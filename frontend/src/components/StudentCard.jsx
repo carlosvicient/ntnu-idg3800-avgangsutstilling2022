@@ -1,13 +1,15 @@
+import React from "react"
 import { Link } from "gatsby"
-import SanityImage from "gatsby-plugin-sanity-image"
-import * as React from "react"
 
-// Student card displaying image and name of a student, linking to the spesific student
+// Components
+import SanityImage from "gatsby-plugin-sanity-image"
+
+// Student card displaying image and name of a student, linking to the specific student
 const StudentCard = ({ node }) => {
   return (
     <Link to={`${node.slug.current}`}>
       <div>
-        <SanityImage asset={node.image._rawAsset} alt="" />
+        <SanityImage asset={node.image._rawAsset} alt={`${node.name}, a student in ${node.studyprogramme.name}`} />
         <p>
           {node.name} {node.surname}
         </p>
@@ -16,4 +18,4 @@ const StudentCard = ({ node }) => {
   )
 }
 
-export default StudentCard
+export default StudentCard;

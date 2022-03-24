@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
+
+// Components
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 
@@ -29,7 +31,7 @@ const IndexPage = ({ data }) => {
       <h2>Hvor</h2>
       <p>Raufossveien 40, 2821 Gjøvik</p>
 
-      {/* Mapper ut hver av kortene som er på siden, linkene er henholdvis /bwu, /bmed og /bixd. Disse kan hardkodes i en navbar */}
+      {/* Mapper ut hver av kortene som er på siden */}
       {studyProgrammes.map(programme => (
         <div key={programme.node.code}>
           <h2>{programme.node.name}</h2>

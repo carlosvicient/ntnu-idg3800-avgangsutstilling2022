@@ -1,14 +1,16 @@
-import React from "react"
-import ProjectCard from "./ProjectCard"
+import React from "react";
+
+// Components
+import ProjectCard from "./ProjectCard";
 
 const ProjectList = ({ showcase }) => {
   return (
     <div>
-      <ProjectCard project={showcase.firstproject} />
-      {/* <ProjectCard project={showcase.secondproject} /> Disse er null atm */}
-      {/* <ProjectCard project={showcase.thirdproject} />  Disse er null atm */}
+      {showcase.firstproject ? <ProjectCard project={showcase.firstproject} /> : null}
+      {showcase.secondproject ? <ProjectCard project={showcase.secondproject} /> : null}
+      {showcase.thirdproject ? <ProjectCard project={showcase.thirdproject} /> : null}
     </div>
   )
 }
 
-export default ProjectList
+export default ProjectList;

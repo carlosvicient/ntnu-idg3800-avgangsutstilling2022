@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const SocialLinks = ({ links }) => {
   return (
@@ -27,4 +27,4 @@ const SocialLinks = ({ links }) => {
   )
 }
 
-export default SocialLinks
+export default SocialLinks;

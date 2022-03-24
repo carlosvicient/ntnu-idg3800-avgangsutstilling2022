@@ -1,5 +1,5 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import { Link } from 'gatsby';
 
 function Navbar() {
     return (
@@ -7,7 +7,7 @@ function Navbar() {
             <ul>
                 <li><Link to='/bmed'>Grafisk design</Link></li>
                 <li><Link to='/bixd'>Interaksjonsdesign</Link></li>
-                <li><Link to='bwu'>Webutvikling</Link></li>
+                <li><Link to='/bwu'>Webutvikling</Link></li>
             </ul>
         </nav>
     );
