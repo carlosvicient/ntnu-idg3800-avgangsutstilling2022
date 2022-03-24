@@ -1,14 +1,14 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
-import Seo from "../components/seo"
-import Footer from "../components/Footer"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
+import Seo from "../components/Seo";
+import Layout from "../components/Layout";
 
 const IndexPage = ({ data }) => {
   const studyProgrammes = data.allSanityStudyprogramme.edges
   //console.log(studyProgrammes);
 
   return (
-    <>
+    <Layout>
       <Seo title="Home" />
       <h1>Avgangsutstilling</h1>
 
@@ -38,8 +38,7 @@ const IndexPage = ({ data }) => {
           <Link to={`${programme.node.slug.current}`}>Til utstilling</Link>
         </div>
       ))}
-      <Footer />
-    </>
+      </Layout>
   )
 }
 

@@ -8,6 +8,7 @@ import StudentList from "../components/StudentList"
 import BioCard from "../components/BioCard"
 import Footer from "../components/Footer"
 import BackLink from "../components/BackLink"
+import Layout from "../components/Layout"
 
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
@@ -25,7 +26,7 @@ function Student({ data }) {
   console.log(studentList)
 
   return (
-    <>
+    <Layout>
       <section>
         {/* Tilbake til course-page */}
         <BackLink to={`/${student.studyprogramme.slug.current}`} />
@@ -54,8 +55,7 @@ function Student({ data }) {
           />
         )}
       </section>
-      <Footer />
-    </>
+    </Layout>
   )
 }
 

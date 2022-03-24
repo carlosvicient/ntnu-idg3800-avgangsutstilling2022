@@ -5,10 +5,11 @@ import { graphql } from "gatsby"
 import StudentList from "../components/StudentList"
 import Footer from "../components/Footer"
 import BackLink from "../components/BackLink"
+import Layout from "../components/Layout"
 
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
-export default function Courses({ data }) {
+export default function Studyprogramme({ data }) {
   const students = data.allSanityStudent.edges
   const name = data.allSanityStudent.edges[0].node.studyprogramme.name
   console.log(data)
@@ -17,8 +18,8 @@ export default function Courses({ data }) {
       .children[0].text
 
   return (
-    <>
-      <main>
+    <Layout>
+      <section>
         {/* Tilbake til forsiden */}
         <BackLink to="/" />
 
@@ -28,9 +29,8 @@ export default function Courses({ data }) {
 
         {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
         <StudentList students={students} withSorting={true} />
-      </main>
-      <Footer />
-    </>
+      </section>
+    </Layout>
   )
 }
 
