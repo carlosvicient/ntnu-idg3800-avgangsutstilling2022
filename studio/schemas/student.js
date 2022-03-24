@@ -22,11 +22,9 @@ export default {
       },
     },
     {
-      name: 'firstlettersurname',
-      title: 'First Letter Surname',
+      name: 'surname',
+      title: 'Surname',
       type: 'string',
-      validation: (Rule) =>
-        Rule.max(1).warning('Can only be one character long'),
       options: {
         required: true,
       },
@@ -88,8 +86,6 @@ export default {
           },
         },
       ],
-      validation: (Rule) =>
-        Rule.max(100).warning('Can only be 100 characters long'),
       options: {
         required: true,
       },
