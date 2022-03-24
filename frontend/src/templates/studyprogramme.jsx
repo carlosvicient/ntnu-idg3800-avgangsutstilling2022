@@ -43,7 +43,7 @@ export const query = graphql`
         node {
           id
           name
-          firstlettersurname
+          surname
           image {
             _rawAsset
           }

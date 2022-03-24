@@ -9,7 +9,7 @@ const StudentCard = ({ node }) => {
       <div>
         <SanityImage asset={node.image._rawAsset} alt="" />
         <p>
-          {node.name} {node.firstlettersurname}
+          {node.name} {node.surname}
         </p>
       </div>
     </Link>

@@ -33,7 +33,7 @@ exports.createPages = async function ({ actions, graphql }) {
     const slug = edge.node.slug.current
     actions.createPage({
       path: slug,
-      component: require.resolve("./src/templates/courses.jsx"),
+      component: require.resolve("./src/templates/studyprogramme.jsx"),
       context: { slug },
     })
   })

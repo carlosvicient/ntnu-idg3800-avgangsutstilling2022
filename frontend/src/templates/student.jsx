@@ -32,7 +32,7 @@ function Student({ data }) {
 
         {/* Overskrift og studieretning */}
         <h1>
-          {student.name} {student.firstlettersurname}
+          {student.name} {student.surname}
         </h1>
         <p>{student.studyprogramme.title}</p>
 
@@ -63,7 +63,7 @@ export const query = graphql`
   query MyQuery($slug: [String] = "", $studyprogramme: [String] = "") {
     sanityStudent(slug: { current: { in: $slug } }) {
       name
-      firstlettersurname
+      surname
       studyprogramme {
         name
         title
@@ -131,7 +131,7 @@ export const query = graphql`
         node {
           id
           name
-          firstlettersurname
+          surname
           image {
             _rawAsset
           }
