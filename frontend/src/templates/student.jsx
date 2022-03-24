@@ -12,17 +12,15 @@ import Layout from "../components/Layout";
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
 function Student({ data }) {
-  const student = data.sanityStudent
-  const allStudents = data.allSanityStudent.edges
-  console.log(student)
-  console.log(allStudents)
+  const student = data.sanityStudent;
+  const allStudents = data.allSanityStudent.edges;
+  
   let studentList = []
   allStudents.forEach(element => {
     if (student.slug.current !== element.node.slug.current) {
       studentList.push(element)
     }
-  })
-  console.log(studentList)
+  });
 
   return (
     <Layout>

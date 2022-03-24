@@ -4,8 +4,7 @@ import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 
 const IndexPage = ({ data }) => {
-  const studyProgrammes = data.allSanityStudyprogramme.edges
-  //console.log(studyProgrammes);
+  const studyProgrammes = data.allSanityStudyprogramme.edges;
 
   return (
     <Layout>
@@ -25,17 +24,18 @@ const IndexPage = ({ data }) => {
       </p>
 
       <h2>Når</h2>
-      <p>Dato</p>
+      <p>3. – 4. juni</p>
 
       <h2>Hvor</h2>
-      <p>Adresse</p>
+      <p>Raufossveien 40, 2821 Gjøvik</p>
 
       {/* Mapper ut hver av kortene som er på siden, linkene er henholdvis /bwu, /bmed og /bixd. Disse kan hardkodes i en navbar */}
       {studyProgrammes.map(programme => (
         <div key={programme.node.code}>
           <h2>{programme.node.name}</h2>
+          <a href={programme.node.instagram} target='_blank' rel="noreferrer">@instagram</a>
           <p>{programme.node.description[0].children[0].text}</p>
-          <Link to={`${programme.node.slug.current}`}>Til utstilling</Link>
+          <Link to={`${programme.node.slug.current}`}><button>Til utstilling</button></Link>
         </div>
       ))}
       </Layout>
@@ -49,6 +49,7 @@ export const query = graphql`
         node {
           code
           name
+          instagram
           description {
             children {
               text

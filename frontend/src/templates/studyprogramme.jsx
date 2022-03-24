@@ -10,11 +10,8 @@ import Layout from "../components/Layout";
 
 export default function Studyprogramme({ data }) {
   const students = data.allSanityStudent.edges
-  const name = data.allSanityStudent.edges[0].node.studyprogramme.name
-  console.log(data)
-  const description =
-    data.allSanityStudent.edges[0].node.studyprogramme.description[0]
-      .children[0].text
+  const name = data.allSanityStudent.edges[0].node.studyprogramme.name;
+  const description = data.allSanityStudent.edges[0].node.studyprogramme.description[0].children[0].text;
 
   return (
     <Layout>
