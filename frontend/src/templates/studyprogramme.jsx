@@ -1,11 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
 // Components
-import StudentList from "../components/StudentList"
-import Footer from "../components/Footer"
-import BackLink from "../components/BackLink"
-import Layout from "../components/Layout"
+import StudentList from "../components/StudentList";
+import BackLink from "../components/BackLink";
+import Layout from "../components/Layout";
 
 // Dette er kun pseudokode for å vise hva som er hva, det må lages komponenter til de forskjellige tingene og legges inn i templaten her
 
