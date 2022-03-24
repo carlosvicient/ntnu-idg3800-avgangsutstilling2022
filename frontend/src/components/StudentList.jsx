@@ -18,7 +18,7 @@ const StudentList = ({ students, withSorting, studyprogramme }) => {
 
   useEffect(() => {
     students.sort(sortAsc)
-  }, [])
+  }, [students])
 
   const handleClick = () => {
     setSorting(!sorting)
