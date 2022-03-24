@@ -1,9 +1,10 @@
-import * as React from "react";
-import { Link, graphql } from "gatsby";
-import Seo from "../components/seo";
+import * as React from "react"
+import { Link, graphql } from "gatsby"
+import Seo from "../components/seo"
+import Footer from "../components/Footer"
 
 const IndexPage = ({ data }) => {
-  const studyProgrammes = data.allSanityStudyprogramme.edges;
+  const studyProgrammes = data.allSanityStudyprogramme.edges
   //console.log(studyProgrammes);
 
   return (
@@ -13,14 +14,21 @@ const IndexPage = ({ data }) => {
 
       {/* Generell informasjon, her må det fylles inn korrekt tekst */}
       <h2>Om</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum
+      </p>
 
       <h2>Når</h2>
       <p>Dato</p>
 
       <h2>Hvor</h2>
       <p>Adresse</p>
-
 
       {/* Mapper ut hver av kortene som er på siden, linkene er henholdvis /bwu, /bmed og /bixd. Disse kan hardkodes i en navbar */}
       {studyProgrammes.map(programme => (
@@ -30,8 +38,9 @@ const IndexPage = ({ data }) => {
           <Link to={`${programme.node.slug.current}`}>Til utstilling</Link>
         </div>
       ))}
+      <Footer />
     </>
-  );
+  )
 }
 
 export const query = graphql`
@@ -53,7 +62,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
 export default IndexPage
-
