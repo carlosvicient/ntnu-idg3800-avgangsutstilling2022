@@ -29,7 +29,7 @@ const StudentList = ({ students, withSorting, studyprogramme }) => {
 
   return (
     <div>
-      <h2>Studenter {studyprogramme && `- ${studyprogramme}`}</h2>
+      <h2>Studenter {studyprogramme && `– ${studyprogramme}`}</h2>
       {withSorting && (
         <button aria-label="sorter" onClick={() => handleClick()}>
           {sorting ? "a - z" : "z - a"}
