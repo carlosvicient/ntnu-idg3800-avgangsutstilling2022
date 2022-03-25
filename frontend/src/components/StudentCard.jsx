@@ -9,7 +9,7 @@ const StudentCard = ({ node }) => {
   return (
     <Link to={`${node.slug.current}`}>
       <div>
-        <SanityImage asset={node.image._rawAsset} alt={`${node.name}, a student in ${node.name}`} />
+        {node.image && <SanityImage asset={node.image._rawAsset} alt={`${node.name}, a student in ${node.name}`} />}
         <p>
           {node.name} {node.surname}
         </p>
