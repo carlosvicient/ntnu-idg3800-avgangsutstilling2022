@@ -16,13 +16,19 @@ const IndexPage = ({ data }) => {
       {/* Generell informasjon, her må det fylles inn korrekt tekst */}
       <h2>Om</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
+        «Antall» studenter fra Bachelor i grafisk design,
+        «antall» studenter fra Bachelor interaksjonsdesign og
+        «antall» studenter fra Bachelor i webutvikling ved NTNU i Gjøvik avslutter tre års studier med en utstilling.
+        Hver student viser utvalgte arbeider fra egenportefølje.
+      </p>
+
+      <p>
+        Utstillingen inkluderer studentarbeider for papirbaserte og elektroniske medier. 
+        Kjerneområder for de ulike studieretningene vil for grafisk design være typografi og informasjonsdesign. 
+        Interaksjonsdesign har hatt fokus på tjenestedesign og å utforme løsninger som støtter opp under menneskers 
+        kommunikasjon og samhandling. 
+        For webutvikling er innovative og brukervennlige webløsninger vektlagt. 
+        Fellesnevnere for allestudieretningene er universell utforming samt brukersentrert design og utvikling.
       </p>
 
       <h2>Når</h2>
@@ -40,7 +46,7 @@ const IndexPage = ({ data }) => {
           <Link to={`${programme.node.slug.current}`}><button>Til utstilling</button></Link>
         </div>
       ))}
-      </Layout>
+    </Layout>
   )
 }
 
