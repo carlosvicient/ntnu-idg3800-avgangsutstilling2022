@@ -2,10 +2,20 @@ import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+// Style
+import * as style from "../styles/header.module.css"
+
 function Navbar() {
   return (
-    <header>
+    <header className={style.header}>
       <nav>
+
+        {/* Burger for mobile */}
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+
         <ul>
           <li>
             <Link to="/bmed">Grafisk design</Link>
@@ -21,6 +31,7 @@ function Navbar() {
       <StaticImage
         src="../assets/images/logo.svg"
         alt="Avgangsutstilling 2022, logo"
+        className={style.staticImg}
       />
     </header>
   )
