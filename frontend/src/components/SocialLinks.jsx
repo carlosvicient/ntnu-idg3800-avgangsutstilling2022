@@ -5,9 +5,9 @@ import { GrLinkedinOption } from "react-icons/gr"
 import { BsInstagram, BsBehance } from "react-icons/bs"
 import * as styles from "../styles/socialLinks.module.css"
 
-/**Hvis vi alltid skal ha behance, insta og linked in, så funker dette
+/**Hvis vi alltid skal ha behance, insta og linked in, så funker koden som er kommentert ut nedenfor
  *
- * Men! hvis vi vil velge hva vi skal presentere så brukes det som er under den
+ * Men! hvis vi vil velge hva vi skal presentere, så brukes det som er under den
  * kommenterte koden, se linje 60
  */
 
@@ -65,7 +65,6 @@ const SocialLinks = ({ links }) => {
     <IconContext.Provider
       value={{
         className: "shared-class",
-
         size: "24px",
       }}
     >
