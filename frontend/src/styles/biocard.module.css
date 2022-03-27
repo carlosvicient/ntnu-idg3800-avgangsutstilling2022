@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  /* max-width: 400px; */
+  margin: 1em;
+  justify-content: space-between;
+  text-align: start;
+}
+
+.cardContainer {
+  max-width: 40%;
+  flex: 1 1 40%;
+}
+
+.fullName {
+  margin-bottom: 0.5em;
+}
+
+.studyProgramme {
+  margin-bottom: 1em;
+}
+
+.profileImageContainer {
+  border: 1px solid black;
+  margin-bottom: 1em;
+}
+
+.profileImage {
+  width: 100%;
+}
+
+.bioContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 50%;
+  max-width: 50%;
+
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .cardContainer {
+    max-width: none;
+  }
+
+  .bioContainer {
+    margin-top: 1em;
+    max-width: none;
+  }
+
+  .test {
+    order: 3;
+  }
+}
