@@ -1,6 +1,5 @@
 .allIconsContainer {
   display: flex;
-
   align-items: center;
   max-width: 400px;
   color: var(--tekstSort);

@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  /* max-width: 400px; */
   margin: 1em;
   justify-content: space-between;
   text-align: start;
@@ -20,7 +19,6 @@
 }
 
 .profileImageContainer {
-  border: 1px solid black;
   margin-bottom: 1em;
 }
 
@@ -34,8 +32,6 @@
   align-items: center;
   flex: 1 1 50%;
   max-width: 50%;
-
-  border: 1px solid black;
 }
 
 @media only screen and (max-width: 600px) {
