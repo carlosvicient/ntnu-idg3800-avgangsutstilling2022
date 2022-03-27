@@ -1,0 +1,38 @@
+.footer {
+    background-color: var(--tekstSort);
+    color: var(--bakgrunnHvit);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.gridItem {
+    height: 100%;
+}
+
+.gridItem:last-child {
+    text-align: right;
+}
+
+.gridItem p {
+    padding-top: .1rem;
+}
+
+.staticImg {
+    max-width: 300px;
+    filter: drop-shadow(rgba(20, 20, 20, 0.5) 2px 2px 2px);
+}
+
+
+
+@media (max-width: 600px) {
+    .footer {
+        grid-template-columns: 1fr;
+    }
+    .gridItem:last-child {
+        margin-top: 2rem;
+    }
+}
