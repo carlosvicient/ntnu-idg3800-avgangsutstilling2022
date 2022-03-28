@@ -2166,6 +2166,29 @@
     "schema-utils" "^2.6.5"
     "source-map" "^0.7.3"
 
+"@prefresh/babel-plugin@^0.4.0", "@prefresh/babel-plugin@^0.4.1":
+  "integrity" "sha512-fYAWbU1WDSLn108kKY4eDaaeUcnszFqXjgaGKYXNZ5NLulpRTpsrY+Sbfo9q8LDpWrBpqIgzjrwNnvglWI1xNQ=="
+  "resolved" "https://registry.npmjs.org/@prefresh/babel-plugin/-/babel-plugin-0.4.3.tgz"
+  "version" "0.4.3"
+
+"@prefresh/core@^1.3.3":
+  "integrity" "sha512-s7iNsnyJ3lZEUrYIgmVIB/hKtp4U6mdD91a31Zg7Q8M49O0x2KThrbrMQYraoDDrs4STdFB8Zv6bceUguOoX1A=="
+  "resolved" "https://registry.npmjs.org/@prefresh/core/-/core-1.3.4.tgz"
+  "version" "1.3.4"
+
+"@prefresh/utils@^1.1.2":
+  "integrity" "sha512-Mb9abhJTOV4yCfkXrMrcgFiFT7MfNOw8sDa+XyZBdq/Ai2p4Zyxqsb3EgHLOEdHpMj6J9aiZ54W8H6FTam1u+A=="
+  "resolved" "https://registry.npmjs.org/@prefresh/utils/-/utils-1.1.3.tgz"
+  "version" "1.1.3"
+
+"@prefresh/webpack@^3.3.2":
+  "integrity" "sha512-uT+A7ZuA7fuuUPNEde6Gmzr4oFnzreW9xw6iqw01nPpDiv46o6YWq1j0oGCbdffzHl3fBpcgkPuY07vIfmZ9Lg=="
+  "resolved" "https://registry.npmjs.org/@prefresh/webpack/-/webpack-3.3.3.tgz"
+  "version" "3.3.3"
+  dependencies:
+    "@prefresh/core" "^1.3.3"
+    "@prefresh/utils" "^1.1.2"
+
 "@rexxars/eventsource-polyfill@^1.0.0":
   "integrity" "sha512-YnrybIoM9WFqmeK1D8p/gutqjJnmXCVFWAU3ucka9M7Dzpen3f2Dy4KsC6k1wDHrCtHQuUHHwZovh3i5UPDaZw=="
   "resolved" "https://registry.npmjs.org/@rexxars/eventsource-polyfill/-/eventsource-polyfill-1.0.0.tgz"
@@ -5944,6 +5967,16 @@
     "globby" "^11.0.4"
     "lodash" "^4.17.21"
 
+"gatsby-plugin-preact@^6.10.1":
+  "integrity" "sha512-uO/ml9iXQTQzm6TX6p9tfj0jDW1sMKEq/dadiKP/858KX216p2qWTU8cRoEsthiZZaS1kbEINgbaVR7df/KiNw=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-preact/-/gatsby-plugin-preact-6.10.1.tgz"
+  "version" "6.10.1"
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "@gatsbyjs/webpack-hot-middleware" "^2.25.2"
+    "@prefresh/babel-plugin" "^0.4.1"
+    "@prefresh/webpack" "^3.3.2"
+
 "gatsby-plugin-react-helmet@^5.9.0":
   "integrity" "sha512-TpPxg0Cl+zH34P9rVzKW+o6ejC6fZpvZMZ4Gs/zZ4uFswSJo6hwj/teUjB1rGAytPE+d6w9cZ2IP1gEM2RR9Ig=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.9.0.tgz"
@@ -9219,6 +9252,18 @@
   dependencies:
     "jimp" "^0.14.0"
 
+"preact-render-to-string@^5.1.8":
+  "integrity" "sha512-ivh2oOGzth0o7XqbatWUQ81WQGoJwSqDKP5z917SoqTWYCAr7dlBzMv3SAMTAu3Gr5g47BJwrvyO44H2Y10ubg=="
+  "resolved" "https://registry.npmjs.org/preact-render-to-string/-/preact-render-to-string-5.1.20.tgz"
+  "version" "5.1.20"
+  dependencies:
+    "pretty-format" "^3.8.0"
+
+"preact@^10.0.0", "preact@^10.3.4", "preact@^10.4.0", "preact@^10.6.6", "preact@>=10":
+  "integrity" "sha512-dgxpTFV2vs4vizwKohYKkk7g7rmp1wOOcfd4Tz3IB3Wi+ivZzsn/SpeKJhRENSE+n8sUfsAl4S3HiCVT923ABw=="
+  "resolved" "https://registry.npmjs.org/preact/-/preact-10.6.6.tgz"
+  "version" "10.6.6"
+
 "prebuild-install@^7.0.1":
   "integrity" "sha512-QBSab31WqkyxpnMWQxubYAHR5S9B2+r81ucocew34Fkl98FhvKIF50jIJnNOBmAZfyNV7vE5T6gd3hTVWgY6tg=="
   "resolved" "https://registry.npmjs.org/prebuild-install/-/prebuild-install-7.0.1.tgz"
@@ -9265,6 +9310,11 @@
   dependencies:
     "lodash" "^4.17.20"
     "renderkid" "^2.0.4"
+
+"pretty-format@^3.8.0":
+  "integrity" "sha1-v77VbV6ad2ZF9LH/eqGjrE+jw4U="
+  "resolved" "https://registry.npmjs.org/pretty-format/-/pretty-format-3.8.0.tgz"
+  "version" "3.8.0"
 
 "probe-image-size@^6.0.0":
   "integrity" "sha512-99PZ5+RU4gqiTfK5ZDMDkZtn6eL4WlKfFyVJV7lFQvH3iGmQ85DqMTOdxorERO26LHkevR2qsxnHp0x/2UDJPA=="
