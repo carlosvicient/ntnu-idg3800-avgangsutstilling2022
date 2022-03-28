@@ -1,24 +1,24 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from "react"
+import { graphql } from "gatsby"
 
 // Components
-import SocialLinks from "../components/SocialLinks";
-import ProjectList from "../components/ProjectList";
-import StudentList from "../components/StudentList";
-import BioCard from "../components/BioCard";
-import BackLink from "../components/BackLink";
-import Layout from "../components/Layout";
+import SocialLinks from "../components/SocialLinks"
+import ProjectList from "../components/ProjectList"
+import StudentList from "../components/StudentList"
+import BioCard from "../components/BioCard"
+import BackLink from "../components/BackLink"
+import Layout from "../components/Layout"
 
 function Student({ data }) {
-  const student = data.sanityStudent;
-  const allStudents = data.allSanityStudent.edges;
+  const student = data.sanityStudent
+  const allStudents = data.allSanityStudent.edges
 
   let studentList = []
   allStudents.forEach(element => {
     if (student.slug.current !== element.node.slug.current) {
       studentList.push(element)
     }
-  });
+  })
 
   return (
     <Layout>
@@ -26,17 +26,18 @@ function Student({ data }) {
         {/* Tilbake til course-page */}
         <BackLink to={`/${student.studyprogramme.slug.current}`} />
 
-        {/* Overskrift og studieretning */}
-        <h1>
+        {/* Overskrift og studieretning - update 27.03: Flyttet inn til biocard */}
+        {/* <h1>
           {student.name} {student.surname}
         </h1>
-        <p>{student.studyprogramme.title}</p>
+        <p>{student.studyprogramme.title}</p> */}
 
         {/* Profilbilde og bio */}
         <BioCard student={student} />
 
+        {/* Update 27.03: Sociallinks er puttet inni biocard */}
         {/* Sosiale medier linker */}
-        <SocialLinks links={student.social} />
+        {/* <SocialLinks links={student.social} /> */}
 
         {/* Prosjekter */}
         <ProjectList showcase={student.showcase} />
