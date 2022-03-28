@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className={style.footer}>
       <div className={style.gridItem}>
         <StaticImage 
-          src="../assets/images/ntnu_logo.png" 
+          src="../assets/images/ntnu.svg" 
           alt="NTNU Logo" 
           className={style.staticImg}
         />

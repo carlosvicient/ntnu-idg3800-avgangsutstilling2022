@@ -6,7 +6,6 @@
     grid-template-columns: 1fr 1fr;
 
     padding: 2rem;
-    margin-top: 2rem;
 }
 
 .gridItem {
@@ -23,7 +22,6 @@
 
 .staticImg {
     max-width: 300px;
-    filter: drop-shadow(rgba(20, 20, 20, 0.5) 2px 2px 2px);
 }
 
 
