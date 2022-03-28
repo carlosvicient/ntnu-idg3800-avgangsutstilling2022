@@ -1,0 +1,51 @@
+.backLink {
+    text-decoration: none;
+    font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+    color: var(--tekstSort);
+    font-size: 14px;
+    position: absolute;
+    left: 100px;
+    top: 187px;
+}
+
+.mobileArrow {
+    visibility: hidden;
+}
+
+.desktopArrow {
+    font-weight: bolder;
+    font-size: 20px;
+    color: black;
+}
+
+
+.backLink span {
+    position: relative;
+    margin-left: .5em;
+    bottom: .3em;
+
+}
+
+/* Media queries */
+@media (max-width: 900px) {
+    .backLink {
+        font-size: 16px;
+        left: 15px;
+        top: 120px;
+    }
+
+    .backLink span {
+        margin-left: -.5em;
+        bottom: 0;
+    }
+
+
+    .mobileArrow {
+        visibility: visible;
+    }
+
+    .desktopArrow {
+        visibility: hidden;
+    }
+
+}
