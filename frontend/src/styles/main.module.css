@@ -1,6 +1,5 @@
 /* <main> */
 .main {
-    padding-top: 10vh;
     padding-bottom: 2rem;
     min-height: 95vh; /* Makes sure footer stays at bottom */
     background-color: var(--bakgrunnHvit);
@@ -8,6 +7,6 @@
 
 @media (max-width: 900px) {
     .main {
-        padding-top: 130px;
+        padding-top: 110px;
     }
 }
