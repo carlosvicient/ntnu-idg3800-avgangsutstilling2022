@@ -1,45 +1,27 @@
 .backLink {
     text-decoration: none;
     font-size: 14px;
-    position: absolute;
-    left: 100px;
-    top: 187px;
-}
-
-.mobileArrow {
-    visibility: hidden;
+    margin-left: 11.4vw;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .desktopArrow {
+    order: 0;
     font-weight: bolder;
     font-size: 20px;
     color: black;
 }
 
 .backLink span {
-    position: relative;
+    order: 1;
     margin-left: .5em;
-    bottom: .3em;
 }
 
 /* Media queries */
 @media (max-width: 900px) {
     .backLink {
         font-size: 16px;
-        left: 15px;
-        top: 120px;
-    }
-
-    .backLink span {
-        margin-left: -.5em;
-        bottom: 0;
-    }
-
-    .mobileArrow {
-        visibility: visible;
-    }
-
-    .desktopArrow {
-        visibility: hidden;
     }
 }

@@ -2,9 +2,7 @@
 .header {
     background-color: var(--bakgrunnHvit);
     width: 100%;
-    height: fit-content;
-    position: relative;
-    top: 0;
+    height: 190px;
 }
 
 /* Navigation */
@@ -115,7 +113,6 @@
         left: 2rem;
         min-width: fit-content;
         width: 65%;
-
     }
 
     .header nav ul {
@@ -150,15 +147,14 @@
 
     .header {
         position: fixed;
-        height: 120px;
+        height: 110px;
     }
 
     .header nav {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0px;
         left: 0px;
-        z-index: 1;
         text-align: left;
         width: 0;
         height: 0;
@@ -173,6 +169,8 @@
     .header nav ul {
         grid-template-columns: 1fr;
         border-bottom: none;
+        padding: 30px;
+        padding-bottom: 60px;
         background-color: var(--bakgrunnHvit);
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
@@ -195,6 +193,12 @@
     .staticImg {
         right: 0;
         top: 0;
-        width: 220px;
+        margin: 10px;
+        width: 190px;
+    }
+
+    .bigStaticImg {
+        margin: 10px;
+        width: 260px;
     }
 }
