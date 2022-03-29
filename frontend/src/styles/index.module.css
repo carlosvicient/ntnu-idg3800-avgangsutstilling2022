@@ -1,9 +1,6 @@
 .container {
-
     width: 85%;
     margin: auto;
-
-    /* ser ikke ut som teksten ska ta mer plass enn det i figma*/
 }
 
 .container h1 {
