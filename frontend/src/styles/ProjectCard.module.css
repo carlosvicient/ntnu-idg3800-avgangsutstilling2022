@@ -13,6 +13,7 @@
 .ProjectCard p {
     max-width: 29.1vw;
     margin-right: 4.5vw;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 900px) {
@@ -31,5 +32,6 @@
     .ProjectCard p {
         max-width: 100%;
         margin: 0;
+        font-size: 14px;
     }
 }

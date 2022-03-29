@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // Components
-import SocialLinks from "../components/SocialLinks"
 import ProjectList from "../components/ProjectList"
 import StudentList from "../components/StudentList"
 import BioCard from "../components/BioCard"
@@ -26,18 +25,8 @@ function Student({ data }) {
         {/* Tilbake til course-page */}
         <BackLink to={`/${student.studyprogramme.slug.current}`} />
 
-        {/* Overskrift og studieretning - update 27.03: Flyttet inn til biocard */}
-        {/* <h1>
-          {student.name} {student.surname}
-        </h1>
-        <p>{student.studyprogramme.title}</p> */}
-
         {/* Profilbilde og bio */}
         <BioCard student={student} />
-
-        {/* Update 27.03: Sociallinks er puttet inni biocard */}
-        {/* Sosiale medier linker */}
-        {/* <SocialLinks links={student.social} /> */}
 
         {/* Prosjekter */}
         <ProjectList showcase={student.showcase} />
