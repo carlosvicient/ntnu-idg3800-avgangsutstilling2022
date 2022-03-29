@@ -14,9 +14,16 @@
 /* ------------------- Font family ------------------- */
 
 /* Vi må prøve å få lastet ned fontene lokalt så vi får brukt det på denne måten
- (det var dette Tom mente med bærekraftig)
+(det var dette Tom mente med bærekraftig)
 Hvis ikke vi får lisens, så må vi nesten bare fetche det fra adobe. 
 Muligens bare importere en av fontene og ikke 3 (pga bærekraftighet) */
+
+@import url("https://use.typekit.net/jpr2mtr.css");
+
+:root {
+  --ohno-blazeface: ohno-blazeface, sans-serif;
+  --aktiv-grotesk: aktiv-grotesk, sans-serif;
+}
 
 /* Aktiv grotesk regular */
 
@@ -53,18 +60,12 @@ Muligens bare importere en av fontene og ikke 3 (pga bærekraftighet) */
 
 /* ------------------- Font size ------------------- */
 /* Bare eksempel tall, frem til vi har riktig tall fra design manual v3 */
-html,
-body {
-  font-size: 17px;
-}
 
 :root {
-  --fs-h1: 2.488rem;
-  --fs-h2: 2.074rem;
-  --fs-h3: 1.728rem;
-  --fs-h4: 1.44rem;
-  --fs-h5: 1.2rem;
-  --fs-h6: 1rem;
+  /* Headers */
+  --fs-h1: 36px;
+  --fs-h2: 24px;
+  --fs-h3: 20px;
 }
 
 /* ------------------- Predefined tag styles ------------------- */
@@ -79,54 +80,65 @@ body {
 
 a {
   color: var(--tekstSort);
+  font-family: var(--aktiv-grotesk);
+}
+
+p {
+  font-family: var(--aktiv-grotesk);
+  font-size: 14px;
+  line-height: 114.3%;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+h3 {
+  font-family: var(--ohno-blazeface);
+  color: var(--tekstSort);
 }
 
 h1 {
   font-size: var(--fs-h1);
 }
+
 h2 {
   font-size: var(--fs-h2);
+  margin: 30px 0;
 }
+
 h3 {
   font-size: var(--fs-h3);
 }
-h4 {
-  font-size: var(--fs-h4);
-}
-h5 {
-  font-size: var(--fs-h5);
-}
-h6 {
-  font-size: var(--fs-h6);
-}
+
 
 /* ------------------- Mobile font size ------------------- */
 
 @media (min-width: 830px) {
   :root {
-    --fs-h1: 5.653rem;
-    --fs-h2: 2.827rem;
-    --fs-h3: 1.999rem;
-    --fs-h4: 1.414rem;
-    --fs-h5: 1rem;
-    --fs-h6: 0.8rem;
+    /* Headers */
+    --fs-h2: 36px;
+    --fs-h3: 24px;
+    --fs-h4: 20px;
+    --fs-h5: 18px;
+    --fs-h6: 12px;
+
+    /* Body */
+    --fs-pl: 20px;
+    --fs-pm: 18px;
+    --fs-ps: 14px;
+    --fs-pxs: 12px;
 
     --padding-xl: 7em;
   }
 }
 
 @media screen and (min-width: 830px) {
+
   html,
   body {
     font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
   }
 }

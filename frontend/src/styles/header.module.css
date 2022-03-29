@@ -26,18 +26,17 @@
     border-bottom: #DDD5B8 1px solid;
 }
 
-.header nav  ul li {
+.header nav ul li {
     margin: auto;
 }
 
-.header nav  ul li a {
-    /* font-family: Helvetica Neue ; wip */
-    font-family: Arial, Helvetica, sans-serif ; /* TEMPORARY */
-    font-weight: 600;                           /* TEMPORARY // Unsure */
+.header nav ul li a {
+    font-size: 14px;
+    font-weight: 700;
     color: var(--tekstSort);
     padding: 1rem;
     text-decoration: none;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .header nav ul li a:hover {
@@ -83,17 +82,17 @@
     transform-origin: 0% 100%;
 }
 
-.header nav input:checked ~ span {
+.header nav input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
 }
 
-.header nav input:checked ~ span:nth-last-child(3) {
+.header nav input:checked~span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-.header nav input:checked ~ span:nth-last-child(2) {
+.header nav input:checked~span:nth-last-child(2) {
     transform: rotate(-45deg);
 }
 
@@ -105,7 +104,8 @@
     width: 370px;
 }
 
-@media (max-width: 1200px) {   
+@media (max-width: 1200px) {
+
     /* Navigation */
     .header nav {
         position: relative;
@@ -114,7 +114,7 @@
         min-width: fit-content;
         width: 65%;
     }
-    
+
     .header nav ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -123,8 +123,8 @@
         height: fit-content;
         padding: 15px 0;
     }
-    
-    .header nav  ul li a {
+
+    .header nav ul li a {
         padding: 1rem .5rem;
     }
 
@@ -138,8 +138,10 @@
 }
 
 @media (max-width: 900px) {
+
     /* Navigation */
-    .header nav input, .header nav span {
+    .header nav input,
+    .header nav span {
         display: block;
     }
 
@@ -148,7 +150,7 @@
         height: 110px;
     }
 
-    .header nav  {
+    .header nav {
         display: block;
         position: fixed;
         top: 0px;
@@ -160,11 +162,11 @@
         user-select: none;
     }
 
-    .header nav input:checked ~ ul {
+    .header nav input:checked~ul {
         transform: none;
     }
 
-    .header nav  ul {
+    .header nav ul {
         grid-template-columns: 1fr;
         border-bottom: none;
         padding: 30px;
@@ -180,8 +182,11 @@
         padding: 1rem 0;
     }
 
-    .header nav  ul li a {
+    .header nav ul li a {
         padding: 2rem 0;
+        font-size: 12px;
+        font-weight: 500;
+        color: black;
     }
 
     /* Logo */

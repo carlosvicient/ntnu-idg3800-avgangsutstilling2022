@@ -17,6 +17,11 @@
   width: 2.25em;
 }
 
+.portfolioLink {
+  font-weight: 700;
+  font-size: 14px;
+}
+
 .socialLinkIcon {
   color: var(--tekstSort);
 }
