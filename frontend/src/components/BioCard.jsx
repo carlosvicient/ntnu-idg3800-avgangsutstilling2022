@@ -27,13 +27,7 @@ const BioCard = ({ student }) => {
         </div>
       </div>
       <div className={styles.bioContainer}>
-        <p className={styles.bio}>
-          {student.bio[0].children[0].text} Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Dolor, explicabo obcaecati. Rem alias
-          autem consequatur nostrum deleniti magnam, saepe labore, ducimus
-          assumenda veniam repudiandae ipsam voluptatum commodi quae laboriosam!
-          Eaque!
-        </p>
+        <p className={styles.bio}>{student.bio[0].children[0].text}</p>
       </div>
     </div>
   )
