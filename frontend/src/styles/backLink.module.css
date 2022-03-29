@@ -1,7 +1,5 @@
 .backLink {
     text-decoration: none;
-    font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
-    color: var(--tekstSort);
     font-size: 14px;
     position: absolute;
     left: 100px;
@@ -18,12 +16,10 @@
     color: black;
 }
 
-
 .backLink span {
     position: relative;
     margin-left: .5em;
     bottom: .3em;
-
 }
 
 /* Media queries */
@@ -39,7 +35,6 @@
         bottom: 0;
     }
 
-
     .mobileArrow {
         visibility: visible;
     }
@@ -47,5 +42,4 @@
     .desktopArrow {
         visibility: hidden;
     }
-
 }
