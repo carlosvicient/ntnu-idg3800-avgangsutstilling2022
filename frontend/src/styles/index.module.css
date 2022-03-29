@@ -1,0 +1,154 @@
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.container h1 {
+    text-indent: -999em;
+    /* flytter den helt ut av siden - endre font-size om det er for stor top-margin*/
+}
+
+.container h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+
+}
+
+.greenLine {
+    border-left: 5px solid var(--elementGrønn);
+    padding-left: 9px;
+    margin-left: -14px;
+
+}
+
+.containerText {
+    width: 50%;
+}
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    position: relative;
+
+}
+
+.gridContainer h2 {
+    font-size: 24px;
+    margin-left: 43px;
+    margin-top: 36px;
+    margin-bottom: 10px;
+}
+
+.containerText {
+    width: 100%;
+}
+
+.boxes {
+    border: 2px solid #DDD5B8;
+    /*fulgte målene i Figma*/
+    width: 369px;
+    height: 319px;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.social {
+    text-decoration: none;
+    color: black;
+}
+
+.boxes p,
+.social {
+    color: var(--tekstSort);
+    margin: 10px 41px 25px 43px !important;
+
+}
+
+.boxes button {
+    color: black;
+    font-size: 12px;
+    font-weight: 400;
+    width: 299px;
+    height: 32px;
+    background-color: var(--bakgrunnHvit);
+    border: 1px solid var(--elementGrønn);
+    cursor: pointer;
+    position: absolute;
+    bottom: 2em;
+    margin-left: 50%;
+    transform: translateX(-50%)
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1300px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .gridContainer {
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+        margin-top: 3rem;
+
+    }
+
+    .boxes {
+        margin: auto;
+        width: 100%;
+        position: relative;
+
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    .container {
+        width: 90%;
+
+    }
+
+    .gridContainer {
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+        margin: auto;
+    }
+
+    .container p,
+    .container h2 {
+        margin-left: 30px;
+    }
+
+    .greenLine {
+        margin-left: 18px !important;
+        border-left: none;
+
+    }
+
+    .boxes {
+        margin-top: 3rem;
+    }
+
+    .boxes button {
+        width: 50vw;
+    }
+
+    .boxes h2 {
+        margin-left: 43px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 90%;
+
+    }
+
+
+}
