@@ -1,6 +1,7 @@
 .container {
   display: flex;
-  margin: 1em;
+  margin-right: 4vw;
+  margin-left: 11.4vw;  
   justify-content: space-between;
   text-align: start;
 }
@@ -23,10 +24,11 @@
 
 .profileImageContainer {
   margin-bottom: 1em;
+  margin-top: 25px;
 }
 
 .profileImage {
-  width: 100%;
+  width: 27.8vw;
 }
 
 .bioContainer {
@@ -43,6 +45,7 @@
 @media only screen and (max-width: 600px) {
   .container {
     flex-direction: column;
+    margin: 0 5vw;
   }
 
   .cardContainer {
