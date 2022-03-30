@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import * as styles from "../styles/biocard.module.css"
 import SocialLinks from "./SocialLinks"
 
@@ -6,6 +6,16 @@ import SocialLinks from "./SocialLinks"
 import SanityImage from "gatsby-plugin-sanity-image"
 
 const BioCard = ({ student }) => {
+  const [largeScreenSize, setLargeScreenSize] = useState(
+    window.matchMedia("(min-width: 900px)").matches
+  )
+
+  useEffect(() => {
+    window.matchMedia("(min-width: 900px)").addEventListener("change", e => {
+      setLargeScreenSize(e.matches)
+    })
+  })
+
   console.log(student)
   return (
     <div className={styles.container}>
@@ -24,13 +34,16 @@ const BioCard = ({ student }) => {
             />
           )}
         </div>
-        <div className={styles.test}>
+        { largeScreenSize && <div className={styles.test}>
           <SocialLinks links={student.social} />
-        </div>
+        </div>}
       </div>
       <div className={styles.bioContainer}>
         <p className={styles.bio}>{student.bio[0].children[0].text}</p>
       </div>
+      { !largeScreenSize && <div className={styles.test}>
+          <SocialLinks links={student.social} />
+        </div>}
     </div>
   )
 }

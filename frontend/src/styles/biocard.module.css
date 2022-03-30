@@ -42,7 +42,7 @@
   font-size: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .container {
     flex-direction: column;
     margin: 0 5vw;
@@ -58,12 +58,17 @@
   }
 
   .bioContainer {
-    margin-top: 1em;
+    margin-top: 15px;
+    margin-bottom: 25px;
     max-width: none;
   }
 
   .bio {
     font-size: 14px;
+  }
+
+  .profileImage {
+    width: 67.7vw;
   }
 
   .test {
