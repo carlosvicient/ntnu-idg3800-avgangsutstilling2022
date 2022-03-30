@@ -60,7 +60,6 @@ import * as styles from "../styles/socialLinks.module.css"
 /**Hvis vi vil bestemme hvilke ikoner som vises, så funker dette) */
 
 const SocialLinks = ({ links }) => {
-  console.log(links)
   return (
     <IconContext.Provider
       value={{

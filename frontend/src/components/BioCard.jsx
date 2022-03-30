@@ -16,7 +16,6 @@ const BioCard = ({ student }) => {
     })
   })
 
-  console.log(student)
   return (
     <div className={styles.container}>
       <div className={styles.cardContainer}>
