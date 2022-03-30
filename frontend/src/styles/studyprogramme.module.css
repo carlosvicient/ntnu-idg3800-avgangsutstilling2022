@@ -1,0 +1,12 @@
+.header {
+  padding: 1rem 7.5vw;
+}
+.header p {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 900px) {
+  .header {
+    padding: 1rem 7.2vw;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react"
+import * as styles from "../styles/studyprogramme.module.css"
 import { graphql } from "gatsby"
 
 // Components
@@ -8,6 +9,7 @@ import Layout from "../components/Layout"
 
 export default function Studyprogramme({ data }) {
   const students = data.allSanityStudent.edges
+  console.log('students', students)
   const name = data.allSanityStudent.edges[0].node.studyprogramme.name
   const description =
     data.allSanityStudent.edges[0].node.studyprogramme.description[0]
@@ -20,8 +22,10 @@ export default function Studyprogramme({ data }) {
         <BackLink to="/" />
 
         {/* Overskrift og description */}
-        <h2>{name}</h2>
-        <p>{description}</p>
+        <header className={styles.header}>
+          <h2 >{name}</h2>
+          <p>{description}</p>
+        </header>
 
         {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
         <StudentList students={students} withSorting={true} />
@@ -40,6 +44,7 @@ export const query = graphql`
           id
           name
           surname
+          middle
           image {
             _rawAsset
           }

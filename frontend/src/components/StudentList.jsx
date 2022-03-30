@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import * as styles from "../styles/studentlist.module.css"
+import { AiOutlineSortAscending, AiOutlineSortDescending } from "react-icons/ai"
 
 // Components
 import StudentCard from "./StudentCard";
@@ -29,15 +31,19 @@ const StudentList = ({ students, withSorting, studyprogramme }) => {
 
   return (
     <div>
-      <h3>Studenter {studyprogramme && `– ${studyprogramme}`}</h3>
-      {withSorting && (
-        <button aria-label="sorter" onClick={() => handleClick()}>
-          {sorting ? "a - z" : "z - a"}
-        </button>
-      )}
-      {students.map(({ node }) => (
-        <StudentCard key={node.id} node={node} />
-      ))}
+      <div className={styles.sortHead}>
+        <h3>Studenter {studyprogramme && `– ${studyprogramme}`}</h3>
+        {withSorting && (
+          <button className={styles.button} aria-label="sorter" onClick={() => handleClick()}>
+            {sorting ? <AiOutlineSortAscending /> : <AiOutlineSortDescending />}
+          </button>
+        )}
+      </div>
+      <div className={styles.studentGrid}>
+        {students.map(({ node }) => (
+          <StudentCard key={node.id} node={node} />
+        ))}
+      </div>
     </div>
   )
 }
