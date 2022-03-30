@@ -1,5 +1,5 @@
 .container {
-    width: 85%;
+    width: 84vw;
     margin: auto;
 }
 
@@ -17,6 +17,7 @@
 .container p {
     font-size: 14px;
     color: var(--tekstSort);
+    margin-bottom: 22px;
 }
 
 .greenLine {
@@ -26,33 +27,27 @@
 }
 
 .containerText {
-    width: 50%;
+    margin-bottom: 42px;
 }
 
+.containerText p {
+    width: 32.4vw;
+}
+
+/* Study programme containers */
 .gridContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
-    position: relative;
-}
-
-.gridContainer h2 {
-    font-size: 24px;
-    margin-left: 43px;
-    margin-top: 36px;
-    margin-bottom: 10px;
-}
-
-.containerText {
-    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3.4vw;
 }
 
 .boxes {
     border: 2px solid #DDD5B8;
-    width: 369px;
-    height: 319px;
-    margin-top: 3rem;
-    position: relative;
+    height: 100%;
+    padding: 2.6vw 2.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .social {
@@ -63,72 +58,66 @@
 
 .boxes h2 {
     font-size: 24px;
+    margin: 0 0 10px 0;
 }
 
 .boxes p {
     color: var(--tekstSort);
     font-size: 12px;
-}
-
-.boxes p,
-.social {
-    margin: 10px 41px 25px 43px !important;
+    margin-top: 25px;
+    margin-bottom: 57px;
 }
 
 .boxes button {
     font-family: var(--aktiv-grotesk);
     font-size: 12px;
-    width: 299px;
+    width: 100%;
     height: 32px;
     background-color: var(--bakgrunnHvit);
     border: 1px solid var(--elementGrønn);
     cursor: pointer;
-    position: absolute;
-    bottom: 2em;
-    margin-left: 50%;
-    transform: translateX(-50%)
+    bottom: 38px;
 }
 
 /* Media Queries */
-
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1200px) {
 
     .container {
-        width: 80%;
+        width: 80vw;
+    }
+
+    .containerText p {
+        width: 50vw;
     }
 
     .gridContainer {
         grid-template-columns: 1fr;
         grid-gap: 24px;
-        margin-top: 3rem;
-    }
-
-    .boxes {
-        margin: auto;
-        width: 100%;
-        position: relative;
     }
 }
 
 @media only screen and (max-width: 900px) {
 
     .container {
-        width: 90%;
+        width: 90vw;
     }
 
     .gridContainer {
         grid-template-columns: 1fr;
         row-gap: 24px;
-        margin: auto;
     }
 
-    .container p {
+    .containerText {
+        margin-left: 8.3vw;
+    }
+
+    .containerText p {
         font-size: 12px;
+        width: 64.8vw;
     }
 
     .container p,
     .container h2 {
-        margin-left: 30px;
         margin-bottom: 3px;
     }
 
@@ -137,21 +126,26 @@
     }
 
     .greenLine {
-        margin-left: 18px !important;
-        border-left: none;
+        border: none;
         font-size: 18px !important;
+        padding-left: 0;
+        margin-left: 0;
+        margin-bottom: 7px !important;
     }
 
     .boxes {
-        margin-top: 3rem;
-    }
-
-    .boxes button {
-        width: 50vw;
+        padding: 8.2vw;
     }
 
     .boxes h2 {
-        margin-left: 43px;
         font-size: 18px;
+    }
+
+    .boxes p {
+        margin-bottom: 40px;
+    }
+
+    .boxes button {
+        box-shadow: 0px 4px 9px rgba(27, 26, 26, 0.05);
     }
 }
