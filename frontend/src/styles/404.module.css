@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+}
+
+.back {
+    cursor: pointer;
+}
+
+.container p {
+    margin-top: 20px;
+    font-size: 16px;
+}
