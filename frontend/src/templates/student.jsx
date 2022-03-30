@@ -123,6 +123,11 @@ export const query = graphql`
           slug {
             current
           }
+          studyprogramme {
+            slug {
+              current
+            }
+          }
         }
       }
     }

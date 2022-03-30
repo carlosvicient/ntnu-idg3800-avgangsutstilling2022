@@ -51,6 +51,9 @@ export const query = graphql`
                 text
               }
             }
+            slug {
+              current
+            }
           }
           slug {
             current
