@@ -1,0 +1,27 @@
+.backLink {
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 11.4vw;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.desktopArrow {
+    order: 0;
+    font-weight: bolder;
+    font-size: 20px;
+    color: black;
+}
+
+.backLink span {
+    order: 1;
+    margin-left: .5em;
+}
+
+/* Media queries */
+@media (max-width: 900px) {
+    .backLink {
+        font-size: 16px;
+    }
+}

@@ -21,7 +21,8 @@
     "prop-types": "^15.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "prettier": "^2.5.1"

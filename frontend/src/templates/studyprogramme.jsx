@@ -1,15 +1,17 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from "react"
+import { graphql } from "gatsby"
 
 // Components
-import StudentList from "../components/StudentList";
-import BackLink from "../components/BackLink";
-import Layout from "../components/Layout";
+import StudentList from "../components/StudentList"
+import BackLink from "../components/BackLink"
+import Layout from "../components/Layout"
 
 export default function Studyprogramme({ data }) {
   const students = data.allSanityStudent.edges
-  const name = data.allSanityStudent.edges[0].node.studyprogramme.name;
-  const description = data.allSanityStudent.edges[0].node.studyprogramme.description[0].children[0].text;
+  const name = data.allSanityStudent.edges[0].node.studyprogramme.name
+  const description =
+    data.allSanityStudent.edges[0].node.studyprogramme.description[0]
+      .children[0].text
 
   return (
     <Layout>
@@ -18,7 +20,7 @@ export default function Studyprogramme({ data }) {
         <BackLink to="/" />
 
         {/* Overskrift og description */}
-        <h1>{name}</h1>
+        <h2>{name}</h2>
         <p>{description}</p>
 
         {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
