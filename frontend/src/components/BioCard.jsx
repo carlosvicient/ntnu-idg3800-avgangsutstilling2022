@@ -16,13 +16,13 @@ const BioCard = ({ student }) => {
         </h2>
         <p className={styles.studyProgramme}>Grafisk designer</p>
         <div className={styles.profileImageContainer}>
-          {student.image && <SanityImage
+          {student.image && (
             <SanityImage
               className={styles.profileImage}
               asset={student.image._rawAsset}
               alt={`${student.name}`}
             />
-           />}
+          )}
         </div>
         <div className={styles.test}>
           <SocialLinks links={student.social} />
