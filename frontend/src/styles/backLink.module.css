@@ -1,7 +1,7 @@
 .backLink {
     text-decoration: none;
     font-size: 14px;
-    margin-left: 11.4vw;
+    margin-left: 110px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -22,6 +22,7 @@
 /* Media queries */
 @media (max-width: 900px) {
     .backLink {
+        margin-left: 30px;
         font-size: 16px;
     }
 }
