@@ -1,7 +1,7 @@
 .container {
   display: flex;
   margin-right: 4vw;
-  margin-left: 11.4vw;  
+  margin-left: 11.4vw;
   justify-content: space-between;
   text-align: start;
 }
