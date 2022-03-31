@@ -6,18 +6,22 @@ import ImageCarousel from "./ImageCarousel"
 import ProjectCard from "./ProjectCard"
 
 const ProjectList = ({ showcase }) => {
-  const [largeScreenSize, setLargeScreenSize] = useState(
-    window.matchMedia("(min-width: 900px)").matches
-  )
+  let match = ""
+  if (typeof window !== "undefined") {
+    match = window.matchMedia("(min-width: 900px)").matches
+  }
+  const [largeScreenSize, setLargeScreenSize] = useState(match)
   const [showImageCarousel, setShowImageCarousel] = useState(false)
   const [currentImage, setCurrentImage] = useState(0)
   const projects = Object.values(showcase).filter(project => project)
 
   useEffect(() => {
-    window.matchMedia("(min-width: 900px)").addEventListener("change", e => {
-      setShowImageCarousel(prev => false)
-      setLargeScreenSize(e.matches)
-    })
+    if (typeof window !== "undefined") {
+      window.matchMedia("(min-width: 900px)").addEventListener("change", e => {
+        setShowImageCarousel(prev => false)
+        setLargeScreenSize(e.matches)
+      })
+    }
   })
 
   const toggleImageCarouselState = () => {
@@ -25,7 +29,7 @@ const ProjectList = ({ showcase }) => {
   }
 
   const startCarousel = image => {
-    const idx = projects.findIndex(element => element == image)
+    const idx = projects.findIndex(element => element === image)
     setShowImageCarousel(prev => true)
     setCurrentImage(idx)
   }

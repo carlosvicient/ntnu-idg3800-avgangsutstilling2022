@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -6,12 +6,14 @@ import { StaticImage } from "gatsby-plugin-image"
 import * as style from "../styles/header.module.css"
 
 function Navbar() {
-  const path = window.location.pathname
+  let path = ""
+  if (typeof window !== "undefined") {
+    path = window.location.pathname
+  }
 
   return (
     <header className={style.header}>
       <nav>
-
         {/* Burger for mobile */}
         <input type="checkbox" />
         <span></span>
@@ -34,7 +36,11 @@ function Navbar() {
         <StaticImage
           src="../assets/images/logo.svg"
           alt="Avgangsutstilling 2022, logo"
-          className={path == "/" ? `${style.bigStaticImg} ${style.staticImg}` : style.staticImg }
+          className={
+            path === "/"
+              ? `${style.bigStaticImg} ${style.staticImg}`
+              : style.staticImg
+          }
         />
       </Link>
     </header>

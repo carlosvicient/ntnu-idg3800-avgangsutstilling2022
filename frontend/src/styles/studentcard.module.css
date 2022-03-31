@@ -8,27 +8,33 @@
   margin-bottom: 1rem;
   transition: all 0.2s ease-in-out;
 }
+
 .studentCard:hover {
   box-shadow: 0.5rem 0.5rem 0 var(--elementGrønn);
   color: var(--elementGrønn);
 }
+
 .studentCard:focus-visible {
   box-shadow: 0.5rem 0.5rem 0 var(--elementGrønn) !important;
 }
+
 .studentCardName {
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
 }
+
 .studentImage {
   max-height: 100%;
   min-width: 100%;
   object-fit: cover;
   vertical-align: bottom;
 }
+
 .nodeco {
   text-decoration: none;
 }
+
 @media only screen and (max-width: 900px) {
   .studentCard {
     height: 25.8vw;
@@ -42,5 +48,9 @@
     height: 38.5vw;
     width: 38.5vw;
     margin-bottom: 2rem;
+  }
+
+  .studentCard p {
+    font-size: 14px;
   }
 }

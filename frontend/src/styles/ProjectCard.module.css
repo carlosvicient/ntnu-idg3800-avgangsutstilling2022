@@ -16,22 +16,35 @@
     font-size: 20px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     .ProjectCard {
         flex-direction: column;
         gap: 8px;
+        width: 76vw;
+    }
+
+    .ProjectCard img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .ProjectCard p {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ProjectCard {
         width: 87.2vw;
     }
 
     .ProjectCard img {
         cursor: default;
         width: 100%;
-        margin: 0;
     }
 
     .ProjectCard p {
-        max-width: 100%;
-        margin: 0;
         font-size: 14px;
     }
 }

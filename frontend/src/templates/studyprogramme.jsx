@@ -9,7 +9,6 @@ import Layout from "../components/Layout"
 
 export default function Studyprogramme({ data }) {
   const students = data.allSanityStudent.edges
-  console.log('students', students)
   const name = data.allSanityStudent.edges[0].node.studyprogramme.name
   const description =
     data.allSanityStudent.edges[0].node.studyprogramme.description[0]
@@ -23,7 +22,7 @@ export default function Studyprogramme({ data }) {
 
         {/* Overskrift og description */}
         <header className={styles.header}>
-          <h2 >{name}</h2>
+          <h2>{name}</h2>
           <p>{description}</p>
         </header>
 

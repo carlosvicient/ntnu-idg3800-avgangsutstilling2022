@@ -1,6 +1,7 @@
 .container {
-  width: 84vw;
-  margin: auto;
+    width: 84vw;
+    margin: auto;
+    margin-bottom: 100px;
 }
 
 .container h1 {
