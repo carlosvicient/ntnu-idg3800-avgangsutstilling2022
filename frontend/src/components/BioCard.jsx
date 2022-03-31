@@ -6,14 +6,18 @@ import SocialLinks from "./SocialLinks"
 import SanityImage from "gatsby-plugin-sanity-image"
 
 const BioCard = ({ student }) => {
-  const [largeScreenSize, setLargeScreenSize] = useState(
-    window.matchMedia("(min-width: 900px)").matches
-  )
+  let match = ""
+  if (typeof window !== "undefined") {
+    match = window.matchMedia("(min-width: 900px)").matches
+  }
+  const [largeScreenSize, setLargeScreenSize] = useState(match)
 
   useEffect(() => {
-    window.matchMedia("(min-width: 900px)").addEventListener("change", e => {
-      setLargeScreenSize(e.matches)
-    })
+    if (typeof window !== "undefined") {
+      window.matchMedia("(min-width: 900px)").addEventListener("change", e => {
+        setLargeScreenSize(e.matches)
+      })
+    }
   })
 
   return (
@@ -33,16 +37,20 @@ const BioCard = ({ student }) => {
             />
           )}
         </div>
-        { largeScreenSize && <div className={styles.test}>
-          <SocialLinks links={student.social} />
-        </div>}
+        {largeScreenSize && (
+          <div className={styles.test}>
+            <SocialLinks links={student.social} />
+          </div>
+        )}
       </div>
       <div className={styles.bioContainer}>
         <p className={styles.bio}>{student.bio[0].children[0].text}</p>
       </div>
-      { !largeScreenSize && <div className={styles.test}>
+      {!largeScreenSize && (
+        <div className={styles.test}>
           <SocialLinks links={student.social} />
-        </div>}
+        </div>
+      )}
     </div>
   )
 }

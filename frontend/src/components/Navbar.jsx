@@ -6,7 +6,10 @@ import { StaticImage } from "gatsby-plugin-image"
 import * as style from "../styles/header.module.css"
 
 function Navbar() {
-  const path = window.location.pathname
+  let path = ""
+  if (typeof window !== "undefined") {
+    path = window.location.pathname
+  }
 
   return (
     <header className={style.header}>
