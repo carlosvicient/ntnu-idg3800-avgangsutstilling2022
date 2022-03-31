@@ -1,5 +1,6 @@
 .sortHead {
-  margin: 3.1vw 7.5vw;
+  /* margin: 3.1vw 7.5vw; */
+  margin: 55px 7.5vw 32px 7.5vw;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -8,6 +9,11 @@
 .sortHead h3 {
   font-family: var(--aktiv-grotesk);
   font-size: 20px;
+}
+
+.line {
+  border-top: 1px solid #DDD5B8;
+  margin: 17px 7.5vw 44px 7.5vw;
 }
 
 .button {
@@ -25,6 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 3.1vw 7.5vw;
+  margin: 0 7.5vw 3.1vw 7.5vw;
   gap: 3.1vw;
 }
 
