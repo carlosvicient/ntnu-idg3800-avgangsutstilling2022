@@ -1,6 +1,6 @@
 .footer {
-    background-color: var(--tekstSort);
-    color: var(--bakgrunnHvit);
+    background-color: var(--color-text);
+    color: var(--color-background);
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
@@ -20,6 +20,12 @@
 
 .staticImg {
     max-width: 300px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .footer p {
+        color: var(--color-background);
+    }
 }
 
 @media (max-width: 600px) {

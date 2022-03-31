@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   max-width: 400px;
-  color: var(--tekstSort);
+  color: var(--color-text);
 }
 
 .iconContainer {
@@ -16,11 +16,17 @@
   width: 2.25em;
 }
 
+@media (prefers-color-scheme: dark) {
+  .iconContainer {
+    background-color: rgb(93, 153, 66, 0.68);
+  }
+}
+
 .portfolioLink {
   font-weight: 700;
   font-size: 14px;
 }
 
 .socialLinkIcon {
-  color: var(--tekstSort);
+  color: var(--color-text);
 }

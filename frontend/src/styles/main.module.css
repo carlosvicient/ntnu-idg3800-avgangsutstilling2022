@@ -2,7 +2,7 @@
 .main {
     padding-bottom: 2rem;
     min-height: calc(100vh - 190px - 180px);
-    background-color: var(--bakgrunnHvit);
+    background-color: var(--color-background);
 }
 
 @media (max-width: 900px) {
