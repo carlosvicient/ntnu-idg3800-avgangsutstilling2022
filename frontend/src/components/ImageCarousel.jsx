@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/no-static-element-interactions */
 import React, { useRef, useCallback, useEffect } from "react"
 import * as ImageCarouselStyles from "../styles/ImageCarousel.module.css"
 
@@ -27,15 +28,18 @@ const ImageCarousel = ({
     }
   }
 
-  const changeCarouselImage = newIndex => {
-    if (newIndex >= projects.length) {
-      setCurrentImage(prev => 0)
-    } else if (newIndex < 0) {
-      setCurrentImage(prev => projects.length - 1)
-    } else {
-      setCurrentImage(prev => newIndex)
-    }
-  }
+  const changeCarouselImage = useCallback(
+    newIndex => {
+      if (newIndex >= projects.length) {
+        setCurrentImage(prev => 0)
+      } else if (newIndex < 0) {
+        setCurrentImage(prev => projects.length - 1)
+      } else {
+        setCurrentImage(prev => newIndex)
+      }
+    },
+    [projects.length, setCurrentImage]
+  )
 
   // Close carousel when ESC is pressed
   const exitOnEscape = useCallback(
@@ -61,7 +65,7 @@ const ImageCarousel = ({
         changeCarouselImage(currentImage - 1)
       }
     },
-    [changeCarouselImage, showImageCarousel]
+    [changeCarouselImage, showImageCarousel, currentImage]
   )
 
   useEffect(() => {

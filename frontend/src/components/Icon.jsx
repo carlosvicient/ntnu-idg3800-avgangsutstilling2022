@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { GrLinkedinOption } from "react-icons/gr"
 import { BsInstagram, BsBehance } from "react-icons/bs"
 

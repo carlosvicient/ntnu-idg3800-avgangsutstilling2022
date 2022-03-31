@@ -25,7 +25,7 @@ const ProjectList = ({ showcase }) => {
   }
 
   const startCarousel = image => {
-    const idx = projects.findIndex(element => element == image)
+    const idx = projects.findIndex(element => element === image)
     setShowImageCarousel(prev => true)
     setCurrentImage(idx)
   }
