@@ -1,17 +1,16 @@
-import React from "react";
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 // Style
 import * as style from "../styles/footer.module.css"
 
-
 const Footer = () => {
   return (
     <footer className={style.footer}>
       <div className={style.gridItem}>
-        <StaticImage 
-          src="../assets/images/ntnu.svg" 
-          alt="NTNU Logo" 
+        <StaticImage
+          src="../assets/images/ntnu.svg"
+          alt="NTNU Logo"
           className={style.staticImg}
         />
         <p>Fakultet for arkitektur og design</p>
@@ -26,4 +25,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default Footer

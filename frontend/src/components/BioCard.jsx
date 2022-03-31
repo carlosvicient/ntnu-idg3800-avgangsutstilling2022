@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import * as styles from "../styles/biocard.module.css"
 import SocialLinks from "./SocialLinks"
 
@@ -6,7 +6,20 @@ import SocialLinks from "./SocialLinks"
 import SanityImage from "gatsby-plugin-sanity-image"
 
 const BioCard = ({ student }) => {
-  console.log(student)
+  let match = ""
+  if (typeof window !== "undefined") {
+    match = window.matchMedia("(min-width: 900px)").matches
+  }
+  const [largeScreenSize, setLargeScreenSize] = useState(match)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.matchMedia("(min-width: 900px)").addEventListener("change", e => {
+        setLargeScreenSize(e.matches)
+      })
+    }
+  })
+
   return (
     <div className={styles.container}>
       <div className={styles.cardContainer}>
@@ -16,21 +29,28 @@ const BioCard = ({ student }) => {
         </h2>
         <p className={styles.studyProgramme}>Grafisk designer</p>
         <div className={styles.profileImageContainer}>
-          {student.image && <SanityImage
+          {student.image && (
             <SanityImage
               className={styles.profileImage}
               asset={student.image._rawAsset}
               alt={`${student.name}`}
             />
-           />}
+          )}
         </div>
-        <div className={styles.test}>
-          <SocialLinks links={student.social} />
-        </div>
+        {largeScreenSize && (
+          <div className={styles.test}>
+            <SocialLinks links={student.social} />
+          </div>
+        )}
       </div>
       <div className={styles.bioContainer}>
         <p className={styles.bio}>{student.bio[0].children[0].text}</p>
       </div>
+      {!largeScreenSize && (
+        <div className={styles.test}>
+          <SocialLinks links={student.social} />
+        </div>
+      )}
     </div>
   )
 }

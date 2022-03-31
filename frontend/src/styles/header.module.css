@@ -3,6 +3,7 @@
     background-color: var(--bakgrunnHvit);
     width: 100%;
     height: 190px;
+    z-index: 2;
 }
 
 /* Navigation */

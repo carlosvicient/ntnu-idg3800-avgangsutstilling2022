@@ -1,26 +1,38 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "gatsby";
+import React, { useEffect, useState } from "react"
+import { Link } from "gatsby"
 
 // Style
 import * as style from "../styles/backLink.module.css"
-import { MdArrowBackIosNew } from 'react-icons/md';
-import { BsArrowLeft } from 'react-icons/bs';
+import { MdArrowBackIosNew } from "react-icons/md"
+import { BsArrowLeft } from "react-icons/bs"
 
 const BackLink = ({ to }) => {
-  const [largeScreenSize, setLargeScreenSize] = useState(
-    window.matchMedia("(min-width: 900px)").matches
-  )
+  let match = ""
+  if (typeof window !== "undefined") {
+    match = window.matchMedia("(min-width: 900px)").matches
+  }
+  const [largeScreenSize, setLargeScreenSize] = useState(match)
 
   useEffect(() => {
-    window.matchMedia("(min-width: 900px)").addEventListener("change", e => {
-      setLargeScreenSize(e.matches)
-    })
+    if (typeof window !== "undefined") {
+      window.matchMedia("(min-width: 900px)").addEventListener("change", e => {
+        setLargeScreenSize(e.matches)
+      })
+    }
   })
 
-  return <Link className={style.backLink} to={to}>
-    { !largeScreenSize ? <MdArrowBackIosNew className={style.mobileArrow} /> : <BsArrowLeft className={style.desktopArrow} />}
-    <span>Tilbake</span>
-  </Link>;
+  return (
+    <div className={style.backLink}>
+      <Link to={to}>
+        {!largeScreenSize ? (
+          <MdArrowBackIosNew />
+        ) : (
+          <BsArrowLeft className={style.desktopArrow} />
+        )}
+        <span>Tilbake</span>
+      </Link>
+    </div>
+  )
 }
 
-export default BackLink;
+export default BackLink

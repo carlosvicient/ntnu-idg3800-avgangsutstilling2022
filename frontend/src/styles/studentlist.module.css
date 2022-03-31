@@ -1,0 +1,55 @@
+.sortHead {
+  margin: 55px 7.5vw 32px 7.5vw;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sortHead h3 {
+  font-family: var(--aktiv-grotesk);
+  font-size: 20px;
+}
+
+.line {
+  border-top: 1px solid #DDD5B8;
+  margin: 17px 7.5vw 44px 7.5vw;
+}
+
+.button {
+  display: grid;
+  place-items: center;
+  font-size: 29px;
+  background: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.studentGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3.1vw 7.5vw;
+  margin: 0 7.5vw 3.1vw 7.5vw;
+  gap: 3.1vw;
+}
+
+@media only screen and (max-width: 900px) {
+  .sortHead {
+    margin: 1rem 7.1vw;
+  }
+
+  .studentGrid {
+    margin: 1rem 7.1vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sortHead {
+    margin: 1rem 7.1vw;
+  }
+
+  .studentGrid {
+    margin: 1rem 7.1vw;
+  }
+}

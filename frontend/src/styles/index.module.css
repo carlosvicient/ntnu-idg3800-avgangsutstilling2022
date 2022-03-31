@@ -1,157 +1,150 @@
 .container {
-    width: 85%;
-    margin: auto;
+  width: 84vw;
+  margin: auto;
+  margin-bottom: 100px;
 }
 
 .container h1 {
-    text-indent: -999em;
-    /* flytter den helt ut av siden - endre font-size om det er for stor top-margin*/
+  text-indent: -999em;
 }
 
 .container h2 {
-    font-size: 18px;
-    margin-bottom: 8px;
-    margin-top: 20px;
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-top: 20px;
 }
 
 .container p {
-    font-size: 14px;
-    color: var(--tekstSort);
+  font-size: 14px;
+  color: var(--tekstSort);
+  margin-bottom: 22px;
 }
 
 .greenLine {
-    border-left: 5px solid var(--elementGrønn);
-    padding-left: 9px;
-    margin-left: -14px;
+  border-left: 5px solid var(--elementGrønn);
+  padding-left: 9px;
+  margin-left: -14px;
 }
 
 .containerText {
-    width: 50%;
+  margin-bottom: 42px;
 }
 
+.containerText p {
+  width: 32.4vw;
+}
+
+/* Study programme containers */
 .gridContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
-    position: relative;
-}
-
-.gridContainer h2 {
-    font-size: 24px;
-    margin-left: 43px;
-    margin-top: 36px;
-    margin-bottom: 10px;
-}
-
-.containerText {
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3.4vw;
 }
 
 .boxes {
-    border: 2px solid #DDD5B8;
-    width: 369px;
-    height: 319px;
-    margin-top: 3rem;
-    position: relative;
+  border: 2px solid #ddd5b8;
+  height: 100%;
+  padding: 2.6vw 2.8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .social {
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
 }
 
 .boxes h2 {
-    font-size: 24px;
+  font-size: 24px;
+  margin: 0 0 10px 0;
 }
 
 .boxes p {
-    color: var(--tekstSort);
-    font-size: 12px;
-}
-
-.boxes p,
-.social {
-    margin: 10px 41px 25px 43px !important;
+  color: var(--tekstSort);
+  font-size: 12px;
+  margin-top: 25px;
+  margin-bottom: 57px;
 }
 
 .boxes button {
-    font-family: var(--aktiv-grotesk);
-    font-size: 12px;
-    width: 299px;
-    height: 32px;
-    background-color: var(--bakgrunnHvit);
-    border: 1px solid var(--elementGrønn);
-    cursor: pointer;
-    position: absolute;
-    bottom: 2em;
-    margin-left: 50%;
-    transform: translateX(-50%)
+  font-family: var(--aktiv-grotesk);
+  font-size: 12px;
+  width: 100%;
+  height: 32px;
+  background-color: var(--bakgrunnHvit);
+  border: 1px solid var(--elementGrønn);
+  cursor: pointer;
+  bottom: 38px;
+  color: black;
 }
 
 /* Media Queries */
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 80vw;
+  }
 
-@media only screen and (max-width: 1300px) {
+  .containerText p {
+    width: 50vw;
+  }
 
-    .container {
-        width: 80%;
-    }
-
-    .gridContainer {
-        grid-template-columns: 1fr;
-        grid-gap: 24px;
-        margin-top: 3rem;
-    }
-
-    .boxes {
-        margin: auto;
-        width: 100%;
-        position: relative;
-    }
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
+  .container {
+    width: 90vw;
+  }
 
-    .container {
-        width: 90%;
-    }
+  .gridContainer {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
 
-    .gridContainer {
-        grid-template-columns: 1fr;
-        row-gap: 24px;
-        margin: auto;
-    }
+  .containerText {
+    margin-left: 8.3vw;
+  }
 
-    .container p {
-        font-size: 12px;
-    }
+  .containerText p {
+    font-size: 12px;
+    width: 64.8vw;
+  }
 
-    .container p,
-    .container h2 {
-        margin-left: 30px;
-        margin-bottom: 3px;
-    }
+  .container p,
+  .container h2 {
+    margin-bottom: 3px;
+  }
 
-    .container h2 {
-        font-size: 12px;
-    }
+  .container h2 {
+    font-size: 12px;
+  }
 
-    .greenLine {
-        margin-left: 18px !important;
-        border-left: none;
-        font-size: 18px !important;
-    }
+  .greenLine {
+    border: none;
+    font-size: 18px !important;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 7px !important;
+  }
 
-    .boxes {
-        margin-top: 3rem;
-    }
+  .boxes {
+    padding: 8.2vw;
+  }
 
-    .boxes button {
-        width: 50vw;
-    }
+  .boxes h2 {
+    font-size: 18px;
+  }
 
-    .boxes h2 {
-        margin-left: 43px;
-        font-size: 18px;
-    }
+  .boxes p {
+    margin-bottom: 40px;
+  }
+
+  .boxes button {
+    box-shadow: 0px 4px 9px rgba(27, 26, 26, 0.05);
+  }
 }

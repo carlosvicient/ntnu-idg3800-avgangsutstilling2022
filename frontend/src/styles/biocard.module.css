@@ -1,6 +1,7 @@
 .container {
   display: flex;
-  margin: 1em;
+  margin-right: 4vw;
+  margin-left: 11.4vw;
   justify-content: space-between;
   text-align: start;
 }
@@ -23,26 +24,29 @@
 
 .profileImageContainer {
   margin-bottom: 1em;
+  margin-top: 25px;
 }
 
 .profileImage {
-  width: 100%;
+  width: 27.8vw;
 }
 
 .bioContainer {
+  padding-top: 6vw;
   display: flex;
   align-items: center;
-  flex: 1 1 50%;
-  max-width: 50%;
+  flex: 1 1 60%;
+  max-width: 60%;
 }
 
 .bio {
   font-size: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .container {
     flex-direction: column;
+    margin: 0 5vw;
   }
 
   .cardContainer {
@@ -55,12 +59,17 @@
   }
 
   .bioContainer {
-    margin-top: 1em;
+    margin-top: 15px;
+    margin-bottom: 25px;
     max-width: none;
   }
 
   .bio {
     font-size: 14px;
+  }
+
+  .profileImage {
+    width: 67.7vw;
   }
 
   .test {
