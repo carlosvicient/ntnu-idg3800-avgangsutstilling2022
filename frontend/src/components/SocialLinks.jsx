@@ -12,39 +12,41 @@ const SocialLinks = ({ links }) => {
         size: "24px",
       }}
     >
-      <div className={styles.allIconsContainer}>
-        {links.behance ? (
-          <a href={links.behance} target="_blank" rel="noreferrer">
-            <div className={styles.iconContainer}>
-              <BsBehance className={styles.socialLinkIcon} />
-            </div>
-          </a>
-        ) : null}
-        {links.instagram ? (
-          <a href={links.instagram} target="_blank" rel="noreferrer">
-            <div className={styles.iconContainer}>
-              <BsInstagram className={styles.socialLinkIcon} />
-            </div>
-          </a>
-        ) : null}
-        {links.linkedin ? (
-          <a href={links.linkedin} target="_blank" rel="noreferrer">
-            <div className={styles.iconContainer}>
-              <GrLinkedinOption className={styles.socialLinkIcon} />
-            </div>
-          </a>
-        ) : null}
-        {links.portfolio ? (
-          <a
-            href={links.portfolio}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.portfolioLink}
-          >
-            Se portfolio
-          </a>
-        ) : null}
-      </div>
+      {links &&
+        <div className={styles.allIconsContainer}>
+          {links.behance &&
+            <a href={links.behance} target="_blank" rel="noreferrer">
+              <div className={styles.iconContainer}>
+                <BsBehance className={styles.socialLinkIcon} />
+              </div>
+            </a>
+          }
+          {links.instagram &&
+            <a href={links.instagram} target="_blank" rel="noreferrer">
+              <div className={styles.iconContainer}>
+                <BsInstagram className={styles.socialLinkIcon} />
+              </div>
+            </a>
+          }
+          {links.linkedin &&
+            <a href={links.linkedin} target="_blank" rel="noreferrer">
+              <div className={styles.iconContainer}>
+                <GrLinkedinOption className={styles.socialLinkIcon} />
+              </div>
+            </a>
+          }
+          {links.portfolio &&
+            <a
+              href={links.portfolio}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.portfolioLink}
+            >
+              Se portfolio
+            </a>
+          }
+        </div>
+      }
     </IconContext.Provider>
   )
 }
