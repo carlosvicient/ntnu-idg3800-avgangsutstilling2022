@@ -18,14 +18,16 @@ const BackLink = ({ to }) => {
   })
 
   return (
-    <Link className={style.backLink} to={to}>
-      {!largeScreenSize ? (
-        <MdArrowBackIosNew />
-      ) : (
-        <BsArrowLeft className={style.desktopArrow} />
-      )}
-      <span>Tilbake</span>
-    </Link>
+    <div className={style.backLink}>
+      <Link to={to}>
+        {!largeScreenSize ? (
+          <MdArrowBackIosNew />
+        ) : (
+          <BsArrowLeft className={style.desktopArrow} />
+        )}
+        <span>Tilbake</span>
+      </Link>
+    </div>
   )
 }
 
