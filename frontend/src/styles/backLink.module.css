@@ -18,6 +18,12 @@
     color: black;
 }
 
+@media (prefers-color-scheme: dark) {
+    .desktopArrow {
+        color: var(--color-text);
+    }
+}
+
 .backLink span {
     order: 1;
     margin-left: .5em;
@@ -27,7 +33,7 @@
 @media (max-width: 900px) {
     .backLink {
         position: fixed;
-        background-color: var(--bakgrunnHvit);
+        background-color: var(--color-background);
         width: 100%;
         padding-bottom: 10px;
         padding-left: 7.1vw;

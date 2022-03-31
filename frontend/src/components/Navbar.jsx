@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -10,6 +10,22 @@ function Navbar() {
   if (typeof window !== "undefined") {
     path = window.location.pathname
   }
+
+  let colorScheme = ""
+  if (typeof window !== "undefined") {
+    colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+  }
+  const [darkMode, setDarkMode] = useState(colorScheme)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", e => {
+          setDarkMode(e.matches)
+        })
+    }
+  })
 
   return (
     <header className={style.header}>
@@ -33,15 +49,27 @@ function Navbar() {
         </ul>
       </nav>
       <Link to="/">
-        <StaticImage
-          src="../assets/images/logo.svg"
-          alt="Avgangsutstilling 2022, logo"
-          className={
-            path === "/"
-              ? `${style.bigStaticImg} ${style.staticImg}`
-              : style.staticImg
-          }
-        />
+        {darkMode ? (
+          <StaticImage
+            src="../assets/images/logo-dark.svg"
+            alt="Avgangsutstilling 2022, logo"
+            className={
+              path === "/"
+                ? `${style.bigStaticImg} ${style.staticImg}`
+                : style.staticImg
+            }
+          />
+        ) : (
+          <StaticImage
+            src="../assets/images/logo.svg"
+            alt="Avgangsutstilling 2022, logo"
+            className={
+              path === "/"
+                ? `${style.bigStaticImg} ${style.staticImg}`
+                : style.staticImg
+            }
+          />
+        )}
       </Link>
     </header>
   )

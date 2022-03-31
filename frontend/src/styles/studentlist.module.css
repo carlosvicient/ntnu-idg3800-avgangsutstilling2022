@@ -34,6 +34,16 @@
   gap: 3.1vw;
 }
 
+@media (prefers-color-scheme: dark) {
+  .line {
+    border-top: 1px solid hsl(0, 0%, 34%);
+  }
+
+  .sortHead button {
+    color: var(--color-text);
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .sortHead {
     margin: 1rem 7.1vw;
