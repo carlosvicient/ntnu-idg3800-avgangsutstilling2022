@@ -9,13 +9,22 @@ import BackLink from "../components/BackLink"
 
 const NotFoundPage = () => {
   const goBack = e => {
-    e.preventDefault()
     navigate(-1)
   }
 
   return (
     <Layout>
-      <span onClick={goBack} className={styles.back}>
+      <span
+        role="link"
+        tabIndex="0"
+        onClick={goBack}
+        onKeyDown={e => {
+          if (e.key === "Enter") {
+            goBack()
+          }
+        }}
+        className={styles.back}
+      >
         <BackLink />
       </span>
       <div className={styles.container}>
