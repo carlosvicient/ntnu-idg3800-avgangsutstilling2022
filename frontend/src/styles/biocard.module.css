@@ -1,7 +1,7 @@
 .container {
   display: flex;
   margin-right: 4vw;
-  margin-left: 11.4vw;  
+  margin-left: 11.4vw;
   justify-content: space-between;
   text-align: start;
 }
@@ -34,8 +34,8 @@
 .bioContainer {
   display: flex;
   align-items: center;
-  flex: 1 1 50%;
-  max-width: 50%;
+  flex: 1 1 55%;
+  max-width: 55%;
 }
 
 .bio {
