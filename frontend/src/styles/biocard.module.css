@@ -34,8 +34,8 @@
 .bioContainer {
   display: flex;
   align-items: center;
-  flex: 1 1 50%;
-  max-width: 50%;
+  flex: 1 1 55%;
+  max-width: 55%;
 }
 
 .bio {

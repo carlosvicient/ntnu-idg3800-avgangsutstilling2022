@@ -1,5 +1,4 @@
 import React from "react"
-import SocialLink from "./SocialLink"
 import { IconContext } from "react-icons"
 import { GrLinkedinOption } from "react-icons/gr"
 import { BsInstagram, BsBehance } from "react-icons/bs"
