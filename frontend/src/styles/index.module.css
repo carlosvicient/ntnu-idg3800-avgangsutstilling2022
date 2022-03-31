@@ -1,12 +1,11 @@
 .container {
-    width: 84vw;
-    margin: auto;
-    margin-bottom: 100px;
+  width: 84vw;
+  margin: auto;
+  margin-bottom: 100px;
 }
 
 .container h1 {
   text-indent: -999em;
-  /* flytter den helt ut av siden - endre font-size om det er for stor top-margin*/
 }
 
 .container h2 {
