@@ -19,7 +19,7 @@
   margin-bottom: 1em;
   font-weight: 700;
   font-size: 12px;
-  color: var(--tekstSort);
+  color: var(--color-text);
 }
 
 .profileImageContainer {

@@ -10,12 +10,12 @@
 }
 
 .studentCard:hover {
-  box-shadow: 0.5rem 0.5rem 0 var(--elementGrønn);
-  color: var(--elementGrønn);
+  box-shadow: 0.5rem 0.5rem 0 var(--color-accent);
+  color: var(--color-accent);
 }
 
 .studentCard:focus-visible {
-  box-shadow: 0.5rem 0.5rem 0 var(--elementGrønn) !important;
+  box-shadow: 0.5rem 0.5rem 0 var(--color-accent) !important;
 }
 
 .studentCardName {

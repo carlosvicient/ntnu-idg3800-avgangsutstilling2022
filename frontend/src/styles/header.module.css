@@ -1,6 +1,6 @@
 /* .header style */
 .header {
-    background-color: var(--bakgrunnHvit);
+    background-color: var(--color-background);
     width: 100%;
     height: 190px;
     z-index: 2;
@@ -27,6 +27,12 @@
     border-bottom: #DDD5B8 1px solid;
 }
 
+@media (prefers-color-scheme: dark) {
+    .header nav ul {
+        border-bottom: hsl(0, 0%, 34%) 1px solid;
+    }
+}
+
 .header nav ul li {
     margin: auto;
 }
@@ -34,14 +40,14 @@
 .header nav ul li a {
     font-size: 14px;
     font-weight: 700;
-    color: var(--tekstSort);
+    color: var(--color-text);
     padding: 1rem;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .header nav ul li a:hover {
-    color: var(--elementGrønn);
+    color: var(--color-accent);
 }
 
 /* Burger */
@@ -66,7 +72,7 @@
     position: relative;
     top: 20px;
     left: 20px;
-    background: var(--tekstSort);
+    background: var(--color-text);
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
@@ -172,7 +178,7 @@
         border-bottom: none;
         padding: 30px;
         padding-bottom: 60px;
-        background-color: var(--bakgrunnHvit);
+        background-color: var(--color-background);
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
         transition: transform 0.5s ease-in-out;
@@ -188,6 +194,12 @@
         font-size: 12px;
         font-weight: 500;
         color: black;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .header nav ul li a {
+            color: var(--color-text);
+        }
     }
 
     /* Logo */

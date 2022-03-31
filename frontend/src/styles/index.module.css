@@ -16,12 +16,12 @@
 
 .container p {
   font-size: 14px;
-  color: var(--tekstSort);
+  color: var(--color-text);
   margin-bottom: 22px;
 }
 
 .greenLine {
-  border-left: 5px solid var(--elementGrønn);
+  border-left: 5px solid var(--color-accent);
   padding-left: 9px;
   margin-left: -14px;
 }
@@ -50,6 +50,12 @@
   justify-content: space-between;
 }
 
+@media (prefers-color-scheme: dark) {
+  .boxes {
+    border: 2px solid hsl(0, 0%, 34%);
+  }
+}
+
 .social {
   text-decoration: none;
   color: black;
@@ -62,7 +68,7 @@
 }
 
 .boxes p {
-  color: var(--tekstSort);
+  color: var(--color-text);
   font-size: 12px;
   margin-top: 25px;
   margin-bottom: 57px;
@@ -73,14 +79,24 @@
   font-size: 12px;
   width: 100%;
   height: 32px;
-  background-color: var(--bakgrunnHvit);
-  border: 1px solid var(--elementGrønn);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-accent);
   cursor: pointer;
   bottom: 38px;
   color: black;
 }
 
 /* Media Queries */
+@media (prefers-color-scheme: dark) {
+  .social {
+    color: var(--color-text);
+  }
+
+  .boxes button {
+    color: var(--color-text);
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .container {
     width: 80vw;

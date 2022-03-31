@@ -1,14 +1,25 @@
 /* ------------------- Color palette ------------------- */
-
+/* Light mode (standard) */
 :root {
   /* Brukes på tekst mot lys bakgrunn eller som bakgrunn i dark mode */
-  --tekstSort: #3e3e3e;
+  --color-text: #3e3e3e;
 
   /* Brukes som tekst mot mørk bakgrunn eller som bakgrunn i standard modus */
-  --bakgrunnHvit: #fdf9ed;
+  --color-background: #fdf9ed;
 
   /* Brukes på stor tekst, "call to action" og grafiske elementer */
-  --elementGrønn: #5d9942;
+  --color-accent: #5d9942;
+}
+
+/* Dark mode (if user has dark mode preffered on their device) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Brukes på tekst mot lys bakgrunn eller som bakgrunn i dark mode */
+    --color-text: #FDF9ED;
+
+    /* Brukes som tekst mot mørk bakgrunn eller som bakgrunn i standard modus */
+    --color-background: #3e3e3e;
+  }
 }
 
 /* ------------------- Font family ------------------- */
@@ -40,7 +51,7 @@
 }
 
 a {
-  color: var(--tekstSort);
+  color: var(--color-text);
   font-family: var(--aktiv-grotesk);
 }
 
@@ -50,11 +61,17 @@ p {
   line-height: 114.3%;
 }
 
+@media (prefers-color-scheme: dark) {
+  p {
+    color: var(--color-text);
+  }
+}
+
 h1,
 h2,
 h3 {
   font-family: var(--ohno-blazeface);
-  color: var(--tekstSort);
+  color: var(--color-text);
 }
 
 h1 {
