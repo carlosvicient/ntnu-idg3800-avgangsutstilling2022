@@ -39,6 +39,13 @@ function About() {
                     <li><Link to='#'>Sine Uberg</Link></li>
                 </ul>
 
+                <h2>Innholdsansvarlige</h2>
+                <ul>
+                    <li><Link to='#'>Ann Margit Krog</Link></li>
+                    <li><Link to='#'>Andrea Kristoffersen</Link></li>
+                    <li><Link to='#'>Lisa Sofie Edelman Sæther</Link></li>
+                </ul>
+
                 <h2>Utviklingsansvarlige</h2>
                 <ul>
                     <li><Link to='#'>Cornelius Ottar Sandmæl</Link></li>
