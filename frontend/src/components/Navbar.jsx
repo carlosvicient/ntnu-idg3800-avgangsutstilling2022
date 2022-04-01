@@ -51,6 +51,8 @@ function Navbar() {
       <Link to="/">
         {darkMode ? (
           <StaticImage
+            placeholder="tracedSVG"
+            loading="eager"
             src="../assets/images/logo-dark.svg"
             alt="Avgangsutstilling 2022, logo"
             className={
@@ -61,6 +63,8 @@ function Navbar() {
           />
         ) : (
           <StaticImage
+            placeholder="tracedSVG"
+            loading="eager"
             src="../assets/images/logo.svg"
             alt="Avgangsutstilling 2022, logo"
             className={
