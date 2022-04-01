@@ -20,8 +20,8 @@ const IndexPage = ({ data }) => {
           {/* Generell informasjon, her må det fylles inn korrekt tekst */}
           <h2 className={style.greenLine}>Om</h2>
           <p>
-            «Antall» studenter fra Bachelor i grafisk design, «antall» studenter
-            fra Bachelor interaksjonsdesign og «antall» studenter fra Bachelor i
+            31 studenter fra Bachelor i grafisk design, 29 studenter
+            fra Bachelor interaksjonsdesign og 18 studenter fra Bachelor i
             webutvikling ved NTNU i Gjøvik avslutter tre års studier med en
             utstilling. Hver student viser utvalgte arbeider fra egenportefølje.
           </p>
