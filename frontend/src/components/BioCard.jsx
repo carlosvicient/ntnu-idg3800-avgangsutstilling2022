@@ -27,7 +27,7 @@ const BioCard = ({ student }) => {
           {`${student.name} 
         ${student.surname.charAt(0)}.`}
         </h2>
-        <p className={styles.studyProgramme}>Grafisk designer</p>
+        <p className={styles.studyProgramme}>{student.studyprogramme.title}</p>
         <div className={styles.profileImageContainer}>
           {student.image && (
             <SanityImage
