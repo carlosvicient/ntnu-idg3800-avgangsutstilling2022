@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import * as styles from "../styles/studentlist.module.css"
 import { AiOutlineSortAscending, AiOutlineSortDescending } from "react-icons/ai"
 
@@ -19,10 +19,6 @@ const StudentList = ({ students, withSorting, studyprogramme }) => {
     return 0
   }
 
-  useEffect(() => {
-    students.sort(sortAsc)
-  }, [students])
-
   const handleClick = () => {
     setSorting(!sorting)
     if (sorting) students.sort(sortAsc)
@@ -37,7 +33,7 @@ const StudentList = ({ students, withSorting, studyprogramme }) => {
           <button
             className={styles.button}
             aria-label="sorter"
-            onClick={() => handleClick()}
+            onClick={handleClick}
           >
             {sorting ? <AiOutlineSortAscending /> : <AiOutlineSortDescending />}
           </button>

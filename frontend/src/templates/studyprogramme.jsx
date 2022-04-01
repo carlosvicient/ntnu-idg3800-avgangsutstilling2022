@@ -37,6 +37,7 @@ export const query = graphql`
   query ($slug: [String] = "") {
     allSanityStudent(
       filter: { studyprogramme: { slug: { current: { in: $slug } } } }
+      sort: {fields: name, order: ASC}
     ) {
       edges {
         node {
