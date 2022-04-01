@@ -9,7 +9,8 @@ import Layout from "../components/Layout"
 import * as style from "../styles/index.module.css"
 
 const IndexPage = ({ data }) => {
-  const studyProgrammes = data.allSanityStudyprogramme.edges
+  const studyProgrammes = data.allSanityStudyprogramme.edges;
+  console.log(studyProgrammes);
 
   return (
     <Layout>
@@ -57,7 +58,9 @@ const IndexPage = ({ data }) => {
                 >
                   @instagram
                 </a>
-                <p>{programme.node.description[0].children[0].text}</p>
+                {programme.node.description.map((p) => (
+                  <p>{p.children[0].text}</p>
+                ))}
               </div>
               <Link to={`${programme.node.slug.current}`}>
                 <button>Til studenter</button>

@@ -10,9 +10,7 @@ import Layout from "../components/Layout"
 export default function Studyprogramme({ data }) {
   const students = data.allSanityStudent.edges
   const name = data.allSanityStudent.edges[0].node.studyprogramme.name
-  const description =
-    data.allSanityStudent.edges[0].node.studyprogramme.description[0]
-      .children[0].text
+  const description = data.allSanityStudent.edges[0].node.studyprogramme.description;
 
   return (
     <Layout>
@@ -23,7 +21,9 @@ export default function Studyprogramme({ data }) {
         {/* Overskrift og description */}
         <header className={styles.header}>
           <h2>{name}</h2>
-          <p>{description}</p>
+          {description.map((p) => (
+                  <p>{p.children[0].text}</p>
+          ))}
         </header>
 
         {/* Mapper ut hver student i arrayen med bilde og navn under, denne fungerer som en link */}
