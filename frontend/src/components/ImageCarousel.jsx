@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/no-static-element-interactions */
 import React, { useRef, useCallback, useEffect } from "react"
-import * as ImageCarouselStyles from "../styles/ImageCarousel.module.css"
 
 // Components
 import SanityImage from "gatsby-plugin-sanity-image"
@@ -9,6 +8,8 @@ import {
   MdOutlineArrowForwardIos,
   MdClear,
 } from "react-icons/md"
+//styles
+import * as ImageCarouselStyles from "../styles/ImageCarousel.module.css"
 
 const ImageCarousel = ({
   projects,

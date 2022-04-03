@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import * as styles from "../styles/studentlist.module.css"
 import { AiOutlineSortAscending, AiOutlineSortDescending } from "react-icons/ai"
 
 // Components
 import StudentCard from "./StudentCard"
+
+import * as styles from "../styles/studentlist.module.css"
 
 // List of students
 const StudentList = ({ students, withSorting, studyprogramme }) => {

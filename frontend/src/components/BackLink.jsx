@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 
-// Style
-import * as style from "../styles/backLink.module.css"
 import { MdArrowBackIosNew } from "react-icons/md"
 import { BsArrowLeft } from "react-icons/bs"
+// Style
+import * as style from "../styles/backLink.module.css"
 
 const BackLink = ({ to }) => {
   let match = ""

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
-import * as ProjectListStyles from "../styles/ProjectList.module.css"
 
 // Components
 import ImageCarousel from "./ImageCarousel"
 import ProjectCard from "./ProjectCard"
+
+import * as ProjectListStyles from "../styles/ProjectList.module.css"
 
 const ProjectList = ({ showcase }) => {
   let match = ""

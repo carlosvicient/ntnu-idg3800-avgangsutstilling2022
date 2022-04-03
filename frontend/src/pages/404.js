@@ -1,11 +1,12 @@
 import React from "react"
 import { navigate } from "gatsby"
-import * as styles from "../styles/404.module.css"
 
 // Components
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import BackLink from "../components/BackLink"
+
+import * as styles from "../styles/404.module.css"
 
 const NotFoundPage = () => {
   const goBack = e => {

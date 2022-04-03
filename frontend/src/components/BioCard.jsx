@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
-import * as styles from "../styles/biocard.module.css"
+import SanityImage from "gatsby-plugin-sanity-image"
 import SocialLinks from "./SocialLinks"
 
 // Components
-import SanityImage from "gatsby-plugin-sanity-image"
+import * as styles from "../styles/biocard.module.css"
 
 const BioCard = ({ student }) => {
   let match = ""

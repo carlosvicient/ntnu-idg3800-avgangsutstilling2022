@@ -1,9 +1,10 @@
 import React from "react"
-import * as styles from "../styles/studentcard.module.css"
 import { Link, navigate } from "gatsby"
 
 // Components
 import SanityImage from "gatsby-plugin-sanity-image"
+
+import * as styles from "../styles/studentcard.module.css"
 
 // Student card displaying image and name of a student, linking to the specific student
 const StudentCard = ({ node }) => {

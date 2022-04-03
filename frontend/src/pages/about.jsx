@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import BackLink from '../components/BackLink';
 import Layout from '../components/Layout';
+import BackLink from '../components/BackLink';
 
 import * as header from "../styles/studyprogramme.module.css";
 import * as styles from "../styles/about.module.css";

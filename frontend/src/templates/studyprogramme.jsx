@@ -1,11 +1,12 @@
 import React from "react"
-import * as styles from "../styles/studyprogramme.module.css"
 import { graphql } from "gatsby"
 
 // Components
+import Layout from "../components/Layout"
 import StudentList from "../components/StudentList"
 import BackLink from "../components/BackLink"
-import Layout from "../components/Layout"
+
+import * as styles from "../styles/studyprogramme.module.css"
 
 export default function Studyprogramme({ data }) {
   const students = data.allSanityStudent.edges
