@@ -22,7 +22,7 @@ function Student({ data }) {
 
   return (
     <Layout>
-      <Seo title={`${student.name} ${student.surname[0]}.`} description={student.bio[0].children[0].text} />
+      <Seo title={`${student.name} ${student.surname[0]}.`} description={student.bio[0].children[0].text} image={student.image._rawAsset._ref} />
       <section>
         {/* Tilbake til course-page */}
         <BackLink to={`/${student.studyprogramme.slug.current}`} />
