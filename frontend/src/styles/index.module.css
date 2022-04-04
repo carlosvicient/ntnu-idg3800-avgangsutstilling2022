@@ -138,15 +138,14 @@
   }
 
   .container h2 {
-    font-size: 12px;
+    font-size: 18px;
+    margin-bottom: 7px;
   }
 
   .greenLine {
     border: none;
-    font-size: 18px !important;
     padding-left: 0;
     margin-left: 0;
-    margin-bottom: 7px !important;
   }
 
   .boxes {
