@@ -38,8 +38,7 @@
 }
 
 .header nav ul li a {
-    font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-text);
     padding: 1rem;
     text-decoration: none;
@@ -191,8 +190,6 @@
 
     .header nav ul li a {
         padding: 2rem 0;
-        font-size: 12px;
-        font-weight: 500;
         color: var(--color-text);
     }
 

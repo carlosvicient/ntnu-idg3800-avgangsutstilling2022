@@ -44,7 +44,7 @@ const BioCard = ({ student }) => {
         )}
       </div>
       <div className={styles.bioContainer}>
-        <p className={styles.bio}>{student.bio[0].children[0].text}</p>
+        <p>{student.bio[0].children[0].text}</p>
       </div>
       {!largeScreenSize && (
         <div className={styles.test}>

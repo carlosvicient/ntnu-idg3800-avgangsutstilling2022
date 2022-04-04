@@ -20,7 +20,7 @@
 
 .studentCardName {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -48,9 +48,5 @@
     height: 38.5vw;
     width: 38.5vw;
     margin-bottom: 2rem;
-  }
-
-  .studentCard p {
-    font-size: 14px;
   }
 }

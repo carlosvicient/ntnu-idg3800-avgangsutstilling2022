@@ -13,12 +13,12 @@
 
 .fullName {
   margin-bottom: 0.5em;
+  font-weight: 700;
 }
 
 .studyProgramme {
   margin-bottom: 1em;
-  font-weight: 700;
-  font-size: 12px;
+  font-weight: 500;
   color: var(--color-text);
 }
 
@@ -39,10 +39,6 @@
   max-width: 60%;
 }
 
-.bio {
-  font-size: 20px;
-}
-
 @media only screen and (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -53,19 +49,10 @@
     max-width: none;
   }
 
-  .studyProgramme {
-    font-weight: 500;
-    font-size: 14px;
-  }
-
   .bioContainer {
     margin-top: 15px;
     margin-bottom: 25px;
     max-width: none;
-  }
-
-  .bio {
-    font-size: 14px;
   }
 
   .profileImage {

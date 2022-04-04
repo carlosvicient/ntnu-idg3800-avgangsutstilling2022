@@ -13,7 +13,6 @@
 .ProjectCard p {
     max-width: 29.1vw;
     margin-right: 4.5vw;
-    font-size: 20px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -42,9 +41,5 @@
     .ProjectCard img {
         cursor: default;
         width: 100%;
-    }
-
-    .ProjectCard p {
-        font-size: 14px;
     }
 }

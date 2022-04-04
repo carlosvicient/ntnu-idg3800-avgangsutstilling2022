@@ -27,8 +27,8 @@
 @import url("https://use.typekit.net/jpr2mtr.css");
 
 :root {
-  --ohno-blazeface: ohno-blazeface, sans-serif;
-  --aktiv-grotesk: aktiv-grotesk, sans-serif;
+  --ohno-blazeface: ohno-blazeface, 'Arial Black', sans-serif;
+  --aktiv-grotesk: aktiv-grotesk, Arial, sans-serif;
 }
 
 /* ------------------- Font size ------------------- */
@@ -50,7 +50,12 @@
   padding: 0;
 }
 
+body {
+  font-size: 14px;
+}
+
 a {
+  font-size: 14px;
   color: var(--color-text);
   font-family: var(--aktiv-grotesk);
 }
@@ -71,7 +76,7 @@ p {
 h1,
 h2,
 h3 {
-  font-family: var(--ohno-blazeface);
+  font-family: var(--aktiv-grotesk);
   color: var(--color-text);
 }
 
@@ -111,9 +116,5 @@ h3 {
   html,
   body {
     font-size: 18px;
-  }
-
-  p {
-    font-size: 12px;
   }
 }

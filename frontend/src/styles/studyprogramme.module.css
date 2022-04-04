@@ -2,8 +2,9 @@
   padding: 1rem 7.5vw;
 }
 
-.header p {
-  font-size: 14px;
+.header h2 {
+  text-transform: lowercase;
+  font-family: var(--ohno-blazeface);
 }
 
 @media only screen and (max-width: 900px) {
