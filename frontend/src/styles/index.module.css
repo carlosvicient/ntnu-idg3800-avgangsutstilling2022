@@ -59,7 +59,6 @@
 
 .social {
   text-decoration: none;
-  color: black;
   font-size: 14px;
 }
 
@@ -84,18 +83,7 @@
   border: 1px solid var(--color-accent);
   cursor: pointer;
   bottom: 38px;
-  color: black;
-}
-
-/* Media Queries */
-@media (prefers-color-scheme: dark) {
-  .social {
-    color: var(--color-text);
-  }
-
-  .boxes button {
-    color: var(--color-text);
-  }
+  color: var(--color-text);
 }
 
 @media only screen and (max-width: 1200px) {

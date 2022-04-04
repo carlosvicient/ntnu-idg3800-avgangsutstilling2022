@@ -57,6 +57,7 @@ a {
 
 p {
   font-family: var(--aktiv-grotesk);
+  color: var(--color-text);
   font-size: 14px;
   line-height: 114.3%;
 }

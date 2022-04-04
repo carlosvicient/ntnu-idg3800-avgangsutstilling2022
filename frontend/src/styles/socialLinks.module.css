@@ -27,6 +27,6 @@
   font-size: 14px;
 }
 
-.socialLinkIcon {
-  color: var(--color-text);
+.socialLinkIcon path {
+  stroke: var(--color-text);
 }
