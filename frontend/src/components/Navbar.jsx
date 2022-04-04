@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React, { useState, useEffect } from "react";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import logoDark from "../assets/images/logo-dark.svg";
+import logo from "../assets/images/logo.svg";
 
 // Style
 import * as style from "../styles/header.module.css"
@@ -50,10 +52,10 @@ function Navbar() {
       </nav>
       <Link to="/">
         {darkMode ? (
-          <StaticImage
+          <img
             placeholder="tracedSVG"
             loading="eager"
-            src="../assets/images/logo-dark.svg"
+            src={logoDark}
             alt="Avgangsutstilling 2022, logo"
             className={
               path === "/"
@@ -62,10 +64,10 @@ function Navbar() {
             }
           />
         ) : (
-          <StaticImage
+          <img
             placeholder="tracedSVG"
             loading="eager"
-            src="../assets/images/logo.svg"
+            src={logo}
             alt="Avgangsutstilling 2022, logo"
             className={
               path === "/"

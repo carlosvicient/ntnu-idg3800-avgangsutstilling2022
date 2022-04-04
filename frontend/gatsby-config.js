@@ -4,7 +4,7 @@ module.exports = {
   pathPrefix: "/glenneha/avgangsutstilling",
   siteMetadata: {
     title: `Avgangsutstilling`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `31 studenter fra Bachelor i grafisk design, 29 studenter fra Bachelor interaksjonsdesign og 18 studenter fra Bachelor i webutvikling ved NTNU i Gjøvik avslutter tre års studier med en utstilling. Hver student viser utvalgte arbeider fra egenportefølje. Utstillingen inkluderer studentarbeider for papirbaserte og elektroniske medier. Kjerneområder for de ulike studieretningene vil for grafisk design være typografi og informasjonsdesign. Interaksjonsdesign har hatt fokus på tjenestedesign og å utforme løsninger som støtter opp under menneskers kommunikasjon og samhandling. For webutvikling er innovative og brukervennlige webløsninger vektlagt. Fellesnevnere for allestudieretningene er universell utforming samt brukersentrert design og utvikling.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
@@ -40,7 +40,9 @@ module.exports = {
         }
       },
     },
-    `gatsby-plugin-preact`
+    {
+      resolve: `gatsby-plugin-preact`,
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

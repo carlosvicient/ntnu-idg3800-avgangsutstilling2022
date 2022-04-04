@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import React, { useState, useEffect } from "react";
+
+import logoDark from "../assets/images/ntnu-black.svg";
+import logo from "../assets/images/ntnu.svg";
 
 // Style
 import * as style from "../styles/footer.module.css"
@@ -25,14 +27,14 @@ const Footer = () => {
     <footer className={style.footer}>
       <div className={style.gridItem}>
         {darkMode ? (
-          <StaticImage
-            src="../assets/images/ntnu-black.svg"
+          <img
+            src={logoDark}
             alt="NTNU Logo"
             className={style.staticImg}
           />
         ) : (
-          <StaticImage
-            src="../assets/images/ntnu.svg"
+          <img
+            src={logo}
             alt="NTNU Logo"
             className={style.staticImg}
           />

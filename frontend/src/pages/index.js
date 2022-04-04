@@ -10,7 +10,6 @@ import * as style from "../styles/index.module.css"
 
 const IndexPage = ({ data }) => {
   const studyProgrammes = data.allSanityStudyprogramme.edges;
-  console.log(studyProgrammes);
 
   return (
     <Layout>
