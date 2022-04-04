@@ -7,26 +7,28 @@ import logo from "../assets/images/logo.svg";
 import * as style from "../styles/header.module.css"
 
 function Navbar() {
-  let path = ""
-  if (typeof window !== "undefined") {
-    path = window.location.pathname
-  }
-
-  let colorScheme = ""
-  if (typeof window !== "undefined") {
-    colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-  }
-  const [darkMode, setDarkMode] = useState(colorScheme)
+  const [path, setPath] = useState('');
+  const [darkMode, setDarkMode] = useState('');
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      setPath(window.location.pathname);
+    }
+
+    let colorScheme = ""
+    if (typeof window !== "undefined") {
+      colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setDarkMode(colorScheme);
+    }
+
     if (typeof window !== "undefined") {
       window
         .matchMedia("(prefers-color-scheme: dark)")
         .addEventListener("change", e => {
-          setDarkMode(e.matches)
+          setDarkMode(e.matches);
         })
     }
-  })
+  }, [])
 
   return (
     <header className={style.header}>

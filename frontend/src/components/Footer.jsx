@@ -7,21 +7,22 @@ import logo from "../assets/images/ntnu.svg";
 import * as style from "../styles/footer.module.css"
 
 const Footer = () => {
-  let colorScheme = ""
-  if (typeof window !== "undefined") {
-    colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-  }
-  const [darkMode, setDarkMode] = useState(colorScheme)
+  const [darkMode, setDarkMode] = useState('')
 
   useEffect(() => {
+    let colorScheme = ""
+    if (typeof window !== "undefined") {
+      colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setDarkMode(colorScheme);
+    }
     if (typeof window !== "undefined") {
       window
         .matchMedia("(prefers-color-scheme: dark)")
         .addEventListener("change", e => {
-          setDarkMode(e.matches)
+          setDarkMode(e.matches);
         })
     }
-  })
+  }, [])
 
   return (
     <footer className={style.footer}>
