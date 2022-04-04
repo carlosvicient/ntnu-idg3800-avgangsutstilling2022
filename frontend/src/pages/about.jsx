@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
+import Seo from '../components/Seo';
 import BackLink from '../components/BackLink';
 
 import * as header from "../styles/studyprogramme.module.css";
@@ -9,6 +10,7 @@ import * as styles from "../styles/about.module.css";
 function About() {
     return (
         <Layout>
+            <Seo title="Om" description="De som er ansvarlige for at siden er oppe og går." />
             <BackLink to="/" />
             <header className={header.header}><h1 className={styles.h1}>Om</h1></header>
 

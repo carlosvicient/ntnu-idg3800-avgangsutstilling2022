@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 // Components
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 import StudentList from "../components/StudentList"
 import BackLink from "../components/BackLink"
 
@@ -15,6 +16,7 @@ export default function Studyprogramme({ data }) {
 
   return (
     <Layout>
+      <Seo title={name} description={description[0].children[0].text} />
       <section>
         {/* Tilbake til forsiden */}
         <BackLink to="/" />

@@ -2,11 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // Components
-import Layout from "../components/Layout"
-import ProjectList from "../components/ProjectList"
-import StudentList from "../components/StudentList"
-import BioCard from "../components/BioCard"
-import BackLink from "../components/BackLink"
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
+import ProjectList from "../components/ProjectList";
+import StudentList from "../components/StudentList";
+import BioCard from "../components/BioCard";
+import BackLink from "../components/BackLink";
 
 function Student({ data }) {
   const student = data.sanityStudent
@@ -21,6 +22,7 @@ function Student({ data }) {
 
   return (
     <Layout>
+      <Seo title={`${student.name} ${student.surname[0]}.`} description={student.bio[0].children[0].text} />
       <section>
         {/* Tilbake til course-page */}
         <BackLink to={`/${student.studyprogramme.slug.current}`} />

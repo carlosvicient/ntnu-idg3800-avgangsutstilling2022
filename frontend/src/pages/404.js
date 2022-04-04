@@ -29,7 +29,7 @@ const NotFoundPage = () => {
         <BackLink />
       </span>
       <div className={styles.container}>
-        <Seo title="404: Not found" />
+        <Seo title="404: Ikke funnet" description="Siden du leter etter eksisterer ikke" />
         <h1>404: Siden finnes ikke</h1>
         <span>
           <p>Nei, nå er du ute på bærtur.</p>
