@@ -97,17 +97,8 @@ h3 {
 
 @media (min-width: 830px) {
   :root {
-    /* Headers */
     --fs-h2: 36px;
     --fs-h3: 24px;
-    --fs-h4: 20px;
-    --fs-h5: 18px;
-    --fs-h6: 12px;
-    /* Body */
-    --fs-pl: 20px;
-    --fs-pm: 18px;
-    --fs-ps: 14px;
-    --fs-pxs: 12px;
   }
 }
 
