@@ -20,7 +20,11 @@ function About() {
 
                 <h2>Designansvarlige</h2>
                 <ul>
-                    <li><Link to='#'>Kommer snart =D</Link></li>
+                    <li><Link to='#'>Adam Maximilian Stoffel</Link></li>
+                    <li><Link to='#'>Amalie Bach</Link></li>
+                    <li><Link to='#'>Andrea Hauge Sandvik</Link></li>
+                    <li><Link to='#'>Johanne Lyster Strande</Link></li>
+                    <li><Link to='#'>Martine Egeli</Link></li>
                 </ul>
 
                 <h2>Fotoansvarlige</h2>
