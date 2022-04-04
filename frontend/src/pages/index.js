@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
           </p>
 
           <h2>Når</h2>
-          <p>3. – 4. juni</p>
+          <p>3.–4. juni</p>
 
           <h2>Hvor</h2>
           <p>Raufossveien 40, 2821 Gjøvik</p>
