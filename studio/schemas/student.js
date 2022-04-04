@@ -36,8 +36,8 @@ export default {
       options: {
         source: (doc) =>
           !doc.middle
-            ? `${doc.name}-${doc.firstlettersurname}`
-            : `${doc.name}-${doc.middle}-${doc.firstlettersurname}`,
+            ? `${doc.name}-${doc.surname}`
+            : `${doc.name}-${doc.middle}-${doc.surname}`,
         maxLength: 96,
         isUnique: isUniqueAcrossAllDocuments,
         required: true,
