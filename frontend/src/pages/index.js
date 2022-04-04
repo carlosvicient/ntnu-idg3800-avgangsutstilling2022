@@ -1,12 +1,14 @@
 import React from "react"
+
 import { Link, graphql } from "gatsby"
 
+import * as style from "../styles/index.module.css"
+
 // Components
-import Seo from "../components/Seo"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
 //style
-import * as style from "../styles/index.module.css"
 
 const IndexPage = ({ data }) => {
   const studyProgrammes = data.allSanityStudyprogramme.edges;

@@ -5,6 +5,10 @@
     background-color: var(--color-background);
 }
 
+.main > section {
+    margin-top: 0;
+}
+
 @media (max-width: 900px) {
     .main {
         padding-top: 110px;

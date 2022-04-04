@@ -2,11 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // Components
+import Layout from "../components/Layout"
 import ProjectList from "../components/ProjectList"
 import StudentList from "../components/StudentList"
 import BioCard from "../components/BioCard"
 import BackLink from "../components/BackLink"
-import Layout from "../components/Layout"
 
 function Student({ data }) {
   const student = data.sanityStudent

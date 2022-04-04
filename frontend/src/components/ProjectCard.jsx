@@ -1,8 +1,9 @@
 import React from "react"
-import * as ProjectCardStyles from "../styles/ProjectCard.module.css"
 
 // Components
 import SanityImage from "gatsby-plugin-sanity-image"
+
+import * as ProjectCardStyles from "../styles/ProjectCard.module.css"
 
 const ProjectCard = ({ project, startCarousel }) => {
   const { title, description, mainImage } = project

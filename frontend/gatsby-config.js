@@ -1,7 +1,7 @@
 const { maxHeaderSize } = require("http");
 
 module.exports = {
-  pathPrefix: "/glenneha/avgangsutstilling",
+  pathPrefix: "/carlosvm/avgangsutstilling",
   siteMetadata: {
     title: `Avgangsutstilling`,
     description: `31 studenter fra Bachelor i grafisk design, 29 studenter fra Bachelor interaksjonsdesign og 18 studenter fra Bachelor i webutvikling ved NTNU i Gjøvik avslutter tre års studier med en utstilling. Hver student viser utvalgte arbeider fra egenportefølje. Utstillingen inkluderer studentarbeider for papirbaserte og elektroniske medier. Kjerneområder for de ulike studieretningene vil for grafisk design være typografi og informasjonsdesign. Interaksjonsdesign har hatt fokus på tjenestedesign og å utforme løsninger som støtter opp under menneskers kommunikasjon og samhandling. For webutvikling er innovative og brukervennlige webløsninger vektlagt. Fellesnevnere for allestudieretningene er universell utforming samt brukersentrert design og utvikling.`,
