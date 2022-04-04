@@ -37,8 +37,8 @@
 
 @media only screen and (max-width: 900px) {
   .studentCard {
-    height: 25.8vw;
-    width: 25.8vw;
+    height: 25.5vw;
+    width: 25.5vw;
     margin-bottom: 1.5rem;
   }
 }

@@ -18,7 +18,6 @@
 
 .container p {
   color: var(--color-text);
-  margin-bottom: 22px;
 }
 
 .greenLine {
@@ -72,6 +71,9 @@
 .boxes p {
   color: var(--color-text);
   margin-top: 25px;
+}
+
+.boxes p:last-of-type {
   margin-bottom: 57px;
 }
 
@@ -119,11 +121,6 @@
     width: 64.8vw;
   }
 
-  .container p,
-  .container h2 {
-    margin-bottom: 3px;
-  }
-
   .container h2 {
     font-size: 18px;
     margin-bottom: 7px;
@@ -143,7 +140,7 @@
     font-size: 18px;
   }
 
-  .boxes p {
+  .boxes p:last-of-type {
     margin-bottom: 40px;
   }
 

@@ -66,6 +66,7 @@ p {
   font-size: 14px;
   line-height: 16px;
   max-width: 78ch;
+  margin-bottom: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
