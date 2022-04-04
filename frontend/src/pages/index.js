@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => {
         </div>
         {/* Mapper ut hver av kortene som er på siden */}
         <div className={style.gridContainer}>
-          {studyProgrammes.map(programme => (
+          {studyProgrammes.reverse().map(programme => (
             <div className={style.boxes} key={programme.node.code}>
               <div>
                 <h2>{programme.node.name}</h2>
