@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import logoDark from "../assets/images/logo-dark.svg";
 import logo from "../assets/images/logo.svg";
 
