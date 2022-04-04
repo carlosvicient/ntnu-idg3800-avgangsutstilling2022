@@ -64,7 +64,8 @@ p {
   font-family: var(--aktiv-grotesk);
   color: var(--color-text);
   font-size: 14px;
-  line-height: 114.3%;
+  line-height: 16px;
+  max-width: 78ch;
 }
 
 @media (prefers-color-scheme: dark) {
