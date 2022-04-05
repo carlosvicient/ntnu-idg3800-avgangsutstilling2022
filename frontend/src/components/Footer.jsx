@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
 
 import logoDark from "../assets/images/ntnu-black.svg";
 import logo from "../assets/images/ntnu.svg";
@@ -45,10 +46,14 @@ const Footer = () => {
         <p>Institutt for design</p>
       </div>
       <div className={style.gridItem}>
-        <p>Bachelor i Grafisk Design</p>
-        <p>Bachelor i Interaksjonsdesign</p>
-        <p>Bachelor i Webutvikling</p>
-        <p><Link to='/about'>Om-Siden</Link></p>
+        <span>
+          <p>Bachelor i Grafisk Design</p>
+          <p>Bachelor i Interaksjonsdesign</p>
+          <p>Bachelor i Webutvikling</p>
+        </span>
+        <p className={style.aboutLink}>
+          <Link to="/about">Om siden</Link>
+        </p>
       </div>
     </footer>
   )
