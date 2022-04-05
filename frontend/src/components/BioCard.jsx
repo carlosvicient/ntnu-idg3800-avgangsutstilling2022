@@ -11,7 +11,8 @@ const BioCard = ({ student }) => {
       <div className={styles.cardContainer}>
         {student.name && student.surname && (
           <h2 className={styles.fullName}>
-            {`${student.name} ${student.surname.charAt(0)}.`}
+            {student.name} {student.middle ? student.middle.charAt(0) + "." : ""}{" "}
+            {student.surname.charAt(0) + "."}
           </h2>
         )}
         {student.studyprogramme.title && (
