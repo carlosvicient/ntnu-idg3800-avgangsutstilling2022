@@ -48,6 +48,7 @@ const Footer = () => {
         <p>Bachelor i Grafisk Design</p>
         <p>Bachelor i Interaksjonsdesign</p>
         <p>Bachelor i Webutvikling</p>
+        <p><Link to='/about'>Om-Siden</Link></p>
       </div>
     </footer>
   )
