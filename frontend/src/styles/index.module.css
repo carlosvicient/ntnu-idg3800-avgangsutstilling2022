@@ -86,6 +86,7 @@
   cursor: pointer;
   bottom: 38px;
   color: var(--color-text);
+  box-shadow: 0px 4px 9px rgba(27, 26, 26, 0.05);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -142,9 +143,5 @@
 
   .boxes p:last-of-type {
     margin-bottom: 40px;
-  }
-
-  .boxes button {
-    box-shadow: 0px 4px 9px rgba(27, 26, 26, 0.05);
   }
 }
