@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import SanityImage from "gatsby-plugin-sanity-image"
 import SocialLinks from "./SocialLinks"
 
@@ -15,8 +15,7 @@ const BioCard = ({ student }) => {
         </h2>
         <p className={styles.studyProgramme}>{student.studyprogramme.title}</p>
         <span>
-          {/* Maybe remove profileImageContainerstyle */}
-          <div className={styles.profileImageContainer}>
+          <div>
             {student.image && (
               <SanityImage
                 className={styles.profileImage}
