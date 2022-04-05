@@ -9,7 +9,7 @@ const ProjectCard = ({ project, startCarousel }) => {
   const { title, description, mainImage } = project
   return (
     <div className={ProjectCardStyles.ProjectCard}>
-      {mainImage._rawAsset && <SanityImage
+      {mainImage && <SanityImage
         asset={mainImage._rawAsset}
         width={3000}
         alt={title}

@@ -19,6 +19,7 @@ function Student({ data }) {
       studentList.push(element)
     }
   })
+  studentList.sort((a, b) => (a.node.name.toLowerCase() > b.node.name.toLowerCase()) ? 1 : -1);
 
   return (
     <Layout>
@@ -50,6 +51,7 @@ export const query = graphql`
   query MyQuery($slug: [String] = "", $studyprogramme: [String] = "") {
     sanityStudent(slug: { current: { in: $slug } }) {
       name
+      middle
       surname
       studyprogramme {
         name

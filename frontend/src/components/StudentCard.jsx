@@ -30,7 +30,7 @@ const StudentCard = ({ node }) => {
           <SanityImage
             className={styles.studentImage}
             asset={node.image._rawAsset}
-            alt={`${node.name}, a student in ${node.name}`}
+            alt={`${node.name}, student i ${node.studyprogramme.name}`}
           />
         )}
         <p className={styles.studentCardName}>
