@@ -12,6 +12,7 @@ import Seo from "../components/Seo"
 
 const IndexPage = ({ data }) => {
   const studyProgrammes = data.allSanityStudyprogramme.edges;
+  studyProgrammes.sort((a, b) => (a.node.name.toLowerCase() > b.node.name.toLowerCase()) ? 1 : -1);
 
   return (
     <Layout>
@@ -50,7 +51,7 @@ const IndexPage = ({ data }) => {
         </div>
         {/* Mapper ut hver av kortene som er på siden */}
         <div className={style.gridContainer}>
-          {studyProgrammes.reverse().map(programme => (
+          {studyProgrammes.map(programme => (
             <div className={style.boxes} key={programme.node.code}>
               <div>
                 <h2>{programme.node.name}</h2>
