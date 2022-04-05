@@ -20,7 +20,8 @@
 }
 
 .button {
-  font-size: 22px;
+  font-size: 21px;
+  margin-bottom: -3px;
   background: none;
   color: inherit;
   border: none;
