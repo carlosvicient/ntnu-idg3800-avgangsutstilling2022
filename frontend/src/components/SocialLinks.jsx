@@ -42,13 +42,8 @@ const SocialLinks = ({ links }) => {
               </div>
             </a>
           }
-            <a href={`mailto:test@test.no`} target="_blank" rel="noreferrer">
-              <div className={styles.iconContainer}>
-                <GrMailOption className={styles.socialLinkIcon} />
-              </div>
-            </a>
           
-          {links.portfolio &&
+          {/* (Will be added later) links.portfolio &&
             <a
               href={links.portfolio}
               target="_blank"
@@ -57,7 +52,7 @@ const SocialLinks = ({ links }) => {
             >
               Se portfolio
             </a>
-          }
+        */}
         </div>
       }
     </IconContext.Provider>
