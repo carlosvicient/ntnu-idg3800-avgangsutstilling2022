@@ -6,21 +6,22 @@
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.studentCard img {
   transition: all 0.2s ease-in-out;
 }
 
-.studentCard:hover {
+.studentCard:hover img,
+.studentCard:focus-visible img {
+  transform: translate(-0.5rem, -0.5rem);
   box-shadow: 0.5rem 0.5rem 0 var(--color-accent);
   color: var(--color-accent);
 }
 
-.studentCard:focus-visible {
-  box-shadow: 0.5rem 0.5rem 0 var(--color-accent) !important;
-}
-
 .studentCardName {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -37,8 +38,8 @@
 
 @media only screen and (max-width: 900px) {
   .studentCard {
-    height: 25.8vw;
-    width: 25.8vw;
+    height: 25.5vw;
+    width: 25.5vw;
     margin-bottom: 1.5rem;
   }
 }
@@ -48,9 +49,5 @@
     height: 38.5vw;
     width: 38.5vw;
     margin-bottom: 2rem;
-  }
-
-  .studentCard p {
-    font-size: 14px;
   }
 }

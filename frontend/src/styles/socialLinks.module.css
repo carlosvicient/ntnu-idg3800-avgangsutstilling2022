@@ -13,7 +13,7 @@
   border-radius: 5px;
   margin-right: 0.8em;
   padding: 0.4em;
-  width: 2.25em;
+  width: 40px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,10 +23,9 @@
 }
 
 .portfolioLink {
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 500;
 }
 
-.socialLinkIcon {
-  color: var(--color-text);
+.socialLinkIcon path {
+  stroke: var(--color-text);
 }

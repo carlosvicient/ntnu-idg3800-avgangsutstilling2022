@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  flex-direction: column;
   margin-right: 4vw;
   margin-left: 11.4vw;
   justify-content: space-between;
@@ -7,22 +8,23 @@
 }
 
 .cardContainer {
-  max-width: 40%;
   flex: 1 1 40%;
 }
 
 .fullName {
   margin-bottom: 0.5em;
+  font-weight: 700;
 }
 
 .studyProgramme {
   margin-bottom: 1em;
-  font-weight: 700;
-  font-size: 12px;
+  font-weight: 500;
   color: var(--color-text);
 }
 
-.profileImageContainer {
+.container span {
+  display: flex;
+  gap: 7.5vw;
   margin-bottom: 1em;
   margin-top: 25px;
 }
@@ -32,47 +34,30 @@
 }
 
 .bioContainer {
-  padding-top: 6vw;
   display: flex;
   align-items: center;
-  flex: 1 1 60%;
-  max-width: 60%;
-}
-
-.bio {
-  font-size: 20px;
 }
 
 @media only screen and (max-width: 900px) {
   .container {
-    flex-direction: column;
-    margin: 0 5vw;
+    margin: 0 6.4vw;
   }
 
   .cardContainer {
     max-width: none;
   }
 
-  .studyProgramme {
-    font-weight: 500;
-    font-size: 14px;
+  .container span {
+    flex-direction: column;
+    gap: 16px;
   }
 
   .bioContainer {
     margin-top: 15px;
-    margin-bottom: 25px;
     max-width: none;
-  }
-
-  .bio {
-    font-size: 14px;
   }
 
   .profileImage {
     width: 67.7vw;
-  }
-
-  .test {
-    order: 3;
   }
 }

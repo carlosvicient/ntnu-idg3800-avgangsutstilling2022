@@ -38,8 +38,7 @@
 }
 
 .header nav ul li a {
-    font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-text);
     padding: 1rem;
     text-decoration: none;
@@ -160,8 +159,8 @@
     .header nav {
         display: block;
         position: fixed;
-        top: 0px;
-        left: 0px;
+        top: 0;
+        left: 0;
         text-align: left;
         width: 0;
         height: 0;
@@ -176,12 +175,14 @@
     .header nav ul {
         grid-template-columns: 1fr;
         border-bottom: none;
-        padding: 30px;
+        margin-top: -27px;
+        padding: 60px 35px;
         padding-bottom: 60px;
         background-color: var(--color-background);
         transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
+        transform: translate(-115%, 0);
         transition: transform 0.5s ease-in-out;
+        box-shadow: 0px 4px 9px rgba(27, 26, 26, 0.25);
     }
 
     .header nav ul li {
@@ -191,15 +192,7 @@
 
     .header nav ul li a {
         padding: 2rem 0;
-        font-size: 12px;
-        font-weight: 500;
-        color: black;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        .header nav ul li a {
-            color: var(--color-text);
-        }
+        color: var(--color-text);
     }
 
     /* Logo */
@@ -208,6 +201,10 @@
         top: 0;
         margin: 10px;
         width: 190px;
+    }
+
+    .tallHeader {
+        height: 160px;
     }
 
     .bigStaticImg {
