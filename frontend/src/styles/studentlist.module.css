@@ -10,15 +10,18 @@
   font-size: 20px;
 }
 
+.sortHead button {
+  color: var(--color-text);
+}
+
 .line {
   border-top: 1px solid #DDD5B8;
   margin: 17px 7.5vw 44px 7.5vw;
 }
 
 .button {
-  display: grid;
-  place-items: center;
-  font-size: 29px;
+  font-size: 21px;
+  margin-bottom: -3px;
   background: none;
   color: inherit;
   border: none;
@@ -29,18 +32,14 @@
 .studentGrid {
   display: flex;
   flex-wrap: wrap;
-  margin: 3.1vw 7.5vw;
-  margin: 0 7.5vw 3.1vw 7.5vw;
-  gap: 3.1vw;
+  margin: 0 7.5vw 75px 7.5vw;
+  column-gap: 3vw;
+  row-gap: 5vw;
 }
 
 @media (prefers-color-scheme: dark) {
   .line {
     border-top: 1px solid hsl(0, 0%, 34%);
-  }
-
-  .sortHead button {
-    color: var(--color-text);
   }
 }
 
@@ -50,16 +49,12 @@
   }
 
   .studentGrid {
-    margin: 1rem 7.1vw;
+    row-gap: 5.5vw;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .sortHead {
-    margin: 1rem 7.1vw;
-  }
-
   .studentGrid {
-    margin: 1rem 7.1vw;
+    row-gap: 7vw;
   }
 }

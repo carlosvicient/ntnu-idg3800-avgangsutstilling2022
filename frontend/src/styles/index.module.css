@@ -6,18 +6,18 @@
 
 .container h1 {
   text-indent: -999em;
+  margin: 0;
 }
 
 .container h2 {
   font-size: 18px;
+  font-weight: 500;
   margin-bottom: 8px;
   margin-top: 20px;
 }
 
 .container p {
-  font-size: 14px;
   color: var(--color-text);
-  margin-bottom: 22px;
 }
 
 .greenLine {
@@ -58,43 +58,35 @@
 
 .social {
   text-decoration: none;
-  color: black;
   font-size: 14px;
 }
 
 .boxes h2 {
+  text-transform: lowercase;
+  font-family: var(--ohno-blazeface);
   font-size: 24px;
   margin: 0 0 10px 0;
 }
 
 .boxes p {
   color: var(--color-text);
-  font-size: 12px;
   margin-top: 25px;
+}
+
+.boxes p:last-of-type {
   margin-bottom: 57px;
 }
 
 .boxes button {
   font-family: var(--aktiv-grotesk);
-  font-size: 12px;
   width: 100%;
   height: 32px;
   background-color: var(--color-background);
   border: 1px solid var(--color-accent);
   cursor: pointer;
   bottom: 38px;
-  color: black;
-}
-
-/* Media Queries */
-@media (prefers-color-scheme: dark) {
-  .social {
-    color: var(--color-text);
-  }
-
-  .boxes button {
-    color: var(--color-text);
-  }
+  color: var(--color-text);
+  box-shadow: 0px 4px 9px rgba(27, 26, 26, 0.05);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -127,25 +119,18 @@
   }
 
   .containerText p {
-    font-size: 12px;
     width: 64.8vw;
   }
 
-  .container p,
   .container h2 {
-    margin-bottom: 3px;
-  }
-
-  .container h2 {
-    font-size: 12px;
+    font-size: 18px;
+    margin-bottom: 7px;
   }
 
   .greenLine {
     border: none;
-    font-size: 18px !important;
     padding-left: 0;
     margin-left: 0;
-    margin-bottom: 7px !important;
   }
 
   .boxes {
@@ -156,11 +141,7 @@
     font-size: 18px;
   }
 
-  .boxes p {
+  .boxes p:last-of-type {
     margin-bottom: 40px;
-  }
-
-  .boxes button {
-    box-shadow: 0px 4px 9px rgba(27, 26, 26, 0.05);
   }
 }

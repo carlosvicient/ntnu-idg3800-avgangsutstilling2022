@@ -1,20 +1,25 @@
-import { Link } from 'gatsby';
-import React from 'react';
-import Layout from '../components/Layout';
-import Seo from '../components/Seo';
-import BackLink from '../components/BackLink';
+import { Link } from "gatsby"
+import React from "react"
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
+import BackLink from "../components/BackLink"
 
-import * as header from "../styles/studyprogramme.module.css";
-import * as styles from "../styles/about.module.css";
+import * as header from "../styles/studyprogramme.module.css"
+import * as styles from "../styles/about.module.css"
 
 function About() {
-    return (
-        <Layout>
-            <Seo title="Om" description="De som er ansvarlige for at siden er oppe og går." />
-            <BackLink to="/" />
-            <header className={header.header}><h1 className={styles.h1}>Om</h1></header>
-
-            <section className={styles.section}>
+  return (
+    <Layout>
+      <div className={styles.about}>
+        <Seo
+          title="Om"
+          description="De som er ansvarlige for at siden er oppe og går."
+        />
+        <BackLink to="/" />
+        <header className={header.header}>
+          <h1>Om</h1>
+        </header>
+            <section>
                 <h2>Bærekraftansvarlig</h2>
                 <ul>
                     <li><Link to='/bwu/tom-schrier'>Tom Schrier</Link></li>
@@ -76,4 +81,4 @@ function About() {
     );
 }
 
-export default About;
+export default About
