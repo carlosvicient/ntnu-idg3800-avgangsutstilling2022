@@ -20,9 +20,7 @@
 }
 
 .button {
-  display: grid;
-  place-items: center;
-  font-size: 29px;
+  font-size: 22px;
   background: none;
   color: inherit;
   border: none;
