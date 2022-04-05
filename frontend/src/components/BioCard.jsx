@@ -23,11 +23,11 @@ const BioCard = ({ student }) => {
   return (
     <div className={styles.container}>
       <div className={styles.cardContainer}>
-        <h2 className={styles.fullName}>
+        {student.name && student.surname &&<h2 className={styles.fullName}>
           {`${student.name} 
         ${student.surname.charAt(0)}.`}
-        </h2>
-        <p className={styles.studyProgramme}>{student.studyprogramme.title}</p>
+        </h2>}
+        {student.studyprogramme.title && <p className={styles.studyProgramme}>{student.studyprogramme.title}</p>}
         <div className={styles.profileImageContainer}>
           {student.image && (
             <SanityImage
