@@ -31,6 +31,16 @@ export default {
         }),
     },
     {
+      title: 'Mail',
+      name: 'mail',
+      type: 'url',
+      description: "Add 'mailto:' before writing email address",
+      validation: (Rule) =>
+        Rule.uri({
+          scheme: ['http', 'https', 'mailto', 'tel'],
+        }),
+    },
+    {
       title: 'Portfolio',
       name: 'portfolio',
       type: 'url',

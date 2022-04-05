@@ -12,6 +12,7 @@ import Seo from "../components/Seo"
 
 const IndexPage = ({ data }) => {
   const studyProgrammes = data.allSanityStudyprogramme.edges;
+  studyProgrammes.sort((a, b) => (a.node.name.toLowerCase() > b.node.name.toLowerCase()) ? 1 : -1);
 
   return (
     <Layout>
