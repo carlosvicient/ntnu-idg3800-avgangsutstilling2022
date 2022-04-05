@@ -6,16 +6,17 @@
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.studentCard img {
   transition: all 0.2s ease-in-out;
 }
 
-.studentCard:hover {
+.studentCard:hover img,
+.studentCard:focus-visible img {
+  transform: translate(-0.5rem, -0.5rem);
   box-shadow: 0.5rem 0.5rem 0 var(--color-accent);
   color: var(--color-accent);
-}
-
-.studentCard:focus-visible {
-  box-shadow: 0.5rem 0.5rem 0 var(--color-accent) !important;
 }
 
 .studentCardName {
