@@ -10,12 +10,19 @@
     margin-bottom: 2px;
 }
 
+.footer p a {
+    color: var(--color-background);
+}
+
 .gridItem {
     height: 100%;
 }
 
 .gridItem:last-child {
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .gridItem p {
@@ -27,7 +34,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .footer p {
+
+    .footer p,
+    .footer p a {
         color: var(--color-background);
     }
 }
@@ -39,5 +48,10 @@
 
     .gridItem:last-child {
         margin-top: 2rem;
+        justify-content: normal;
+    }
+
+    .aboutLink {
+        margin-top: 10px;
     }
 }
