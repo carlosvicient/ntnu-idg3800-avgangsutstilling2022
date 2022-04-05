@@ -203,6 +203,10 @@
         width: 190px;
     }
 
+    .tallHeader {
+        height: 160px;
+    }
+
     .bigStaticImg {
         margin: 10px;
         width: 260px;
