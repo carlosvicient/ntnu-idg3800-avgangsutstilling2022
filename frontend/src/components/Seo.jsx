@@ -21,7 +21,6 @@ function Seo({ description, lang, meta, title, image }) {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const titleTemplate = title ? (`${title} | ${defaultTitle}`) : defaultTitle;
-  const imageContent = image ? image: null;
 
   return (
     <Helmet
@@ -48,11 +47,11 @@ function Seo({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: imageContent
+          content: image
         },
         {
           property: `twitter:image`,
-          content: imageContent
+          content: image
         },
         {
           name: `twitter:card`,
@@ -69,6 +68,16 @@ function Seo({ description, lang, meta, title, image }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `theme-color`,
+          media: `(prefers-color-scheme: light)`,
+          content: `#fdf9ed`,
+        },
+        {
+          name: `theme-color`,
+          media: `(prefers-color-scheme: dark)`,
+          content: `#3e3e3e`,
         },
       ].concat(meta)}
     />
