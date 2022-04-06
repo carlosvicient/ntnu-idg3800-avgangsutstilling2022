@@ -7,19 +7,20 @@ import { BsArrowLeft } from "react-icons/bs"
 import * as style from "../styles/backLink.module.css"
 
 const BackLink = ({ to }) => {
-  let match = ""
-  if (typeof window !== "undefined") {
-    match = window.matchMedia("(min-width: 900px)").matches
-  }
-  const [largeScreenSize, setLargeScreenSize] = useState(match)
+  const [largeScreenSize, setLargeScreenSize] = useState('')
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      let match = window.matchMedia("(min-width: 900px)").matches
+      setLargeScreenSize(match);
+    }
+
     if (typeof window !== "undefined") {
       window.matchMedia("(min-width: 900px)").addEventListener("change", e => {
         setLargeScreenSize(e.matches)
       })
     }
-  })
+  }, [])
 
   return (
     <div className={style.backLink}>
