@@ -23,7 +23,9 @@ const ProjectCard = ({ project, startCarousel }) => {
           }
         }}
       />}
-      <p>{description[0].children[0].text}</p>
+      {description.map((description) => (
+        <p>{description.children[0].text}</p>
+      ))}
     </div>
   )
 }
