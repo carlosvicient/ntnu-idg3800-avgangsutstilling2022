@@ -46,7 +46,7 @@ const ProjectList = ({ showcase }) => {
           setCurrentImage={setCurrentImage}
         />
       ) : null}
-
+      <h2>Some of my projects</h2>
       {projects.map(project => {
         return <ProjectCard project={project} startCarousel={startCarousel} />
       })}

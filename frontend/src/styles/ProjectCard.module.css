@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.ProjectCard > h3 {
+    flex: 1;
+}
+
 .ProjectCard img {
     cursor: pointer;
     width: 51vw;
