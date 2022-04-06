@@ -20,10 +20,10 @@ function Student({ data }) {
     }
   })
   studentList.sort((a, b) => (a.node.name.toLowerCase() > b.node.name.toLowerCase()) ? 1 : -1);
-
+  
   return (
     <Layout>
-      <Seo title={`${student.name} ${student.surname[0]}.`} description={student.bio[0].children[0].text} image={student.image._rawAsset._ref} />
+      <Seo title={`${student.name} ${student.surname[0]}.`} description={student.bio[0].children[0].text} image={student.image.asset.url} />
       <section>
         {/* Tilbake til course-page */}
         <BackLink to={`/${student.studyprogramme.slug.current}`} />
@@ -67,6 +67,9 @@ export const query = graphql`
       }
       image {
         _rawAsset
+        asset {
+          url
+        }
       }
       social {
         behance

@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <div className={style.container}>
-        <Seo title="Hjem" description="31 studenter fra Bachelor i grafisk design, 29 studenter
+        <Seo title="" description="31 studenter fra Bachelor i grafisk design, 29 studenter
             fra Bachelor interaksjonsdesign og 18 studenter fra Bachelor i
             webutvikling ved NTNU i Gjøvik avslutter tre års studier med en
             utstilling. Hver student viser utvalgte arbeider fra egenportefølje." />

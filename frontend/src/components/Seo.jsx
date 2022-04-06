@@ -20,14 +20,15 @@ function Seo({ description, lang, meta, title, image }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const titleTemplate = title ? (`${title} | ${defaultTitle}`) : defaultTitle;
+  const imageContent = image ? image: null;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={titleTemplate}
       meta={[
         {
           name: `description`,
@@ -47,11 +48,11 @@ function Seo({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: image ? `https://cdn.sanity.io/images/y2aw28t3/production/${image}` : null
+          content: imageContent
         },
         {
           property: `twitter:image`,
-          content: image ? `https://cdn.sanity.io/images/y2aw28t3/production/${image}` : null
+          content: imageContent
         },
         {
           name: `twitter:card`,
