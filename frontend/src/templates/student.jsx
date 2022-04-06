@@ -76,6 +76,7 @@ export const query = graphql`
         instagram
         linkedin
         portfolio
+        mail
       }
       slug {
         current
