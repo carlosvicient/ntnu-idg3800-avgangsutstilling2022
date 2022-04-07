@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => {
             Interaksjonsdesign har hatt fokus på tjenestedesign og å utforme
             løsninger som støtter opp under menneskers kommunikasjon og
             samhandling. For webutvikling er innovative og brukervennlige
-            webløsninger vektlagt. Fellesnevnere for allestudieretningene er
+            webløsninger vektlagt. Fellesnevnere for alle studieretningene er
             universell utforming samt brukersentrert design og utvikling.
           </p>
 
