@@ -1,5 +1,10 @@
 .ProjectCard {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.ProjectCard h3 {
+    flex: 100%;
 }
 
 .ProjectCard img {
