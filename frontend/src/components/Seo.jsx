@@ -12,6 +12,7 @@ function Seo({ description, lang, meta, title, image }) {
             title
             description
             author
+            image
           }
         }
       }
@@ -21,6 +22,7 @@ function Seo({ description, lang, meta, title, image }) {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const titleTemplate = title ? (`${title} | ${defaultTitle}`) : defaultTitle;
+  const imageContent = image ? image : site.siteMetadata.image;
 
   return (
     <Helmet
@@ -47,11 +49,11 @@ function Seo({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: image
+          content: imageContent
         },
         {
           property: `twitter:image`,
-          content: image
+          content: imageContent
         },
         {
           name: `twitter:card`,
