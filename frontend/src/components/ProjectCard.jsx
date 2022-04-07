@@ -9,6 +9,7 @@ const ProjectCard = ({ project, startCarousel }) => {
   const { title, description, mainImage } = project
   return (
     <div className={ProjectCardStyles.ProjectCard}>
+      <h3>{title}</h3>
       {mainImage && <SanityImage
         asset={mainImage._rawAsset}
         width={3000}
@@ -23,9 +24,13 @@ const ProjectCard = ({ project, startCarousel }) => {
           }
         }}
       />}
-      {description.map((description) => (
-        <p>{description.children[0].text}</p>
-      ))}
+      <div>
+        {description.map((description) => (
+          <p>{description.children.map((children) => (
+            children.text
+          ))}</p>
+        ))}
+      </div>
     </div>
   )
 }
