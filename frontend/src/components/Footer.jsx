@@ -47,9 +47,9 @@ const Footer = () => {
       </div>
       <div className={style.gridItem}>
         <span>
-          <p>Bachelor i Grafisk Design</p>
-          <p>Bachelor i Interaksjonsdesign</p>
-          <p>Bachelor i Webutvikling</p>
+          <p><a href="https://www.ntnu.no/studier/bmed" target="_blank" rel="noreferrer">Bachelor i Grafisk Design</a></p>
+          <p><a href="https://www.ntnu.no/studier/bixd" target="_blank" rel="noreferrer">Bachelor i Interaksjonsdesign</a></p>
+          <p><a href="https://www.ntnu.no/studier/bwu" target="_blank" rel="noreferrer">Bachelor i Webutvikling</a></p>
         </span>
         <p className={style.aboutLink}>
           <Link to="/about">Om siden</Link>
