@@ -21,6 +21,13 @@ function About() {
         </header>
         <section>
           <h2>Bærekraftansvarlig</h2>
+          <p>
+            Som gruppens eneste bidragsyter, har jeg vært ansvarlig for bærekraften til den digitale løsningen.
+            Dette arbeidet startet allerede i designfasen der jeg delte råd om bærekraftig design.
+            For eksempel bruker designet få skrifttyper utenom systemskrifter og har et mørk utseende som kan spare energi på OLED-skjermer.
+            Jeg har også samarbeidet med utviklingsteamet med behandling av bilder og kode på en bærekraftig måte.
+            Som for eksempel ved å bruke optimaliserte bildetyper og fjerning av ubrukt JavaScript.
+          </p>
           <ul>
             <li>
               <Link to="/bwu/tom-schrier">Tom Schrier</Link>
@@ -89,6 +96,10 @@ function About() {
           </ul>
 
           <h2>Innholdsansvarlige</h2>
+          <p>
+            Som innholdsansvarlige har vi vært ansvarlige for å samle inn informasjonen fra studentene
+            og legge denne informasjonen inn i CMSen.
+          </p>
           <ul>
             <li>
               <Link to="/bixd/ann-margit-krog">Ann Margit Krog</Link>
@@ -118,6 +129,12 @@ function About() {
           </ul>
 
           <h2>Utviklingsansvarlige</h2>
+          <p>
+            Som utviklingsansvarlige har vi bestemt hvilke teknologier som skal brukes til prosjektet.
+            Det ble valgt Sanity som headless CMS og Gatsby ble brukt til å lage rammeverket rundt nettsiden.
+            Ansvarsområdet vårt har vært å sette opp CMSen og rammeverket rundt de forskjellige sidene,
+            samt lage forksjellige komponenter som er blitt brukt på siden.
+          </p>
           <ul>
             <li>
               <Link to="/bwu/cornelius-ottar-sandmael">
@@ -135,6 +152,9 @@ function About() {
           </ul>
 
           <h2>Stilarkansvarlige</h2>
+          <p>
+            Som stilarkansvarlige er vi ansvarlige for stilen på nettsiden.
+          </p>
           <ul>
             <li>
               <Link to="/bwu/emil-boen">Emil Bøen</Link>
