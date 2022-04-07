@@ -35,6 +35,10 @@ function About() {
           </ul>
 
           <h2>Designansvarlige</h2>
+          <p>
+            Vi har vært ansvarlige for å utvikle den grafiske profilen til årets avgangsutstilling. 
+            Den grafiske profilen inkluderer: logo, fargepalett, typografi, trykte flater og designmanual, som har blitt brukt til utvikling av hjemmesiden.
+          </p>
           <ul>
             <li>
               <Link to="/bmed/adam-maximilian-stoffel">
