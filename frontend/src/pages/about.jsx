@@ -75,6 +75,13 @@ function About() {
           </ul>
 
           <h2>Informasjonsarkitektur-ansvarlige</h2>
+          <p>
+            Som et ledd i utviklingen av nettsiden for den avsluttende utstillingen, har vi vært ansvarlige for informasjonsarkitekturen.
+            Nettsidens struktur er basert på et minimalistisk uttrykk, hvor et minimum av informasjon er ment å være enkelt strukturert,
+            basert på studieretninger, og deretter basert på hver enkelt student med sine prosjekter.
+            Dette har vært et samarbeid med studenter fra grafisk design og webutvikling, hvor deres innspill har vært med på å forme strukturen.
+            En enkel struktur ble prototypet i Figma, og overlevert design- og utviklingsansvarlige.
+          </p>
           <ul>
             <li>
               <Link to="/bixd/hanna-hernaes">Hanna Hernæs</Link>
