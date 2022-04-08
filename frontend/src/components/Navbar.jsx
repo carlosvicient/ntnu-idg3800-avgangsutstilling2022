@@ -41,13 +41,13 @@ function Navbar() {
 
         <ul>
           <li>
-            <Link to="/bmed">Grafisk design</Link>
+            <Link to="/bmed" activeClassName="active">Grafisk design</Link>
           </li>
           <li>
-            <Link to="/bixd">Interaksjonsdesign</Link>
+            <Link to="/bixd" activeClassName="active">Interaksjonsdesign</Link>
           </li>
           <li>
-            <Link to="/bwu">Webutvikling</Link>
+            <Link to="/bwu" activeClassName="active">Webutvikling</Link>
           </li>
         </ul>
       </nav>
