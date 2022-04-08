@@ -10,7 +10,6 @@
 }
 
 .container h2 {
-  font-size: 18px;
   font-weight: 500;
   margin-bottom: 8px;
   margin-top: 20px;
@@ -58,13 +57,11 @@
 
 .social {
   text-decoration: none;
-  font-size: 14px;
 }
 
 .boxes h2 {
   text-transform: lowercase;
   font-family: var(--ohno-blazeface);
-  font-size: 24px;
   margin: 0 0 10px 0;
 }
 
@@ -80,13 +77,14 @@
 .boxes button {
   font-family: var(--aktiv-grotesk);
   width: 100%;
-  height: 32px;
+  padding: 8px;
   background-color: var(--color-background);
   border: 1px solid var(--color-accent);
   cursor: pointer;
   bottom: 38px;
   color: var(--color-text);
   box-shadow: 0px 4px 9px rgba(27, 26, 26, 0.05);
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -123,7 +121,6 @@
   }
 
   .container h2 {
-    font-size: 18px;
     margin-bottom: 7px;
   }
 
@@ -135,10 +132,6 @@
 
   .boxes {
     padding: 8.2vw;
-  }
-
-  .boxes h2 {
-    font-size: 18px;
   }
 
   .boxes p:last-of-type {
