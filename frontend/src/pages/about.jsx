@@ -164,7 +164,7 @@ function About() {
 
           <h2>Stilarkansvarlige</h2>
           <p>
-            Som stilarkansvarlige er vi ansvarlige for stilen på nettsiden.
+            Ansvar for å stilsette nettsiden basert på en grafisk designmanual og hi-fi prototype i tett samarbeid med de andre utviklerne.
           </p>
           <ul>
             <li>
