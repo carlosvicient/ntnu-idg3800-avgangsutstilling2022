@@ -12,7 +12,8 @@ import * as styles from "../styles/studyprogramme.module.css"
 export default function Studyprogramme({ data }) {
   const students = data.allSanityStudent.edges
   const name = data.allSanityStudent.edges[0].node.studyprogramme.name
-  const description = data.allSanityStudent.edges[0].node.studyprogramme.description;
+  const description =
+    data.allSanityStudent.edges[0].node.studyprogramme.description
 
   return (
     <Layout>
@@ -23,9 +24,9 @@ export default function Studyprogramme({ data }) {
 
         {/* Overskrift og description */}
         <header className={styles.header}>
-          <h2>{name}</h2>
-          {description.map((p) => (
-                  <p>{p.children[0].text}</p>
+          <h1>{name}</h1>
+          {description.map(p => (
+            <p>{p.children[0].text}</p>
           ))}
         </header>
 
@@ -40,7 +41,7 @@ export const query = graphql`
   query ($slug: [String] = "") {
     allSanityStudent(
       filter: { studyprogramme: { slug: { current: { in: $slug } } } }
-      sort: {fields: name, order: ASC}
+      sort: { fields: name, order: ASC }
     ) {
       edges {
         node {
