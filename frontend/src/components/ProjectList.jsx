@@ -10,7 +10,7 @@ const ProjectList = ({ showcase }) => {
   const [largeScreenSize, setLargeScreenSize] = useState('')
   const [showImageCarousel, setShowImageCarousel] = useState(false)
   const [currentImage, setCurrentImage] = useState(0)
-  const projects = Object.values(showcase).filter(project => project)
+  const projects = showcase ? Object.values(showcase).filter(project => project) : [];
 
   useEffect(() => {
     if (typeof window !== "undefined") {
