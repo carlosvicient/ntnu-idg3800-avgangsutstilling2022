@@ -1,18 +1,17 @@
 .ProjectList {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    margin-left: 11.4vw;
-    margin-top: 98px;
-    margin-bottom: 114px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-left: 11.4vw;
+  margin-top: 98px;
+  margin-bottom: 114px;
 }
 
 @media screen and (max-width: 1200px) {
-    .ProjectList {
-        align-items: center;
-        gap: 32px;
-        margin-left: 0;
-        margin-top: 51px;
-        margin-bottom: 60px;
-    }
+  .ProjectList {
+    align-items: center;
+    margin-left: 0;
+    margin-top: 51px;
+    margin-bottom: 60px;
+  }
 }

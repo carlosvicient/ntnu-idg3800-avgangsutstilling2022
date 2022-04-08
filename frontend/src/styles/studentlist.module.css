@@ -15,7 +15,7 @@
 }
 
 .line {
-  border-top: 1px solid #DDD5B8;
+  border-top: 1px solid #ddd5b8;
   margin: 17px 7.5vw 44px 7.5vw;
 }
 
@@ -32,9 +32,15 @@
 .studentGrid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 7.5vw 75px 7.5vw;
   column-gap: 3vw;
   row-gap: 5vw;
+}
+
+.studentGrid::after {
+  content: "";
+  flex: auto;
 }
 
 @media (prefers-color-scheme: dark) {

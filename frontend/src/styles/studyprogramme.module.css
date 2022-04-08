@@ -2,7 +2,7 @@
   padding: 1rem 7.5vw;
 }
 
-.header h2 {
+.header h1 {
   text-transform: lowercase;
   font-family: var(--ohno-blazeface);
 }
