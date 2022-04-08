@@ -1,44 +1,45 @@
 .backLink {
-    padding-left: 7.5vw;
-    margin-bottom: 10px;
+  padding-left: 7.5vw;
+  margin-bottom: 10px;
 }
 
 .backLink a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    width: 10vw;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 10vw;
 }
 
 .desktopArrow {
-    order: 0;
-    font-weight: bolder;
-    font-size: 20px;
-    color: var(--color-text);
+  order: 0;
+  font-weight: bolder;
+  font-size: 20px;
+  color: var(--color-text);
 }
 
 .backLink span {
-    order: 1;
-    margin-left: .5em;
+  order: 1;
+  margin-left: 0.5em;
 }
 
 /* Media queries */
 @media (max-width: 900px) {
-    .backLink {
-        position: fixed;
-        background-color: var(--color-background);
-        width: 100%;
-        padding-bottom: 10px;
-        padding-left: 6.4vw;
-    }
+  .backLink {
+    position: fixed;
+    margin-top: -0.1px;
+    background-color: var(--color-background);
+    width: 100%;
+    padding-bottom: 10px;
+    padding-left: 6.4vw;
+  }
 
-    .backLink a {
-        width: 20vw;
-    }
+  .backLink a {
+    width: 20vw;
+  }
 }
 
 @media (max-width: 350px) {
-    .backLink a {
-        width: 50vw;
-    }
+  .backLink a {
+    width: 50vw;
+  }
 }

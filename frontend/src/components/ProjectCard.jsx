@@ -10,25 +10,25 @@ const ProjectCard = ({ project, startCarousel }) => {
   return (
     <div className={ProjectCardStyles.ProjectCard}>
       <h3>{title}</h3>
-      {mainImage && <SanityImage
-        asset={mainImage._rawAsset}
-        width={3000}
-        alt={title}
-        tabIndex="0"
-        onClick={() => {
-          startCarousel(project)
-        }}
-        onKeyDown={e => {
-          if (e.key === "Enter") {
+      {mainImage && (
+        <SanityImage
+          asset={mainImage._rawAsset}
+          width={3000}
+          alt={title}
+          tabIndex="0"
+          onClick={() => {
             startCarousel(project)
-          }
-        }}
-      />}
+          }}
+          onKeyDown={e => {
+            if (e.key === "Enter") {
+              startCarousel(project)
+            }
+          }}
+        />
+      )}
       <div>
-        {description.map((description) => (
-          <p>{description.children.map((children) => (
-            children.text
-          ))}</p>
+        {description.map(description => (
+          <p>{description.children.map(children => children.text)}</p>
         ))}
       </div>
     </div>
