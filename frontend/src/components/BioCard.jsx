@@ -31,7 +31,7 @@ const BioCard = ({ student }) => {
             )}
           </div>
           <div className={styles.bioContainer}>
-            <p>{student.bio.map(bio => bio.children[0].text)}</p>
+            <p>{student.bio ? student.bio.map(bio => bio.children[0].text) : null}</p>
           </div>
         </span>
       </div>

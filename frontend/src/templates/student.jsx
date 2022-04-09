@@ -23,7 +23,7 @@ function Student({ data }) {
   
   return (
     <Layout>
-      <Seo title={`${student.name} ${student.middle ? student.middle : ""} ${student.surname}`} description={student.bio[0].children[0].text} image={student.image.asset.url} />
+      <Seo title={`${student.name} ${student.middle ? student.middle : ""} ${student.surname}`} description={student.bio ? student.bio[0].children[0].text : null} image={student.image.asset.url} />
       <section>
         {/* Tilbake til course-page */}
         <BackLink to={`/${student.studyprogramme.slug.current}`} />
