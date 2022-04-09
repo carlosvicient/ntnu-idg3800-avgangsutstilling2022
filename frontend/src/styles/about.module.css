@@ -1,0 +1,16 @@
+.about h1 {
+    margin: .5em 0;
+}
+
+.about section {
+    margin: 1rem 7.2vw;
+}
+
+.about section h2 {
+    margin-bottom: .5rem;
+}
+
+.about section ul li {
+    padding: .5rem 0 1rem 0;
+    list-style-type: none;
+}

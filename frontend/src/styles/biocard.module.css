@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4vw;
+  margin-left: 11.4vw;
+  justify-content: space-between;
+  text-align: start;
+}
+
+.cardContainer {
+  flex: 1 1 40%;
+}
+
+.fullName {
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+.studyProgramme {
+  margin-bottom: 1em;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.container span {
+  display: flex;
+  gap: 7.5vw;
+  margin-bottom: 1em;
+  margin-top: 25px;
+}
+
+.profileImage {
+  width: 27.8vw;
+}
+
+.bioContainer {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    margin: 0 6.4vw;
+  }
+
+  .cardContainer {
+    max-width: none;
+  }
+
+  .container span {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .bioContainer {
+    margin-top: 15px;
+    max-width: none;
+  }
+
+  .profileImage {
+    width: 67.7vw;
+  }
+}

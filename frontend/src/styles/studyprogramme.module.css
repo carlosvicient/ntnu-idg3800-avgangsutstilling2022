@@ -1,0 +1,14 @@
+.header {
+  padding: 1rem 7.5vw;
+}
+
+.header h1 {
+  text-transform: lowercase;
+  font-family: var(--ohno-blazeface);
+}
+
+@media only screen and (max-width: 900px) {
+  .header {
+    padding: 1rem 7.2vw;
+  }
+}

@@ -1,0 +1,52 @@
+.studentCard {
+  height: 18.5vw;
+  width: 18.5vw;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.studentCard img {
+  transition: all 0.2s ease-in-out;
+}
+
+.studentCard:hover img,
+.studentCard:focus-visible img {
+  transform: translate(-0.5rem, -0.5rem);
+  box-shadow: 0.5rem 0.5rem 0 var(--color-accent);
+  color: var(--color-accent);
+}
+
+.studentCardName {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.studentImage {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.nodeco {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .studentCard {
+    height: 25.5vw;
+    width: 25.5vw;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .studentCard {
+    height: 38.5vw;
+    width: 38.5vw;
+    margin-bottom: 2rem;
+  }
+}

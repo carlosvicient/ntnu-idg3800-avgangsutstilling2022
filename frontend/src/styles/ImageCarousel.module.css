@@ -1,0 +1,58 @@
+.ImageCarousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444141bf;
+}
+
+.Carousel {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 16px;
+}
+
+.ImageContainer {
+    position: relative;
+}
+
+.icon {
+    cursor: pointer;
+    width: 4.1vw;
+    max-width: 60px;
+    height: 4.1vw;
+    max-height: 60px;
+    border-radius: 100%;
+    background-color: hsla(47, 70%, 96%, 0.80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon svg {
+    width: 2vw;
+    max-width: 30px;
+    height: 2vw;
+    max-height: 30px;
+    fill: #383b3c;
+}
+
+.exitIcon {
+    position: absolute;
+    top: -2vw;
+    right: -2vw;
+    right: calc(0 - 50%);
+    box-shadow: 0px 4px 11px 5px rgba(55, 55, 55, 0.02);
+}
+
+.Carousel img {
+    max-width: 81.9vw;
+    max-height: 90vh;
+    box-shadow: 0px 4px 30px 7px rgba(46, 46, 46, 0.25);
+}

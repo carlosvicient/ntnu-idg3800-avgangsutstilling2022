@@ -1,0 +1,42 @@
+.allIconsContainer {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+}
+
+.allIconsContainer a {
+  color: white;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 5px;
+  margin-right: 0.8em;
+  padding: 0.4em;
+}
+
+.portfolioLink {
+  font-weight: 500;
+  color: var(--color-text) !important;
+}
+
+.socialLinkIcon path {
+  stroke: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .allIconsContainer a {
+    color: black;
+  }
+
+  .iconContainer {
+    background-color: white;
+  }
+
+  .socialLinkIcon path {
+    stroke: black;
+  }
+}

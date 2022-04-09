@@ -1,0 +1,140 @@
+.container {
+  width: 84vw;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.container h1 {
+  text-indent: -999em;
+  margin: 0;
+}
+
+.container h2 {
+  font-weight: 500;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.container p {
+  color: var(--color-text);
+}
+
+.greenLine {
+  border-left: 5px solid var(--color-accent);
+  padding-left: 9px;
+  margin-left: -14px;
+}
+
+.containerText {
+  margin-bottom: 42px;
+}
+
+.containerText p {
+  width: 32.4vw;
+}
+
+/* Study programme containers */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3.4vw;
+}
+
+.boxes {
+  border: 2px solid #ddd5b8;
+  height: 100%;
+  padding: 2.6vw 2.8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (prefers-color-scheme: dark) {
+  .boxes {
+    border: 2px solid hsl(0, 0%, 34%);
+  }
+}
+
+.social {
+  text-decoration: none;
+}
+
+.boxes h2 {
+  text-transform: lowercase;
+  font-family: var(--ohno-blazeface);
+  margin: 0 0 10px 0;
+}
+
+.boxes p {
+  color: var(--color-text);
+  margin-top: 25px;
+}
+
+.boxes p:last-of-type {
+  margin-bottom: 57px;
+}
+
+.boxes button {
+  font-family: var(--aktiv-grotesk);
+  width: 100%;
+  padding: 8px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+  bottom: 38px;
+  color: var(--color-text);
+  box-shadow: 0px 4px 9px rgba(27, 26, 26, 0.05);
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 80vw;
+  }
+
+  .containerText p {
+    width: 50vw;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 90vw;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .containerText {
+    margin-left: 8.3vw;
+  }
+
+  .containerText p {
+    width: 64.8vw;
+  }
+
+  .container h2 {
+    margin-bottom: 7px;
+  }
+
+  .greenLine {
+    border: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .boxes {
+    padding: 8.2vw;
+  }
+
+  .boxes p:last-of-type {
+    margin-bottom: 40px;
+  }
+}

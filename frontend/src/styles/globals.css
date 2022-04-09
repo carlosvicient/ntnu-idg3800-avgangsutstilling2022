@@ -1,0 +1,115 @@
+/* ------------------- Color palette ------------------- */
+/* Light mode (standard) */
+:root {
+  /* Brukes på tekst mot lys bakgrunn eller som bakgrunn i dark mode */
+  --color-text: #3e3e3e;
+
+  /* Brukes som tekst mot mørk bakgrunn eller som bakgrunn i standard modus */
+  --color-background: #fdf9ed;
+
+  /* Brukes på stor tekst, "call to action" og grafiske elementer */
+  --color-accent: #5d9942;
+}
+
+/* Dark mode (if user has dark mode preffered on their device) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Brukes på tekst mot lys bakgrunn eller som bakgrunn i dark mode */
+    --color-text: #fdf9ed;
+
+    /* Brukes som tekst mot mørk bakgrunn eller som bakgrunn i standard modus */
+    --color-background: #3e3e3e;
+  }
+}
+
+/* ------------------- Font family ------------------- */
+
+@import url("https://use.typekit.net/jpr2mtr.css");
+
+:root {
+  --ohno-blazeface: ohno-blazeface, "Arial Black", sans-serif;
+  --aktiv-grotesk: aktiv-grotesk, Arial, sans-serif;
+}
+
+/* ------------------- Font size ------------------- */
+
+:root {
+  /* Headers */
+  --fs-h1: 36px;
+  --fs-h2: 24px;
+  --fs-h3: 20px;
+}
+
+/* ------------------- Predefined tag styles ------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  background-color: var(--color-background);
+}
+
+a {
+  font-size: 18px;
+  color: var(--color-text);
+  font-family: var(--aktiv-grotesk);
+}
+
+p {
+  font-family: var(--aktiv-grotesk);
+  color: var(--color-text);
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 78ch;
+  margin-bottom: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  p {
+    color: var(--color-text);
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--aktiv-grotesk);
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  margin: 30px 0;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  margin: 30px 0;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+/* ------------------- Mobile font size ------------------- */
+
+@media (max-width: 830px) {
+  :root {
+    --fs-h1: 32px;
+    --fs-h2: 28px;
+    --fs-h3: 24px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}

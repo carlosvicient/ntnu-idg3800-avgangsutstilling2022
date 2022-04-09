@@ -1,0 +1,66 @@
+.sortHead {
+  margin: 55px 7.5vw 32px 7.5vw;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sortHead h3 {
+  font-family: var(--aktiv-grotesk);
+  font-size: 20px;
+}
+
+.sortHead button {
+  color: var(--color-text);
+}
+
+.line {
+  border-top: 1px solid #ddd5b8;
+  margin: 17px 7.5vw 44px 7.5vw;
+}
+
+.button {
+  font-size: 21px;
+  margin-bottom: -3px;
+  background: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.studentGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 7.5vw 75px 7.5vw;
+  column-gap: 3vw;
+  row-gap: 5vw;
+}
+
+.studentGrid::after {
+  content: "";
+  flex: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .line {
+    border-top: 1px solid hsl(0, 0%, 34%);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .sortHead {
+    margin: 1rem 7.1vw;
+  }
+
+  .studentGrid {
+    row-gap: 5.5vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .studentGrid {
+    row-gap: 7vw;
+  }
+}

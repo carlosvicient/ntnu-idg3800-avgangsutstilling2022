@@ -1,0 +1,17 @@
+/* <main> */
+.main {
+    padding-bottom: 2rem;
+    min-height: calc(100vh - 190px - 180px);
+    background-color: var(--color-background);
+}
+
+.main > section {
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    .main {
+        padding-top: 110px;
+        min-height: calc(100vh - 180px);
+    }
+}
