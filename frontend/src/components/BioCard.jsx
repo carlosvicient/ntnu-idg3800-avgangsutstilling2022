@@ -11,7 +11,7 @@ const BioCard = ({ student }) => {
       <div className={styles.cardContainer}>
         {student.name && student.surname && (
           <h1 className={styles.fullName}>
-            {student.name} {student.middle ? student.middle : ""} {" "}
+            {student.name} {student.middle ? student.middle : ""}{" "}
             {student.surname}
           </h1>
         )}
@@ -21,17 +21,19 @@ const BioCard = ({ student }) => {
           </p>
         )}
         <span>
-          <div>
-            {student.image && (
-              <SanityImage
-                className={styles.profileImage}
-                asset={student.image._rawAsset}
-                alt={`${student.name}`}
-              />
-            )}
-          </div>
+          {student.image && (
+            <SanityImage
+              className={styles.profileImage}
+              asset={student.image._rawAsset}
+              alt={`${student.name}`}
+            />
+          )}
           <div className={styles.bioContainer}>
-            <p>{student.bio ? student.bio.map(bio => bio.children[0].text) : null}</p>
+            <p>
+              {student.bio
+                ? student.bio.map(bio => bio.children[0].text)
+                : null}
+            </p>
           </div>
         </span>
       </div>

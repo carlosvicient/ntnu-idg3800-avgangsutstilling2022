@@ -1,6 +1,4 @@
 .container {
-  width: 84vw;
-  margin: auto;
   margin-bottom: 100px;
 }
 
@@ -29,21 +27,17 @@
   margin-bottom: 42px;
 }
 
-.containerText p {
-  width: 32.4vw;
-}
-
 /* Study programme containers */
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 3.4vw;
+  column-gap: 3.7%;
 }
 
 .boxes {
   border: 2px solid #ddd5b8;
   height: 100%;
-  padding: 2.6vw 2.8vw;
+  padding: 11.5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -88,36 +82,24 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .container {
-    width: 80vw;
-  }
-
   .containerText p {
-    width: 50vw;
+    max-width: 70%;
   }
 
   .gridContainer {
     grid-template-columns: 1fr;
     grid-gap: 24px;
   }
+
+  .boxes {
+    padding: 5%;
+  }
 }
 
 @media only screen and (max-width: 900px) {
-  .container {
-    width: 90vw;
-  }
-
   .gridContainer {
     grid-template-columns: 1fr;
     row-gap: 24px;
-  }
-
-  .containerText {
-    margin-left: 8.3vw;
-  }
-
-  .containerText p {
-    width: 64.8vw;
   }
 
   .container h2 {
@@ -131,7 +113,7 @@
   }
 
   .boxes {
-    padding: 8.2vw;
+    padding: 8.2%;
   }
 
   .boxes p:last-of-type {
