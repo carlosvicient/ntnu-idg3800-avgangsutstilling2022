@@ -1,4 +1,5 @@
 .footer {
+    width: 100%;
     background-color: var(--color-text);
     display: grid;
     grid-template-columns: 1fr 1fr;
