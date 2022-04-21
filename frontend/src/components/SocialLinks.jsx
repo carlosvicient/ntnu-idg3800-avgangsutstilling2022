@@ -43,7 +43,7 @@ const SocialLinks = ({ links }) => {
             </a>
           }
           
-          {/* (Will be added later) links.portfolio &&
+          {links.portfolio &&
             <a
               href={links.portfolio}
               target="_blank"
@@ -52,7 +52,7 @@ const SocialLinks = ({ links }) => {
             >
               Se portfolio
             </a>
-        */}
+        }
         </div>
       }
     </IconContext.Provider>
