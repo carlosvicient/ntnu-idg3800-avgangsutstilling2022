@@ -1,8 +1,14 @@
 .footer {
+    width: 100%;
     background-color: var(--color-text);
-    display: grid;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 2rem 50px;
     grid-template-columns: 1fr 1fr;
-    padding: 2rem;
+    display: grid;
+    max-width: 1500px;
 }
 
 .footer p {
@@ -41,8 +47,8 @@
     }
 }
 
-@media (max-width: 600px) {
-    .footer {
+@media (max-width: 650px) {
+    .content {
         grid-template-columns: 1fr;
     }
 

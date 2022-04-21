@@ -9,7 +9,7 @@ import * as styleM from "../styles/main.module.css"
 
 function Layout({ children }) {
   return (
-    <div>
+    <div className={styleM.layout}>
       <Navbar />
       <main className={styleM.main}>{children}</main>
       <Footer />

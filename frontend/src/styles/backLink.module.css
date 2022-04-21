@@ -1,5 +1,4 @@
 .backLink {
-  padding-left: 7.5vw;
   margin-bottom: 10px;
 }
 
@@ -7,7 +6,7 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  width: 10vw;
+  width: 15%;
 }
 
 .desktopArrow {
@@ -30,16 +29,15 @@
     background-color: var(--color-background);
     width: 100%;
     padding-bottom: 10px;
-    padding-left: 6.4vw;
   }
 
   .backLink a {
-    width: 20vw;
+    width: 20%;
   }
 }
 
 @media (max-width: 350px) {
   .backLink a {
-    width: 50vw;
+    width: 50%;
   }
 }
