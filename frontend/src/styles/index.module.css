@@ -101,6 +101,10 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .containerText p {
+    max-width: 100%;
+  }
+
   .gridContainer {
     grid-template-columns: 1fr;
     row-gap: 24px;
