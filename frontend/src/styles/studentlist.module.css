@@ -1,5 +1,6 @@
 .sortHead {
-  margin: 55px 7.5vw 32px 7.5vw;
+  margin-top: 55px;
+  margin-bottom: 32px;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -16,7 +17,8 @@
 
 .line {
   border-top: 1px solid #ddd5b8;
-  margin: 17px 7.5vw 44px 7.5vw;
+  margin-top: 17px;
+  margin-bottom: 44px;
 }
 
 .button {
@@ -33,9 +35,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 7.5vw 75px 7.5vw;
-  column-gap: 3vw;
-  row-gap: 5vw;
+  margin-top: 0;
+  margin-bottom: 75px;
+  column-gap: 4%;
+  row-gap: 40px;
 }
 
 .studentGrid::after {
@@ -51,16 +54,17 @@
 
 @media only screen and (max-width: 900px) {
   .sortHead {
-    margin: 1rem 7.1vw;
+    margin: 1rem 0;
   }
 
   .studentGrid {
-    row-gap: 5.5vw;
+    row-gap: 25px;
+    column-gap: 4vw;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .studentGrid {
-    row-gap: 7vw;
+    row-gap: 15px;
   }
 }

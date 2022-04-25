@@ -36,7 +36,7 @@ function About() {
 
           <h2>Designansvarlige</h2>
           <p>
-            Vi har vært ansvarlige for å utvikle den grafiske profilen til årets avgangsutstilling. 
+            Vi har vært ansvarlige for å utvikle den grafiske profilen til årets avgangsutstilling.
             Den grafiske profilen inkluderer: logo, fargepalett, typografi, trykte flater og designmanual, som har blitt brukt til utvikling av hjemmesiden.
           </p>
           <ul>
@@ -62,6 +62,12 @@ function About() {
           </ul>
 
           <h2>Fotoansvarlige</h2>
+          <p>
+            Vi i fotogruppa har hatt ansvar for å ta bilder av alle studentene til årets avgangsutstilling som er her på nettsiden.
+            Vi har rigget studio, tatt bilder og redigert alle bildene klare til nettsiden.
+            Nora er sjefsfotograf og hatt ansvar for webutvikling sine bilder, Marc har hatt ansvar for alt det tekniske samt
+            redigering av interaksjonsdesign sine bilder, Johanne er sjefsnotar og assistent og har hatt ansvar for redigeringen av grafisk design.
+          </p>
           <ul>
             <li>
               <Link to="/bmed/johanne-lyster-strande">

@@ -10,20 +10,19 @@
 
 .ProjectCard img {
   cursor: pointer;
-  width: 51vw;
+  width: 56%;
   height: 100%;
-  margin-right: 4vw;
+  margin-right: 4.3%;
 }
 
-.ProjectCard p {
-  max-width: 29.1vw;
+.ProjectCard>div {
+  max-width: 39.7%;
 }
 
 @media screen and (max-width: 1200px) {
   .ProjectCard {
     flex-direction: column;
     gap: 8px;
-    width: 76vw;
   }
 
   .ProjectCard img {
@@ -32,18 +31,17 @@
   }
 
   .ProjectCard p {
-    max-width: 100%;
     margin: 0;
+  }
+
+  .ProjectCard>div {
+    max-width: 100%;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .ProjectCard {
-    width: 87.2vw;
-  }
 
   .ProjectCard img {
     cursor: default;
-    width: 100%;
   }
 }
