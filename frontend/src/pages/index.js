@@ -47,7 +47,7 @@ const IndexPage = ({ data }) => {
           <p>3.–4. juni</p>
 
           <h2>Hvor</h2>
-          <p>Raufossveien 40, 2821 Gjøvik</p>
+          <p>Raufossveien 40, 2821 Gjøvik <a href="https://goo.gl/maps/V15USJ4Jie6vftFDA" target="_blank" rel="noreferrer">Google Maps &#x2197;</a></p>
         </div>
         {/* Mapper ut hver av kortene som er på siden */}
         <div className={style.gridContainer}>

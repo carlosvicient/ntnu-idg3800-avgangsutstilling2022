@@ -27,6 +27,10 @@
   margin-bottom: 42px;
 }
 
+.containerText p:last-of-type a  {
+  display: block;
+}
+
 /* Study programme containers */
 .gridContainer {
   display: grid;
