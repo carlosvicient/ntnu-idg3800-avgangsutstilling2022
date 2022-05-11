@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
           {/* Generell informasjon, her må det fylles inn korrekt tekst */}
           <h2 className={style.greenLine}>Om</h2>
           <p>
-            31 studenter fra Bachelor i grafisk design, 29 studenter
+            27 studenter fra Bachelor i grafisk design, 29 studenter
             fra Bachelor interaksjonsdesign og 18 studenter fra Bachelor i
             webutvikling ved NTNU i Gjøvik avslutter tre års studier med en
             utstilling. Hver student viser utvalgte arbeider fra egenportefølje.
@@ -44,7 +44,9 @@ const IndexPage = ({ data }) => {
           </p>
 
           <h2>Når</h2>
-          <p>3.–4. juni</p>
+          <p><a href='https://fb.me/e/1lLCQ5LbM' target='_blank' rel='noreferrer'>Fredag 3. juni kl. 11.00 – 19.00</a></p>
+          <p>– Formell åpning kl. 12.00</p>
+          <p><a href='https://fb.me/e/2ontIweOi' target='_blank' rel='noreferrer'>Lørdag 4. juni kl. 10.00 – 15.00</a></p>
 
           <h2>Hvor</h2>
           <p>
