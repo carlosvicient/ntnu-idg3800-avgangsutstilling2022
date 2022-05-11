@@ -44,9 +44,9 @@ const IndexPage = ({ data }) => {
           </p>
 
           <h2>Når</h2>
-          <p><a href='https://fb.me/e/1lLCQ5LbM' target='_blank' rel='noreferrer'>Fredag 3. juni kl. 11.00 – 19.00</a></p>
-          <p>– Formell åpning kl. 12.00</p>
-          <p><a href='https://fb.me/e/2ontIweOi' target='_blank' rel='noreferrer'>Lørdag 4. juni kl. 10.00 – 15.00</a></p>
+          <p><a href='https://fb.me/e/1lLCQ5LbM' target='_blank' rel='noreferrer'>Fredag 3. juni kl. 11.00–19.00</a>, <br /> formell åpning kl. 12.00</p>
+          
+          <p><a href='https://fb.me/e/2ontIweOi' target='_blank' rel='noreferrer'>Lørdag 4. juni kl. 10.00–15.00</a></p>
 
           <h2>Hvor</h2>
           <p>
