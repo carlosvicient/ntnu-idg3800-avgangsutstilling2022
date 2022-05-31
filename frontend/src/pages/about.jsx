@@ -122,7 +122,7 @@ function About() {
               <Link to="/bixd/ann-margit-krog">Ann Margit Krog</Link>
             </li>
             <li>
-              <Link to="#">Andrea Kristoffersen</Link>
+              <Link to="/bmed/andrea-kristoffersen">Andrea Kristoffersen</Link>
             </li>
             <li>
               <Link to="/bwu/kristian-teppan">Kristian Teppan</Link>
