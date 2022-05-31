@@ -36,7 +36,7 @@ const SocialLinks = ({ links }) => {
             </a>
           }
           {links.mail &&
-            <a href={`mailto:${links.mail}`} target="_blank" rel="noreferrer">
+            <a href={`${links.mail}`} target="_blank" rel="noreferrer">
               <div className={styles.iconContainer}>
                 <GrMailOption className={styles.socialLinkIcon} />
               </div>
